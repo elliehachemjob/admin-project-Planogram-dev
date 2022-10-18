@@ -16,7 +16,7 @@
   <div class="sub-categories-container">
     <div class="sub-categories-content">
       <div class="sub-cats-container">
-        <div class="sub-cats" onclick="subCatsAccordion($(this))">
+        <div class="sub-cats" (click)="subCatsAccordion()">
           <div class="sub-cats-title">
             Impulse A
           </div>
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="sub-cats-container">
-        <div class="sub-cats" onclick="subCatsAccordion($(this))">
+        <div class="sub-cats" (click)="subCatsAccordion()">
           <div class="sub-cats-title">
             Impulse B
           </div>
@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="sub-cats-container">
-        <div class="sub-cats" onclick="subCatsAccordion($(this))">
+        <div class="sub-cats" (click)="subCatsAccordion()">
           <div class="sub-cats-title">
             Impulse C
           </div>
@@ -83,8 +83,8 @@
   <div class="fxd-footer-sect-cont">
     <div class="fxd-footer-sect">
       <div class="footer-elements-wrapper">
-        <div class="footer-elements" onclick="LogoActive($(this));">
-          <a href="inner-page.html">
+        <div class="footer-elements" (click)="LogoActive();">
+          <a (click)="navigateInnerPage()">
             <div class="footer-elements-logo">
               <svg xmlns="http://www.w3.org/2000/svg" width="18.661" height="18.661" viewbox="0 0 18.661 18.661">
                 <path class="a"
@@ -97,7 +97,7 @@
             </div>
           </a>
         </div>
-        <div class="footer-elements" onclick="LogoActive($(this));">
+        <div class="footer-elements" (click)="LogoActive();">
           <a href="vip.html">
             <div class="footer-elements-logo">
               <svg xmlns="http://www.w3.org/2000/svg" width="19.998" height="19.456" viewbox="0 0 19.998 19.456">
@@ -111,7 +111,7 @@
             </div>
           </a>
         </div>
-        <div class="footer-elements" onclick="LogoActive($(this));">
+        <div class="footer-elements" (click)="LogoActive();">
           <a href="insights.html">
             <div class="footer-elements-logo">
               <svg xmlns="http://www.w3.org/2000/svg" width="14.621" height="20.035" viewbox="0 0 14.621 20.035">

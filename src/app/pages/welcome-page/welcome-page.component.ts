@@ -1,15 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
   styleUrls: ['./welcome-page.component.scss']
 })
-export class WelcomePageComponent implements OnInit {
+export class WelcomePageComponent implements OnInit, OnDestroy, AfterViewInit {
 
-  constructor() { }
+  //variable sections
 
-  ngOnInit() {
+
+  // Injection dependencies If needed + 
+  constructor(
+    private router: Router
+  ) { }
+
+  //Lifecycle hooks
+
+  //When component initiate / useEffect without empty dependencies
+  ngOnInit(): void {
+
+  }
+
+  //When component Destroyed
+  ngOnDestroy(): void {
+
+  }
+
+  //To Control Dom elements / UseRef of react
+  ngAfterViewInit() {
+
+  }
+
+  // Function Sections
+  navigateLanguagesPage(): void {
+    this.router.navigate(['/languages']);
+  }
+
+  navigateInsightsPage(): void {
+    this.router.navigate(['/insights']);
   }
 
 }

@@ -12,6 +12,11 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   Variable3: [] = [];
   Variable4: {} = { key: "value" }
 
+
+  // Injection dependencies If needed + 
+  constructor() { }
+
+
   //Lifecycle hooks
 
   //When component initiate / useEffect without empty dependencies

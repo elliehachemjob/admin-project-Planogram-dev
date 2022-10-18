@@ -6,38 +6,18 @@
         <span class="wingman-title">wingman</span><br>
         program 2021
       </div>
-      <!--    <div class="wlc-page-countries-cont countries-list" id="country-list" style="display: none;">
-                        <div class="country-cont" onclick="elio()">
-                            <div class="country-content uae">
-                                UAE
-                            </div>
-                        </div>
-                        <div class="country-cont" onclick="elio()">
-                            <div class="country-content maldives">
-                                Maldives
-                            </div>
-                        </div>
-                        <div class="country-cont" onclick="elio()">
-                            <div class="country-content pak">
-                                Pakistan
-                            </div>
-                        </div>
-                        <div class="select-country">
-                            Select country to start
-                        </div>
-                    </div>-->
       <div class="wlc-page-countries-cont language-menu" id="lang-list" style="">
-        <div class="country-cont lang" onclick="innerPlanogram()">
+        <div class="country-cont lang" (click)="navigateInnerPage()">
           <div class="country-content languages">
             English
           </div>
         </div>
-        <div class="country-cont lang" onclick="innerPlanogram()">
+        <div class="country-cont lang" (click)="navigateInnerPage()">
           <div class="country-content languages">
             Urdu
           </div>
         </div>
-        <div class="country-cont lang" onclick="innerPlanogram()">
+        <div class="country-cont lang" (click)="navigateInnerPage()">
           <div class="country-content languages">
             Arabic
           </div>

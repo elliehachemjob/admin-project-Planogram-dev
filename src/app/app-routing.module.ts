@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'vip', component: VipComponent },
   { path: 'vip-inner-page', component: VipInnerPageComponent },
   { path: 'welcome-page', component: WelcomePageComponent },
-  { path: '**', redirectTo: 'login' }
+  { path: '**', redirectTo: 'welcome-page' }
 ];
 
 @NgModule({

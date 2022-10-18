@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { GiftTableComponent } from './pages/gift-table/gift-table.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
@@ -23,6 +25,5 @@ import { GiftTableComponent } from './pages/gift-table/gift-table.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [AppRoutingModule]
 })
 export class AppModule { }

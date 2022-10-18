@@ -7,13 +7,28 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { GiftTableComponent } from './pages/gift-table/gift-table.component';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { SubCategoriesComponent } from './pages/sub-categories/sub-categories.component';
+import { InnerPageComponent } from './pages/inner-page/inner-page.component';
+import { InsightsComponent } from './pages/insights/insights.component';
+import { LanguagesComponent } from './pages/languages/languages.component';
+import { VipInnerPageComponent } from './pages/vip-inner-page/vip-inner-page.component';
+import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InnerPageComponent,
+    GiftTableComponent,
+    InsightsComponent,
+    LanguagesComponent,
+    SubCategoriesComponent,
+    VipInnerPageComponent,
+    WelcomePageComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     RouterModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

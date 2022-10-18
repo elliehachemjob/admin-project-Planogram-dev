@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LogoService } from 'src/app/services/logo.service';
 
 @Component({
   selector: 'app-inner-page',
@@ -8,19 +9,34 @@ import { Router } from '@angular/router';
 })
 export class InnerPageComponent implements OnInit {
 
+
   //variable sections
+  isHidden: boolean = true;
+  isLogoActive: boolean = false;
+  isLogo1Active: boolean = false;
+  isLogo2Active: boolean = false;
+  isLogo3Active: boolean = false;
 
 
   // Injection dependencies If needed + 
   constructor(
-    private router: Router
+    private router: Router,
+    public logoService: LogoService
   ) { }
 
   //Lifecycle hooks
 
   //When component initiate / useEffect without empty dependencies
   ngOnInit(): void {
-
+    this.logoService.isLogo1Active.subscribe((data) => {
+      this.isLogo1Active = data;
+    })
+    this.logoService.isLogo2Active.subscribe((data) => {
+      this.isLogo2Active = data;
+    })
+    this.logoService.isLogo3Active.subscribe((data) => {
+      this.isLogo3Active = data;
+    })
   }
 
   //When component Destroyed
@@ -42,7 +58,24 @@ export class InnerPageComponent implements OnInit {
     this.router.navigate(['/insights']);
   }
 
-  LogoActive() {
+  logoActivation() {
+    // if (logoNumber === 1) {
+    //   this.isLogo1Active = true;
+    //   this.isLogo2Active = false;
+    //   this.isLogo3Active = false;
+
+    // }
+    // if (logoNumber === 2) {
+    //   this.isLogo1Active = false;
+    //   this.isLogo2Active = true;
+    //   this.isLogo3Active = false;
+    // }
+    // if (logoNumber === 3) {
+    //   this.isLogo1Active = false;
+    //   this.isLogo2Active = false;
+    //   this.isLogo3Active = true;
+    // }
+
   }
 
   navigateVipPage() {
@@ -56,4 +89,9 @@ export class InnerPageComponent implements OnInit {
   navigateInnerVipPage() {
     this.router.navigate(['/vip-inner-page']);
   }
+
+  subCatsAccordion(isEmptyContent: boolean = true) {
+    if (!isEmptyContent) this.isHidden = !this.isHidden;
+  }
+
 }

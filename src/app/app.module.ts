@@ -1,3 +1,4 @@
+import { VipComponent } from './pages/vip/vip.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -23,6 +24,7 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     InsightsComponent,
     LanguagesComponent,
     SubCategoriesComponent,
+    VipComponent,
     VipInnerPageComponent,
     WelcomePageComponent
   ],

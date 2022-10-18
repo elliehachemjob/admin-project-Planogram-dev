@@ -1,14 +1,16 @@
+{{isLogoActive}}
+
 <div class="sub-categories-wrapper">
   <div class="fxd-header-sect-cont sub-categories">
     <div class="fxd-header-sect">
       <div class="fxd-header-content">
         Impulse
       </div>
-      <div class="discover-proceed-arrow back-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083" viewbox="0 0 18.613 14.083">
+      <div class="discover-proceed-arrow back-arrow" [ngClass]="{'footer-element-selected':isLogoActive }">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083" viewBox="0 0 18.613 14.083">
           <path class="a"
             d="M2.814,21.877l6,6A1.039,1.039,0,1,0,10.279,26.4L6.066,22.17H20.075a1.039,1.039,0,1,0,0-2.077H6.066l4.212-4.212a1.028,1.028,0,0,0,0-1.469,1.07,1.07,0,0,0-.745-.314,1.024,1.024,0,0,0-.745.314L2.814,20.387a1.04,1.04,0,0,0,0,1.489Z"
-            transform="translate(21.113 28.181) rotate(180)"></path>
+            transform="translate(21.113 28.181) rotate(180)" />
         </svg>
       </div>
     </div>
@@ -16,7 +18,7 @@
   <div class="sub-categories-container">
     <div class="sub-categories-content">
       <div class="sub-cats-container">
-        <div class="sub-cats" (click)="subCatsAccordion()">
+        <div class="sub-cats" (click)="subCatsAccordion(false)">
           <div class="sub-cats-title">
             Impulse A
           </div>
@@ -25,19 +27,20 @@
           </div>
           <div class="sub-cat-accordion-cont">
             <div class="sub-cat-accordion">
-              <svg class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24" aria-hidden="true" role="presentation">
+              <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
                 <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
               </svg>
             </div>
           </div>
         </div>
-        <div class="sub-cats-inner-page-cont">
+        <div class="sub-cats-inner-page-cont" [ngClass]="{'hide':isHidden }">
           <div class="sub-cats-inner-page">
             <div class="sub-cats-inner-page-title">
               12 Facings
             </div>
-            <div class="sub-cats-inner-page-img"><img
-                src="https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png" alt="1630222037"></div>
+            <div class="sub-cats-inner-page-img">
+              <img src="https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png" alt="">
+            </div>
             <div class="sub-cats-inner-page-flow">
               Traffic Flow
             </div>
@@ -54,7 +57,7 @@
           </div>
           <div class="sub-cat-accordion-cont">
             <div class="sub-cat-accordion">
-              <svg class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24" aria-hidden="true" role="presentation">
+              <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
                 <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
               </svg>
             </div>
@@ -71,7 +74,7 @@
           </div>
           <div class="sub-cat-accordion-cont">
             <div class="sub-cat-accordion">
-              <svg class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24" aria-hidden="true" role="presentation">
+              <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
                 <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
               </svg>
             </div>
@@ -83,10 +86,11 @@
   <div class="fxd-footer-sect-cont">
     <div class="fxd-footer-sect">
       <div class="footer-elements-wrapper">
-        <div class="footer-elements" (click)="LogoActive();">
+        <div class="footer-elements" [ngClass]="{'footer-element-selected':isLogo1Active }"
+          (click)="logoService.setLogoActivation(1)">
           <a (click)="navigateInnerPage()">
             <div class="footer-elements-logo">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18.661" height="18.661" viewbox="0 0 18.661 18.661">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.661" height="18.661" viewBox="0 0 18.661 18.661">
                 <path class="a"
                   d="M30.784,28.582l-3.96-3.968a7.819,7.819,0,1,0-2.21,2.21l3.968,3.96a1.562,1.562,0,0,0,2.2-2.2ZM15.624,20.311A4.687,4.687,0,1,1,17,23.624,4.687,4.687,0,0,1,15.624,20.311Z"
                   transform="translate(-12.499 -12.5)"></path>
@@ -97,10 +101,11 @@
             </div>
           </a>
         </div>
-        <div class="footer-elements" (click)="LogoActive();">
-          <a href="vip.html">
-            <div class="footer-elements-logo">
-              <svg xmlns="http://www.w3.org/2000/svg" width="19.998" height="19.456" viewbox="0 0 19.998 19.456">
+        <div class="footer-elements" [ngClass]="{'footer-element-selected':isLogo2Active  }"
+          (click)="logoService.setLogoActivation(2)">
+          <a (click)="navigateVipPage()">
+            <div class="footer-elements-logo" [ngClass]="{'footer-element-selected':isLogoActive }">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19.998" height="19.456" viewBox="0 0 19.998 19.456">
                 <path class="a"
                   d="M19.878,12.967,24.2,13.6a1.522,1.522,0,0,1,.831,2.585l-3.123,3.1a1.531,1.531,0,0,0-.428,1.343l.743,4.367a1.5,1.5,0,0,1-2.165,1.6l-3.868-2.058a1.474,1.474,0,0,0-1.391,0L10.938,26.6a1.5,1.5,0,0,1-2.17-1.6L9.5,20.638A1.531,1.531,0,0,0,9.069,19.3L5.94,16.208a1.522,1.522,0,0,1,.825-2.587l4.32-.642a1.5,1.5,0,0,0,1.124-.831l1.928-3.977a1.485,1.485,0,0,1,2.68,0l1.937,3.971a1.5,1.5,0,0,0,1.125.828Z"
                   transform="translate(-5.485 -7.325)"></path>
@@ -111,16 +116,17 @@
             </div>
           </a>
         </div>
-        <div class="footer-elements" (click)="LogoActive();">
-          <a href="insights.html">
-            <div class="footer-elements-logo">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14.621" height="20.035" viewbox="0 0 14.621 20.035">
+        <div class="footer-elements " [ngClass]="{'footer-element-selected':isLogo3Active }"
+          click="logoService.setLogoActivation(3)">
+          <a (click)="navigateInsightsPage()">
+            <div class="footer-elements-logo ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14.621" height="20.035" viewBox="0 0 14.621 20.035">
                 <path
                   d="M23.255,6.725a1,1,0,0,1-1,1A1.578,1.578,0,0,0,20.679,9.3a1,1,0,1,1-2,0,3.582,3.582,0,0,1,3.577-3.577,1,1,0,0,1,1,1Zm6.3,2.575a7.323,7.323,0,0,1-3.09,5.969.51.51,0,0,0-.223.417v2.671h0a2,2,0,0,1-1.705,1.977v.787a.914.914,0,0,1-.914.91H20.884a.914.914,0,0,1-.924-.914v-.787a2,2,0,0,1-1.705-1.977V15.684a.516.516,0,0,0-.227-.417A7.308,7.308,0,1,1,29.559,9.3Zm-2,0a5.3,5.3,0,0,0-5.3-5.3q-.19,0-.382.012a5.338,5.338,0,0,0-4.894,4.735,5.267,5.267,0,0,0,2.214,4.885,2.521,2.521,0,0,1,1.073,2.051v.749h3.978v-.75a2.514,2.514,0,0,1,1.07-2.049A5.316,5.316,0,0,0,27.558,9.3Z"
                   transform="translate(-14.938 -1.995)"></path>
               </svg>
             </div>
-            <div class="footer-elements-txt">
+            <div class="footer-elements-txt ">
               INSIGHTS
             </div>
           </a>

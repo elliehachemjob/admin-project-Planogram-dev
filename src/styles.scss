@@ -263,7 +263,7 @@ body {
 }
 
 .footer-elements-logo {
- max-width: 14px;
+ max-width: 25px;
  margin: 0 auto;
  cursor: pointer;
 }
@@ -700,4 +700,12 @@ th {
  font-size: 12px;
  font-weight: 700;
  text-transform: uppercase;
+}
+
+.hide {
+ display: none;
+}
+
+.footer-element-selected {
+ fill: #db0b41;
 }

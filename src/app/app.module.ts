@@ -16,6 +16,12 @@ import { LanguagesComponent } from './pages/languages/languages.component';
 import { VipInnerPageComponent } from './pages/vip-inner-page/vip-inner-page.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 
+
+// Needed for frontend translation to work
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,9 +44,26 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
+    }),
+    // ngx-translate and the loader module
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
     })
+
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
+
+
+
+// required for AOT compilation => for angular 9 and above
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

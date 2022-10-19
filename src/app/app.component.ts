@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+//For translation
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,12 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
 
   // Injection dependencies If needed + 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    //Default fallback language
+    translate.setDefaultLang('en');
+    //Change language here
+    translate.use('ar');
+  }
 
 
   //Lifecycle hooks

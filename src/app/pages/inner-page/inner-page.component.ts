@@ -13,9 +13,8 @@ export class InnerPageComponent implements OnInit {
   //variable sections
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  isLogo1Active: boolean = false;
-  isLogo2Active: boolean = false;
-  isLogo3Active: boolean = false;
+  categories: any = [{ title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }]
+
 
 
   // Injection dependencies If needed + 

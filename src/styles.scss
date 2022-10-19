@@ -14,8 +14,8 @@ $background-color_5: #e0e3e5;
 
 @font-face {
  font-family: 'Bull';
- src: url('font/Bull-Regular.eot');
- src: url('font/Bull-Regular.eot?#iefix') format('embedded-opentype'), url('font/Bull-Regular.woff2') format('woff2'), url('font/Bull-Regular.woff') format('woff'), url('font/Bull-Regular.ttf') format('truetype');
+ src: url('./assets/font/Bull-Regular.eot');
+ src: url('./assets/font/Bull-Regular.eot?#iefix') format('embedded-opentype'), url('./assets/font/Bull-Regular.woff2') format('woff2'), url('./assets/font/Bull-Regular.woff') format('woff'), url('./assets/font/Bull-Regular.ttf') format('truetype');
  font-weight: 300;
  font-style: normal;
  font-display: swap;
@@ -23,8 +23,8 @@ $background-color_5: #e0e3e5;
 
 @font-face {
  font-family: 'Bull';
- src: url('font/Bull-Bold.eot');
- src: url('font/Bull-Bold.eot?#iefix') format('embedded-opentype'), url('font/Bull-Bold.woff2') format('woff2'), url('font/Bull-Bold.woff') format('woff'), url('font/Bull-Bold.ttf') format('truetype');
+ src: url('./assets/font/Bull-Bold.eot');
+ src: url('./assets/font/Bull-Bold.eot?#iefix') format('embedded-opentype'), url('./assets/font/Bull-Bold.woff2') format('woff2'), url('./assets/font/Bull-Bold.woff') format('woff'), url('./assets/font/Bull-Bold.ttf') format('truetype');
  font-weight: 700;
  font-style: normal;
  font-display: swap;
@@ -32,8 +32,8 @@ $background-color_5: #e0e3e5;
 
 @font-face {
  font-family: 'Bull';
- src: url('font/Bull-Medium.eot');
- src: url('font/Bull-Medium.eot?#iefix') format('embedded-opentype'), url('font/Bull-Medium.woff2') format('woff2'), url('font/Bull-Medium.woff') format('woff'), url('font/Bull-Medium.ttf') format('truetype');
+ src: url('./assets/font/Bull-Medium.eot');
+ src: url('./assets/font/Bull-Medium.eot?#iefix') format('embedded-opentype'), url('./assets/font/Bull-Medium.woff2') format('woff2'), url('./assets/font/Bull-Medium.woff') format('woff'), url('./assets/font/Bull-Medium.ttf') format('truetype');
  font-weight: 500;
  font-style: normal;
  font-display: swap;
@@ -41,8 +41,8 @@ $background-color_5: #e0e3e5;
 
 @font-face {
  font-family: 'Bull';
- src: url('font/Bull-Heavy1.eot');
- src: url('font/Bull-Heavy1.eot?#iefix') format('embedded-opentype'), url('font/Bull-Heavy1.woff2') format('woff2'), url('font/Bull-Heavy1.woff') format('woff'), url('font/Bull-Heavy1.ttf') format('truetype');
+ src: url('./assets/font/Bull-Heavy1.eot');
+ src: url('./assets/font/Bull-Heavy1.eot?#iefix') format('embedded-opentype'), url('./assets/font/Bull-Heavy1.woff2') format('woff2'), url('./assets/font/Bull-Heavy1.woff') format('woff'), url('./assets/font/Bull-Heavy1.ttf') format('truetype');
  font-weight: 800;
  font-style: normal;
  font-display: swap;
@@ -71,6 +71,7 @@ body {
  background-size: cover;
  overflow: hidden;
  height: 100vh;
+ overflow: auto;
 }
 
 .plano-wlc-page-container {

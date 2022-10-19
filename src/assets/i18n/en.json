@@ -7,6 +7,7 @@
     "program": "program",
     "selectACountryToStart": "Select country to start"
   },
+  "homePage": {},
   "UAE": "UAE",
   "MALDIVES": "MALDIVES",
   "PAKISTAN": "PAKISTAN",
@@ -23,5 +24,9 @@
   "BAHRAIN": "BAHRAIN",
   "KSA": "KSA",
   "LEBANON": "LEBANON",
-  "GHANA": "GHANA"
+  "GHANA": "GHANA",
+  "planogramQuickSearchPlaceHolder": "Planogram Quick Search ",
+  "Discover": "Discover",
+  "VIP": "VIP",
+  "INSIGHTS": "INSIGHTS"
 }

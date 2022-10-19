@@ -14,7 +14,7 @@ export class InnerPageComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
   categories: any = [{ title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }]
-
+  planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder"
 
 
   // Injection dependencies If needed + 

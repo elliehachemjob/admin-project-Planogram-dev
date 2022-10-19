@@ -2,51 +2,23 @@
   <div class="fxd-header-sect-cont sub-categories">
     <div class="fxd-header-sect">
       <div class="fxd-header-content">
-        Good Read
+        {{"insightsPage.headerContent" | translate }}
       </div>
     </div>
   </div>
   <div class="insights-sec-container">
-    <div class="insights-sec-content">
+    <div *ngFor="let insight of insights" class="insights-sec-content">
       <div class="good-read-section-wrapper flex-center-style">
         <div class="good-read-section">
-          <div class="good-read-image"><img src="assets/good-read-1.PNG" alt="good-read-1"></div>
+          <div class="good-read-image"><img src="{{insight.path}}" alt="good-read-1"></div>
           <div class="good-read-title">
-            FUNCTIONAL PLACEMENTS: LARGE FORMATS
+            {{insight.title}}
           </div>
           <div class="good-read-description">
-            TOOLS TO ADDRESS COLD RED BULL AVAILABILITY AND INCREASE SHOPPER BASKETS.
+            {{insight.description}}
           </div>
           <div class="good-read-explore-btn">
-            <a href="#">Explore</a>
-          </div>
-        </div>
-      </div>
-      <div class="good-read-section-wrapper">
-        <div class="good-read-section">
-          <div class="good-read-image"><img src="assets/good-read-1.PNG" alt="good-read-1"></div>
-          <div class="good-read-title">
-            FUNCTIONAL PLACEMENTS: LARGE FORMATS
-          </div>
-          <div class="good-read-description">
-            TOOLS TO ADDRESS COLD RED BULL AVAILABILITY AND INCREASE SHOPPER BASKETS.
-          </div>
-          <div class="good-read-explore-btn">
-            <a href="#">Explore</a>
-          </div>
-        </div>
-      </div>
-      <div class="good-read-section-wrapper">
-        <div class="good-read-section">
-          <div class="good-read-image"><img src="assets/good-read-1.PNG" alt="good-read-1"></div>
-          <div class="good-read-title">
-            FUNCTIONAL PLACEMENTS: LARGE FORMATS
-          </div>
-          <div class="good-read-description">
-            TOOLS TO ADDRESS COLD RED BULL AVAILABILITY AND INCREASE SHOPPER BASKETS.
-          </div>
-          <div class="good-read-explore-btn">
-            <a href="#">Explore</a>
+            <a href="#">{{"insightsPage.explore" | translate}}</a>
           </div>
         </div>
       </div>
@@ -66,7 +38,7 @@
             </svg>
           </div>
           <div class="footer-elements-txt">
-            Discover
+            {{"Discover" | translate}}
           </div>
         </a>
       </div>
@@ -80,7 +52,7 @@
             </svg>
           </div>
           <div class="footer-elements-txt">
-            VIP
+            {{"VIP" | translate}}
           </div>
         </a>
       </div>
@@ -94,7 +66,7 @@
             </svg>
           </div>
           <div class="footer-elements-txt ">
-            INSIGHTS
+            {{"INSIGHTS" | translate}}
           </div>
         </a>
       </div>

@@ -10,6 +10,10 @@
   "vipPage": {
     "vipHeaderText": "This is a special members club where you will receive discounts based on counterparts in store that will drive incremental sales, helping you earn more profit!"
   },
+  "insightsPage": {
+    "headerContent": "Good Read",
+    "explore": "Explore"
+  },
   "homePage": {},
   "UAE": "UAE",
   "MALDIVES": "MALDIVES",

@@ -14,7 +14,10 @@ export class InsightsComponent implements OnInit, OnDestroy, AfterViewInit {
   //variable sections
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-
+  insights: any = [{
+    title: "FUNCTIONAL PLACEMENTS: LARGE FORMATS", description: "TOOLS TO ADDRESS COLD RED BULL AVAILABILITY AND INCREASE SHOPPER BASKETS.",
+    path: "assets/good-read-1.PNG"
+  }]
 
   // Injection dependencies If needed + 
   constructor(

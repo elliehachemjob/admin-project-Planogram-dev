@@ -5,54 +5,15 @@
         <div class="vip-top-img-wrapper"><img src="assets/top-img.png" alt="top-img"></div>
         <div class="vip-rb-cans-wrapper"><img src="assets/rb-cans.png" alt="rb-cans"></div>
         <div class="vip-header-txt">
-          This is a special members club where you will receive discounts based on counterparts in store that will drive
-          incremental sales, helping you earn more profit!
+          {{"vipPage.vipHeaderText" | translate}}
         </div>
       </div>
       <div class="sub-categories-container vip-cat-container">
         <div class="sub-categories-content">
           <div class="sub-cats-container">
-            <div class="sub-cats vip-cats">
+            <div *ngFor="let vipCategory of vipCategories" class="sub-cats vip-cats">
               <div class="sub-cats-title vip-cats-title">
-                Category A
-              </div>
-              <div class="vip-cats-redirect">
-                <a (click)="navigateInnerVipPage()"></a>
-              </div>
-              <div class="sub-cat-accordion-cont vip-arrow">
-                <div class="sub-cat-accordion">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083" viewbox="0 0 18.613 14.083">
-                    <path class="a"
-                      d="M2.814,21.877l6,6A1.039,1.039,0,1,0,10.279,26.4L6.066,22.17H20.075a1.039,1.039,0,1,0,0-2.077H6.066l4.212-4.212a1.028,1.028,0,0,0,0-1.469,1.07,1.07,0,0,0-.745-.314,1.024,1.024,0,0,0-.745.314L2.814,20.387a1.04,1.04,0,0,0,0,1.489Z"
-                      transform="translate(21.113 28.181) rotate(180)"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="sub-cats-container">
-            <div class="sub-cats vip-cats">
-              <div class="sub-cats-title vip-cats-title">
-                Category B
-              </div>
-              <div class="vip-cats-redirect">
-                <a (click)="navigateInnerVipPage()"></a>
-              </div>
-              <div class="sub-cat-accordion-cont vip-arrow">
-                <div class="sub-cat-accordion">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083" viewbox="0 0 18.613 14.083">
-                    <path class="a"
-                      d="M2.814,21.877l6,6A1.039,1.039,0,1,0,10.279,26.4L6.066,22.17H20.075a1.039,1.039,0,1,0,0-2.077H6.066l4.212-4.212a1.028,1.028,0,0,0,0-1.469,1.07,1.07,0,0,0-.745-.314,1.024,1.024,0,0,0-.745.314L2.814,20.387a1.04,1.04,0,0,0,0,1.489Z"
-                      transform="translate(21.113 28.181) rotate(180)"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="sub-cats-container">
-            <div class="sub-cats vip-cats">
-              <div class="sub-cats-title vip-cats-title">
-                Category C
+                {{vipCategory}}
               </div>
               <div class="vip-cats-redirect">
                 <a (click)="navigateInnerVipPage()"></a>
@@ -86,7 +47,7 @@
             </svg>
           </div>
           <div class="footer-elements-txt">
-            Discover
+            {{"Discover" | translate}}
           </div>
         </a>
       </div>
@@ -100,7 +61,7 @@
             </svg>
           </div>
           <div class="footer-elements-txt">
-            VIP
+            {{"VIP" | translate}}
           </div>
         </a>
       </div>
@@ -114,7 +75,7 @@
             </svg>
           </div>
           <div class="footer-elements-txt ">
-            INSIGHTS
+            {{"INSIGHTS" | translate}}
           </div>
         </a>
       </div>

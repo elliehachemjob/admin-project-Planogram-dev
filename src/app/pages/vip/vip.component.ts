@@ -13,12 +13,13 @@ export class VipComponent implements OnInit {
   //variable sections
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-
+  vipCategories: any = ["Category A", "Category B", "Category C"];
+  vipHeaderText: string = ""
 
 
   // Injection dependencies If needed + 
   constructor(
-    private router: Router,
+    private router: Router
   ) { }
 
   //Lifecycle hooks

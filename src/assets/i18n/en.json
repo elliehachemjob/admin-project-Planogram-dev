@@ -7,6 +7,9 @@
     "program": "program",
     "selectACountryToStart": "Select country to start"
   },
+  "vipPage": {
+    "vipHeaderText": "This is a special members club where you will receive discounts based on counterparts in store that will drive incremental sales, helping you earn more profit!"
+  },
   "homePage": {},
   "UAE": "UAE",
   "MALDIVES": "MALDIVES",

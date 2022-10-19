@@ -14,22 +14,22 @@ export class VipInnerPageComponent implements OnInit {
   //variable sections
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  isLogo1Active: boolean = false;
-  isLogo2Active: boolean = false;
-  isLogo3Active: boolean = false;
+
 
 
   // Injection dependencies If needed + 
   constructor(
     private router: Router,
-    public logoService: LogoService
   ) { }
 
   //Lifecycle hooks
 
   //When component initiate / useEffect without empty dependencies
   ngOnInit(): void {
-
+    console.log(this.router.url, 'router')
+    if (this.router.url.startsWith("/vip-inner-page")) {
+      this.isLogoActive = true;
+    }
   }
 
   //When component Destroyed
@@ -76,7 +76,7 @@ export class VipInnerPageComponent implements OnInit {
   }
 
   navigateInnerPage() {
-    this.router.navigate(['/inner-page']);
+    this.router.navigate(['/home']);
   }
 
   navigateInnerVipPage() {

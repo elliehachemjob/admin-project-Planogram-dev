@@ -56,8 +56,7 @@
 <div class="fxd-footer-sect-cont">
   <div class="fxd-footer-sect">
     <div class="footer-elements-wrapper">
-      <div class="footer-elements" [ngClass]="{'footer-element-selected':isLogo1Active }"
-        (click)="logoService.setLogoActivation(1)">
+      <div class="footer-elements">
         <a (click)="navigateInnerPage()">
           <div class="footer-elements-logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="18.661" height="18.661" viewBox="0 0 18.661 18.661">
@@ -71,10 +70,9 @@
           </div>
         </a>
       </div>
-      <div class="footer-elements" [ngClass]="{'footer-element-selected':isLogo2Active  }"
-        (click)="logoService.setLogoActivation(2)">
+      <div class="footer-elements">
         <a (click)="navigateVipPage()">
-          <div class="footer-elements-logo" [ngClass]="{'footer-element-selected':isLogoActive }">
+          <div class="footer-elements-logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="19.998" height="19.456" viewBox="0 0 19.998 19.456">
               <path class="a"
                 d="M19.878,12.967,24.2,13.6a1.522,1.522,0,0,1,.831,2.585l-3.123,3.1a1.531,1.531,0,0,0-.428,1.343l.743,4.367a1.5,1.5,0,0,1-2.165,1.6l-3.868-2.058a1.474,1.474,0,0,0-1.391,0L10.938,26.6a1.5,1.5,0,0,1-2.17-1.6L9.5,20.638A1.531,1.531,0,0,0,9.069,19.3L5.94,16.208a1.522,1.522,0,0,1,.825-2.587l4.32-.642a1.5,1.5,0,0,0,1.124-.831l1.928-3.977a1.485,1.485,0,0,1,2.68,0l1.937,3.971a1.5,1.5,0,0,0,1.125.828Z"
@@ -86,8 +84,7 @@
           </div>
         </a>
       </div>
-      <div class="footer-elements " [ngClass]="{'footer-element-selected':isLogo3Active }"
-        click="logoService.setLogoActivation(3)">
+      <div class="footer-elements " [ngClass]="{'footer-element-selected':isLogoActive }">
         <a (click)="navigateInsightsPage()">
           <div class="footer-elements-logo ">
             <svg xmlns="http://www.w3.org/2000/svg" width="14.621" height="20.035" viewBox="0 0 14.621 20.035">

@@ -37,6 +37,6 @@ export class LanguagesComponent implements OnInit, OnDestroy, AfterViewInit {
 
 
   navigateInnerPage(): void {
-    this.router.navigate(['/inner-page']);
+    this.router.navigate(['/home']);
   }
 }

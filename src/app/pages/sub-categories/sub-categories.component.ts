@@ -13,30 +13,21 @@ export class SubCategoriesComponent implements OnInit {
   //variable sections
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  isLogo1Active: boolean = false;
-  isLogo2Active: boolean = false;
-  isLogo3Active: boolean = false;
 
 
   // Injection dependencies If needed + 
   constructor(
     private router: Router,
-    public logoService: LogoService
   ) { }
 
   //Lifecycle hooks
 
   //When component initiate / useEffect without empty dependencies
   ngOnInit(): void {
-    this.logoService.isLogo1Active.subscribe((data) => {
-      this.isLogo1Active = data;
-    })
-    this.logoService.isLogo2Active.subscribe((data) => {
-      this.isLogo2Active = data;
-    })
-    this.logoService.isLogo3Active.subscribe((data) => {
-      this.isLogo3Active = data;
-    })
+    console.log(this.router.url, 'router')
+    if (this.router.url.startsWith("/sub-categories")) {
+      this.isLogoActive = true;
+    }
   }
 
   //When component Destroyed
@@ -83,7 +74,7 @@ export class SubCategoriesComponent implements OnInit {
   }
 
   navigateInnerPage() {
-    this.router.navigate(['/inner-page']);
+    this.router.navigate(['/home']);
   }
 
   navigateInnerVipPage() {

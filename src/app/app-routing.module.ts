@@ -11,7 +11,7 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 
 const routes: Routes = [
   { path: 'gift-table', component: GiftTableComponent },
-  { path: 'inner-page', component: InnerPageComponent },
+  { path: 'home', component: InnerPageComponent },
   { path: 'insights', component: InsightsComponent },
   { path: 'languages', component: LanguagesComponent },
   { path: 'sub-categories', component: SubCategoriesComponent },

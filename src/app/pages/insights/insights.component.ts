@@ -14,9 +14,6 @@ export class InsightsComponent implements OnInit, OnDestroy, AfterViewInit {
   //variable sections
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  isLogo1Active: boolean = false;
-  isLogo2Active: boolean = false;
-  isLogo3Active: boolean = false;
 
 
   // Injection dependencies If needed + 
@@ -29,15 +26,10 @@ export class InsightsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   //When component initiate / useEffect without empty dependencies
   ngOnInit(): void {
-    this.logoService.isLogo1Active.subscribe((data) => {
-      this.isLogo1Active = data;
-    })
-    this.logoService.isLogo2Active.subscribe((data) => {
-      this.isLogo2Active = data;
-    })
-    this.logoService.isLogo3Active.subscribe((data) => {
-      this.isLogo3Active = data;
-    })
+    console.log(this.router.url, 'router')
+    if (this.router.url.startsWith("/insights")) {
+      this.isLogoActive = true;
+    }
   }
 
   //When component Destroyed
@@ -84,7 +76,7 @@ export class InsightsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   navigateInnerPage() {
-    this.router.navigate(['/inner-page']);
+    this.router.navigate(['/home']);
   }
 
   navigateInnerVipPage() {

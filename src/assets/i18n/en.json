@@ -1,5 +1,27 @@
 {
   "welcomePage": {
-    "program": "program"
-  }
+    "program": "program",
+    "selectACountryToStart": "Select country to start"
+  },
+  "languagesPage": {
+    "program": "program",
+    "selectACountryToStart": "Select country to start"
+  },
+  "UAE": "UAE",
+  "MALDIVES": "MALDIVES",
+  "PAKISTAN": "PAKISTAN",
+  "SRI LANKA": "SRI LANKA",
+  "ALGERIA": "ALGERIA",
+  "NIGERIA": "NIGERIA",
+  "ANGOLA": "ANGOLA",
+  "MAURITIUS": "MAURITIUS",
+  "KENYA": "KENYA",
+  "EGYPT": "EGYPT",
+  "OMAN": "OMAN",
+  "QATAR": "QATAR",
+  "JORDAN": "JORDAN",
+  "BAHRAIN": "BAHRAIN",
+  "KSA": "KSA",
+  "LEBANON": "LEBANON",
+  "GHANA": "GHANA"
 }

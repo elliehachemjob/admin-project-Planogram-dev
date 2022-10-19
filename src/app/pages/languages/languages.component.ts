@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class LanguagesComponent implements OnInit, OnDestroy, AfterViewInit {
 
   //variable sections
-
+  siteName: string = "WINGMAN"
+  year: Number = new Date().getFullYear();
+  languages: string[] = ["Portuguese", "Sinhala", "dhivehi", "Malayalam", "Arabic", "French", "Urdu", "English"];
 
   // Injection dependencies If needed + 
   constructor(

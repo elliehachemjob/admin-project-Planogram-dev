@@ -20,7 +20,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     //Default fallback language
     translate.setDefaultLang('en');
     //Change language here
-    translate.use('ar');
+    translate.use('en');
   }
 
 

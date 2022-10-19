@@ -1,4 +1,4 @@
-<div class="plano-wlc-page-wrapper" id="welcome-page">
+<!-- <div class="plano-wlc-page-wrapper" id="welcome-page">
   <div class="plano-wlc-page-container">
     <div class="plano-wlc-page-content">
       <div class="plano-bull-logo-cont"><img src="assets/logo.png" alt="Red Bull"></div>
@@ -24,6 +24,30 @@
         </div>
         <div class="select-country">
           Select language from above to start
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="plano-wlc-page-wrapper" id="welcome-page">
+  <div class="plano-wlc-page-container">
+    <div class="plano-wlc-page-content">
+      <div class="plano-bull-logo-cont"><img src="assets/logo.png" alt="Red Bull"></div>
+      <div class="plano-wing-titles-cont">
+        <span class="wingman-title">{{siteName}}</span><br>
+        {{'welcomePage.program' | translate}} {{year}}
+      </div>
+      <div class="wlc-page-countries-cont language-menu" id="lang-list" style="">
+        <div *ngFor="let language of languages" class="country-cont lang" (click)="navigateInnerPage()">
+          <div class="country-content languages">
+            {{language}}
+          </div>
+        </div>
+        <div class="select-country">
+          {{'languagesPage.selectACountryToStart' | translate}}
         </div>
       </div>
     </div>

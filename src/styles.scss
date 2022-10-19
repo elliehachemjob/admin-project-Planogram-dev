@@ -150,11 +150,106 @@ body {
  }
 }
 
-.country-content.pak {
+.country-content.pakistan {
  &::before {
   background-image: url('assets/flags/pakistan.png');
  }
 }
+
+.country-content.sri.lanka {
+ &::before {
+  background-image: url('assets/flags/sriLanka.png');
+ }
+}
+
+
+.country-content.algeria {
+ &::before {
+  background-image: url('assets/flags/algeria.png');
+ }
+}
+
+.country-content.nigeria {
+ &::before {
+  background-image: url('assets/flags/nigeria.png');
+ }
+}
+
+.country-content.angola {
+ &::before {
+  background-image: url('assets/flags/angola.png');
+ }
+}
+
+.country-content.mauritius {
+ &::before {
+  background-image: url('assets/flags/mauritius.png');
+ }
+}
+
+.country-content.kenya {
+ &::before {
+  background-image: url('assets/flags/kenya.png');
+ }
+}
+
+.country-content.egypt {
+ &::before {
+  background-image: url('assets/flags/egypt.png');
+ }
+}
+
+.country-content.oman {
+ &::before {
+  background-image: url('assets/flags/oman.png');
+ }
+}
+
+.country-content.kuwait {
+ &::before {
+  background-image: url('assets/flags/kuwait.png');
+ }
+}
+
+.country-content.qatar {
+ &::before {
+  background-image: url('assets/flags/qatar.png');
+ }
+}
+
+
+.country-content.jordan {
+ &::before {
+  background-image: url('assets/flags/jordan.png');
+ }
+}
+
+
+.country-content.bahrain {
+ &::before {
+  background-image: url('assets/flags/bahrain.png');
+ }
+}
+
+.country-content.ksa {
+ &::before {
+  background-image: url('assets/flags/ksa.png');
+ }
+}
+
+.country-content.lebanon {
+ &::before {
+  background-image: url('assets/flags/lebanon.png');
+ }
+}
+
+.country-content.ghana {
+ &::before {
+  background-image: url('assets/flags/ghana.png');
+ }
+}
+
+
 
 .select-country {
  font-size: 15px;

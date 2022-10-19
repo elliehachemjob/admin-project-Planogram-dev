@@ -1,4 +1,4 @@
-<div class="plano-wlc-page-wrapper" id="welcome-page">
+<!-- <div class="plano-wlc-page-wrapper" id="welcome-page">
   <div class="plano-wlc-page-container">
     <div class="plano-wlc-page-content">
       <div class="plano-bull-logo-cont"><img src="assets/logo.png" alt="Red Bull"></div>
@@ -22,6 +22,31 @@
             Pakistan
           </div>
         </div>
+        <div class="select-country">
+          Select country to start
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+
+<div class="plano-wlc-page-wrapper" id="welcome-page">
+  <div class="plano-wlc-page-container">
+    <div class="plano-wlc-page-content">
+      <div class="plano-bull-logo-cont"><img src="assets/logo.png" alt="Red Bull"></div>
+      <div class="plano-wing-titles-cont">
+        <span class="wingman-title">{{siteName}}</span><br>
+        Program {{year}}
+      </div>
+      <div class="wlc-page-countries-cont countries-list" id="country-list">
+        <div class="country-cont" (click)="navigateLanguagesPage()">
+          <div *ngFor="let country of countries" class="country-content {{country.toLowerCase()}}">
+            {{country.toUpperCase()}}
+          </div>
+        </div>
+
         <div class="select-country">
           Select country to start
         </div>

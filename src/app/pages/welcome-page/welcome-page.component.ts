@@ -9,7 +9,10 @@ import { Router } from '@angular/router';
 export class WelcomePageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   //variable sections
-
+  siteName: string = "WINGMAN"
+  year: Number = new Date().getFullYear();
+  countries: string[] = ['UAE', 'MALDIVES', 'PAKISTAN', "SRI LANKA", "ALGERIA", "NIGERIA", "ANGOLA", "MAURITIUS", "KENYA", "EGYPT", "OMAN", "KUWAIT", "QATAR", "JORDAN", "BAHRAIN", "KSA", "LEBANON", "GHANA"
+  ];
 
   // Injection dependencies If needed + 
   constructor(

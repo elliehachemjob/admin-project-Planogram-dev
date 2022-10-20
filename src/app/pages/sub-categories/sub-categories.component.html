@@ -1,10 +1,9 @@
-{{isLogoActive}}
-
 <div class="sub-categories-wrapper">
+  <!-- sub Category header -->
   <div class="fxd-header-sect-cont sub-categories">
     <div class="fxd-header-sect">
       <div class="fxd-header-content">
-        Impulse
+        {{subCategoryName}}
       </div>
       <div class="discover-proceed-arrow back-arrow" [ngClass]="{'footer-element-selected':isLogoActive }">
         <svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083" viewBox="0 0 18.613 14.083">
@@ -15,15 +14,19 @@
       </div>
     </div>
   </div>
+  <!-- sub Category header -->
+
+
+  <!-- sub Category data -->
   <div class="sub-categories-container">
     <div class="sub-categories-content">
-      <div class="sub-cats-container">
-        <div class="sub-cats" (click)="subCatsAccordion(false)">
+      <div *ngFor="let subCategory of subCategories" class="sub-cats-container">
+        <div class="sub-cats" (click)="subCatsAccordion(subCategory.nestedDetails.isEmptyContent)">
           <div class="sub-cats-title">
-            Impulse A
+            {{subCategory.title}}
           </div>
           <div class="sub-cats-sub-title">
-            1 shelf - main placement
+            {{subCategory.subTitle}}
           </div>
           <div class="sub-cat-accordion-cont">
             <div class="sub-cat-accordion">
@@ -36,53 +39,22 @@
         <div class="sub-cats-inner-page-cont" [ngClass]="{'hide':isHidden }">
           <div class="sub-cats-inner-page">
             <div class="sub-cats-inner-page-title">
-              12 Facings
+              {{subCategory.nestedDetails.title}}
             </div>
             <div class="sub-cats-inner-page-img">
-              <img src="https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png" alt="">
+              <img src="{{subCategory.nestedDetails.imagePath}}" alt="">
             </div>
             <div class="sub-cats-inner-page-flow">
-              Traffic Flow
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sub-cats-container">
-        <div class="sub-cats" (click)="subCatsAccordion()">
-          <div class="sub-cats-title">
-            Impulse B
-          </div>
-          <div class="sub-cats-sub-title">
-            1 shelf - main placement
-          </div>
-          <div class="sub-cat-accordion-cont">
-            <div class="sub-cat-accordion">
-              <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
-                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sub-cats-container">
-        <div class="sub-cats" (click)="subCatsAccordion()">
-          <div class="sub-cats-title">
-            Impulse C
-          </div>
-          <div class="sub-cats-sub-title">
-            1 shelf - main placement
-          </div>
-          <div class="sub-cat-accordion-cont">
-            <div class="sub-cat-accordion">
-              <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
-                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
-              </svg>
+              {{subCategory.nestedDetails.flow}}
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- sub Category data -->
+
+  <!-- footer -->
   <div class="fxd-footer-sect-cont">
     <div class="fxd-footer-sect">
       <div class="footer-elements-wrapper">
@@ -96,7 +68,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt">
-              Discover
+              {{"Discover" | translate}}
             </div>
           </a>
         </div>
@@ -110,7 +82,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt">
-              VIP
+              {{"VIP" | translate}}
             </div>
           </a>
         </div>
@@ -124,11 +96,12 @@
               </svg>
             </div>
             <div class="footer-elements-txt ">
-              INSIGHTS
+              {{"INSIGHTS" | translate}}
             </div>
           </a>
         </div>
       </div>
     </div>
   </div>
+  <!-- footer -->
 </div>

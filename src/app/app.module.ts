@@ -21,20 +21,14 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SharedModule } from "./shared/shared.module"
 
 @NgModule({
   declarations: [
     AppComponent,
-    InnerPageComponent,
-    GiftTableComponent,
-    InsightsComponent,
-    LanguagesComponent,
-    SubCategoriesComponent,
-    VipComponent,
-    VipInnerPageComponent,
-    WelcomePageComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     CommonModule,
     AppRoutingModule,

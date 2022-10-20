@@ -89,6 +89,10 @@ export class InnerPageComponent implements OnInit {
     this.router.navigate(['/vip-inner-page']);
   }
 
+  navigateSubCategory() {
+    this.router.navigate(['/sub-categories']);
+  }
+
   subCatsAccordion(isEmptyContent: boolean = true) {
     if (!isEmptyContent) this.isHidden = !this.isHidden;
   }

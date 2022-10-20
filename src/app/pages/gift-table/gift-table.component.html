@@ -2,7 +2,7 @@
   <div class="fxd-header-sect-cont sub-categories">
     <div class="fxd-header-sect">
       <div class="fxd-header-content">
-        CATEGORY A
+        {{categoryName}}
       </div>
       <div class="discover-proceed-arrow back-arrow">
         <a href="vip-inner-page.html"><svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083"
@@ -19,44 +19,14 @@
       <div class="gift-table-content">
         <table>
           <tr>
-            <th>Impulse VIP A</th>
-            <th>BEFORE</th>
-            <th>AFTER</th>
+            <th>{{categoryHeaderName.title}}</th>
+            <th>{{categoryHeaderName.before}}</th>
+            <th>{{categoryHeaderName.after}}</th>
           </tr>
-          <tr>
-            <td>Recommended Shelf Price</td>
-            <td>10.00</td>
-            <td>10.00</td>
-          </tr>
-          <tr>
-            <td>VAT</td>
-            <td>0.48</td>
-            <td>0.48</td>
-          </tr>
-          <tr>
-            <td>Shelf Price Excluding VAT</td>
-            <td>53.70</td>
-            <td>55.337</td>
-          </tr>
-          <tr>
-            <td>Excise Tax</td>
-            <td>10.00</td>
-            <td>10.00</td>
-          </tr>
-          <tr>
-            <td>Rebate %</td>
-            <td>10.00</td>
-            <td>36</td>
-          </tr>
-          <tr>
-            <td>Total Rebates</td>
-            <td>14.00</td>
-            <td>11</td>
-          </tr>
-          <tr>
-            <td>Recommended Shelf Price</td>
-            <td>27.120</td>
-            <td>10</td>
+          <tr *ngFor="let category of categoriesTableContent">
+            <td>{{category.title}}</td>
+            <td>{{category.beforeValue}}</td>
+            <td>{{category.afterValue}}</td>
           </tr>
         </table>
       </div>

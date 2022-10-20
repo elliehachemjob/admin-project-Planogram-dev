@@ -1,44 +1,28 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LogoService {
 
-  isLogoActive = new BehaviorSubject(false);
-  isLogo1Active = new BehaviorSubject(false);
-  isLogo2Active = new BehaviorSubject(false);
-  isLogo3Active = new BehaviorSubject(false);
 
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
 
   setLogoActivation(logoNumber: any) {
 
-    if (logoNumber === 1) {
-      console.log("here 1")
-      this.isLogo1Active.next(true);
-      this.isLogo2Active.next(false);
-      this.isLogo3Active.next(true)
-    }
-    if (logoNumber === 2) {
-      console.log("here 2")
 
-      this.isLogo1Active.next(false);
-      this.isLogo2Active.next(true);
-      this.isLogo3Active.next(false)
-    }
-    if (logoNumber === 3) {
-      console.log("here 3")
-
-      this.isLogo1Active.next(false);
-      this.isLogo2Active.next(false);
-      this.isLogo3Active.next(true)
-    }
 
   }
 
-
+  payloadApiTest(): Observable<any> {
+    //Write code calling service to obtain food fact data
+    let url = `https://demo.payloadcms.com/api/posts/63512a3220f2c83732faa738?draft=true`;
+    return this.http.get(url);
+  }
 }

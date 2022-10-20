@@ -15,11 +15,12 @@ export class InnerPageComponent implements OnInit {
   isLogoActive: boolean = false;
   categories: any = [{ title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }]
   planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder"
-
+  title: string = '';
 
   // Injection dependencies If needed + 
   constructor(
     private router: Router,
+    private logoService: LogoService
   ) { }
 
   //Lifecycle hooks
@@ -30,6 +31,11 @@ export class InnerPageComponent implements OnInit {
     if (this.router.url.startsWith("/home")) {
       this.isLogoActive = true;
     }
+    //Api Test
+    // this.logoService.payloadApiTest().subscribe((data) => {
+    //   console.log(data.title, "data")
+    //   this.title = data.title;
+    // })
   }
 
   //When component Destroyed

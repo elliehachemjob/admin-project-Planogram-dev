@@ -8,8 +8,10 @@
       </div>
       <div class="wlc-page-countries-cont countries-list" id="country-list">
         <div class="country-cont" (click)="navigateLanguagesPage()">
-          <div *ngFor="let country of countries" class="country-content {{country.toLowerCase()}}">
-            {{country.toUpperCase() | translate}}
+          <div>
+            <div *ngFor="let country of countries" class="country-content {{country.toLowerCase()}} default-margin">
+              {{country.toUpperCase() | translate}}
+            </div>
           </div>
         </div>
         <div class="select-country">

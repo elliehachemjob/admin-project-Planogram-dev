@@ -9,12 +9,6 @@ import { environment } from '../environments/environment';
 import { GiftTableComponent } from './pages/gift-table/gift-table.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { SubCategoriesComponent } from './pages/sub-categories/sub-categories.component';
-import { InnerPageComponent } from './pages/inner-page/inner-page.component';
-import { InsightsComponent } from './pages/insights/insights.component';
-import { LanguagesComponent } from './pages/languages/languages.component';
-import { VipInnerPageComponent } from './pages/vip-inner-page/vip-inner-page.component';
-import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 
 
 // Needed for frontend translation to work
@@ -22,12 +16,14 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SharedModule } from "./shared/shared.module"
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     SharedModule,
     BrowserModule,
     CommonModule,

@@ -1,0 +1,29 @@
+.overlay-list {
+ width: 100px;
+ border: solid 1px darkgreen;
+ border-radius: 5px;
+ background: white;
+ text-align: center;
+ margin: 5px;
+ margin: 0;
+ padding: 0;
+ border-radius: 5px;
+ position: relative;
+ bottom: 30px;
+}
+
+
+.inner-overlay {
+ width: auto;
+ overflow: hidden;
+ font-size: 1rem;
+ box-sizing: border-box;
+ // min-height: 48px;
+ font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+ font-weight: 400;
+ line-height: 1.5;
+ padding-top: 6px;
+ white-space: nowrap;
+ letter-spacing: 0.00938em;
+ padding-bottom: 6px;
+}

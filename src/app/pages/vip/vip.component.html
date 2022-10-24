@@ -11,9 +11,9 @@
       <div class="sub-categories-container vip-cat-container">
         <div class="sub-categories-content">
           <div class="sub-cats-container">
-            <div *ngFor="let vipCategory of vipCategories" class="sub-cats vip-cats">
+            <div *ngFor="let vipCategory of vipCategories" class="sub-cats vip-cats default-margin">
               <div class="sub-cats-title vip-cats-title">
-                {{vipCategory}}
+                {{vipCategory | translate }}
               </div>
               <div class="vip-cats-redirect">
                 <a (click)="navigateInnerVipPage()"></a>

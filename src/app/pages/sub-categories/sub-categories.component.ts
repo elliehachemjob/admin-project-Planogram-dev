@@ -1,6 +1,7 @@
 import { LogoService } from './../../services/logo.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-sub-categories',
@@ -13,8 +14,13 @@ export class SubCategoriesComponent implements OnInit {
   //variable sections
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  subCategoryName: string = "Impulse";
-  subCategories: any = [{ title: "Impulse A", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png", flow: "Traffic Flow", isEmptyContent: false } }, { title: "Impulse B", subTitle: "1 shelf - main placement", nestedDetails: { title: "", imagePath: "", flow: "", isEmptyContent: true } }, { title: "Impulse C", subTitle: "1 shelf - main placement", nestedDetails: { title: "", imagePath: "", flow: " Flow", isEmptyContent: true } }]
+  subCategoryName: string = "impulse";
+  subCategories: any = [{ title: "Impulse A", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png", flow: "Traffic Flow", isEmptyContent: false } }, { title: "Impulse B", subTitle: "1 shelf - main placement", nestedDetails: { title: "", imagePath: "", flow: "", isEmptyContent: true } }, { title: "Impulse C", subTitle: "1 shelf - main placement", nestedDetails: { title: "br", imagePath: "", flow: "", isEmptyContent: true } }]
+
+  @ViewChild(MatAccordion) accordion: any;
+
+  panelOpenState = false;
+
 
   // Injection dependencies If needed + 
   constructor(
@@ -51,23 +57,6 @@ export class SubCategoriesComponent implements OnInit {
   }
 
   logoActivation() {
-    // if (logoNumber === 1) {
-    //   this.isLogo1Active = true;
-    //   this.isLogo2Active = false;
-    //   this.isLogo3Active = false;
-
-    // }
-    // if (logoNumber === 2) {
-    //   this.isLogo1Active = false;
-    //   this.isLogo2Active = true;
-    //   this.isLogo3Active = false;
-    // }
-    // if (logoNumber === 3) {
-    //   this.isLogo1Active = false;
-    //   this.isLogo2Active = false;
-    //   this.isLogo3Active = true;
-    // }
-
   }
 
   navigateVipPage() {
@@ -82,9 +71,6 @@ export class SubCategoriesComponent implements OnInit {
     this.router.navigate(['/vip-inner-page']);
   }
 
-  subCatsAccordion(isEmptyContent: boolean = true) {
-    if (!isEmptyContent) this.isHidden = !this.isHidden;
-  }
 
 
 }

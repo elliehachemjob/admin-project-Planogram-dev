@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { LogoService } from 'src/app/services/logo.service';
+import { TranslationService } from 'src/app/services/translation.service';
+
 
 @Component({
   selector: 'app-inner-page',
@@ -16,11 +19,15 @@ export class InnerPageComponent implements OnInit {
   categories: any = [{ title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }]
   planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder"
   title: string = '';
+  isOpen = false;
+  languages: string[] = ["en", "ar", "fr"]
+
 
   // Injection dependencies If needed + 
   constructor(
     private router: Router,
-    private logoService: LogoService
+    private translate: TranslateService,
+    private translation: TranslationService
   ) { }
 
   //Lifecycle hooks
@@ -63,7 +70,8 @@ export class InnerPageComponent implements OnInit {
     //   this.isLogo2Active = false;
     //   this.isLogo3Active = false;
 
-    // }
+    // }fOverlayModule
+
     // if (logoNumber === 2) {
     //   this.isLogo1Active = false;
     //   this.isLogo2Active = true;
@@ -97,4 +105,18 @@ export class InnerPageComponent implements OnInit {
     if (!isEmptyContent) this.isHidden = !this.isHidden;
   }
 
+  openLanguageOverlay() {
+    console.log("overlay working")
+  }
+
+  changeLanguage(language: string = "english") {
+    //Change language here
+    this.translate.use(language);
+    if (language === 'ar') {
+      localStorage.setItem("isRTL", "true"); window.location.reload();
+    } else { localStorage.setItem("isRTL", "false"); window.location.reload(); }
+
+
+  }
 }
+

@@ -11,7 +11,9 @@ export class LanguagesComponent implements OnInit, OnDestroy, AfterViewInit {
   //variable sections
   siteName: string = "WINGMAN"
   year: Number = new Date().getFullYear();
-  languages: string[] = ["Portuguese", "Sinhala", "dhivehi", "Malayalam", "Arabic", "French", "Urdu", "English"];
+  languages: string[] = ["Portuguese", "Sinhala", "Dhivehi", "Malayalam", "Arabic", "French", "Urdu", "English"];
+
+
 
   // Injection dependencies If needed + 
   constructor(
@@ -41,4 +43,8 @@ export class LanguagesComponent implements OnInit, OnDestroy, AfterViewInit {
   navigateInnerPage(): void {
     this.router.navigate(['/home']);
   }
+
+
+
+
 }

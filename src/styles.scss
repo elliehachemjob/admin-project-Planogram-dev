@@ -48,6 +48,9 @@ $background-color_5: #e0e3e5;
  font-display: swap;
 }
 
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+
 /* discover page style */
 /* inner cat style */
 /* VIP Style */
@@ -389,6 +392,8 @@ body {
  background-size: cover;
  height: 100vh;
  padding: 5px 0;
+ min-height: 100px;
+
 
  &::before {
   content: "";
@@ -492,12 +497,12 @@ body {
 }
 
 .sub-cats-container {
- padding-bottom: 25px;
+ padding-bottom: 20px;
 }
 
 .sub-cats {
  background-color: $background-color_4;
- padding: 10px 20px;
+ padding: 5px 20px;
  color: $color_1;
  cursor: pointer;
  position: relative;
@@ -520,7 +525,7 @@ body {
  top: 0;
  right: 0;
  width: 60px;
- height: 63px;
+ height: 52px;
 }
 
 .sub-cat-accordion {
@@ -811,4 +816,27 @@ th {
 
 .numbered-elements-part-two {
  top: inherit;
+}
+
+.default-margin {
+ margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 786px) {
+ .discover-category {
+  height: 20vh;
+ }
+
+
+
+}
+
+.sub-cats-inner-page-img {
+ overflow: hidden;
+}
+
+.default-icon-size {
+ width: 24px;
+ height: 24px
 }

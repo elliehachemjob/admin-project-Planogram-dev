@@ -3,9 +3,9 @@
   <div class="fxd-header-sect-cont sub-categories">
     <div class="fxd-header-sect">
       <div class="fxd-header-content">
-        {{ vipCategoriesDetailsHeader }} </div>
+        {{ vipCategoriesDetailsHeader | translate }} </div>
       <div class="discover-proceed-arrow back-arrow">
-        <a href="vip.html"><svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083"
+        <a (click)="navigateVipPage()"><svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083"
             viewbox="0 0 18.613 14.083">
             <path class="a"
               d="M2.814,21.877l6,6A1.039,1.039,0,1,0,10.279,26.4L6.066,22.17H20.075a1.039,1.039,0,1,0,0-2.077H6.066l4.212-4.212a1.028,1.028,0,0,0,0-1.469,1.07,1.07,0,0,0-.745-.314,1.024,1.024,0,0,0-.745.314L2.814,20.387a1.04,1.04,0,0,0,0,1.489Z"
@@ -13,7 +13,7 @@
           </svg></a>
       </div>
       <div class="gift-logo">
-        <a href="gift-table.html"><svg xmlns="http://www.w3.org/2000/svg" width="20.664" height="21.8"
+        <a (click)="navigateGiftTablePage()"><svg xmlns="http://www.w3.org/2000/svg" width="20.664" height="21.8"
             viewbox="0 0 20.664 21.8">
             <defs></defs>
             <path class="a"
@@ -31,12 +31,12 @@
       <div class="sub-cats-container">
         <div class="sub-cats vip-inner">
           <div class="sub-cats-title">
-            {{vipCategoryDetailContent.title}}
+            {{vipCategoryDetailContent.title | translate}}
           </div>
           <div class="sub-cat-accordion-cont numbered-circle">
             <div class="sub-cat-accordion">
               <div class="numbered-elements">
-                {{vipCategoryDetailContent.numberedElementPartOne}}
+                {{vipCategoryDetailContent.numberedElementPartOne | translate}}
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@
               <div class="sub-cats-inner-page-img"><img src="{{vipCategoryDetailContent.path}}" alt="1630222037"></div>
             </div>
             <div class="numbered-elements numbered-elements-part-two">
-              {{vipCategoryDetailContent.numberedElementPartTwo}}
+              {{vipCategoryDetailContent.numberedElementPartTwo | translate}}
             </div>
           </div>
         </div>

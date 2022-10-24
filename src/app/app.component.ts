@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 //For translation
 import { TranslateService } from "@ngx-translate/core";
+import { TranslationService } from './services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -9,18 +10,29 @@ import { TranslateService } from "@ngx-translate/core";
 })
 export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   //variable sections
-  Variable: number = 5;
-  Variable2: string = "2";
-  Variable3: [] = [];
-  Variable4: {} = { key: "value" }
+  isRTL: boolean = false;
 
 
   // Injection dependencies If needed + 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService,
+    private translation: TranslationService
+  ) {
     //Default fallback language
     translate.setDefaultLang('en');
+
     //Change language here
-    translate.use('en');
+    translate.use('fr');
+
+    if (localStorage.getItem("isRTL") === "true") {
+      this.isRTL = true;
+      console.log("true")
+
+    } else {
+      this.isRTL = false;
+      console.log("false")
+    }
+
+
   }
 
 
@@ -28,6 +40,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   //When component initiate / useEffect without empty dependencies
   ngOnInit(): void {
+
 
   }
 

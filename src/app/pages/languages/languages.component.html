@@ -43,11 +43,11 @@
       <div class="wlc-page-countries-cont language-menu" id="lang-list" style="">
         <div *ngFor="let language of languages" class="country-cont lang" (click)="navigateInnerPage()">
           <div class="country-content languages">
-            {{language}}
+            {{language.toUpperCase()}}
           </div>
         </div>
         <div class="select-country">
-          {{'languagesPage.selectACountryToStart' | translate}}
+          {{'languagesPage.selectALanguageToStart' | translate}}
         </div>
       </div>
     </div>

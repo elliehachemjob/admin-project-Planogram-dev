@@ -11,7 +11,7 @@ import { TranslationService } from './services/translation.service';
 export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   //variable sections
   isRTL: boolean = false;
-
+  language: any = localStorage.getItem("lang")
 
   // Injection dependencies If needed + 
   constructor(private translate: TranslateService,
@@ -21,15 +21,13 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     translate.setDefaultLang('en');
 
     //Change language here
-    translate.use('fr');
+    translate.use(this.language);
 
     if (localStorage.getItem("isRTL") === "true") {
       this.isRTL = true;
-      console.log("true")
 
     } else {
       this.isRTL = false;
-      console.log("false")
     }
 
 
@@ -41,7 +39,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   //When component initiate / useEffect without empty dependencies
   ngOnInit(): void {
 
-
+    console.log(localStorage.getItem("lang"), "test")
   }
 
   //When component Destroyed

@@ -40,8 +40,17 @@ export class LanguagesComponent implements OnInit, OnDestroy, AfterViewInit {
   // Function Sections
 
 
-  navigateInnerPage(): void {
-    this.router.navigate(['/home']);
+  navigateInnerPage(language: string): void {
+    if (language.toLowerCase() === "english") { language = "en"; localStorage.setItem("lang", "en"); }
+    else if (language.toLowerCase() === "arabic") { language = "ar"; localStorage.setItem("lang", "ar"); }
+    else if (language.toLowerCase() === "french") { language = "fr"; localStorage.setItem("lang", "fr"); }
+    if (language === 'ar') {
+      localStorage.setItem("isRTL", "true");
+    } else { localStorage.setItem("isRTL", "false"); }
+    this.router.navigate(['/home']).then(() => {
+      window.location.reload();
+    });
+
   }
 
 

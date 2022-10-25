@@ -20,7 +20,7 @@ export class InnerPageComponent implements OnInit {
   planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder"
   title: string = '';
   isOpen = false;
-  languages: string[] = ["en", "ar", "fr"]
+  languages: string[] = ["english", "arabic", "french"]
 
 
   // Injection dependencies If needed + 
@@ -111,11 +111,15 @@ export class InnerPageComponent implements OnInit {
 
   changeLanguage(language: string = "english") {
     //Change language here
-    this.translate.use(language);
-    if (language === 'ar') {
-      localStorage.setItem("isRTL", "true"); window.location.reload();
-    } else { localStorage.setItem("isRTL", "false"); window.location.reload(); }
+    if (language === "english") { language = "en"; localStorage.setItem("lang", "en"); }
+    else if (language === "arabic") { language = "ar"; localStorage.setItem("lang", "ar"); }
+    else if (language === "french") { language = "fr"; localStorage.setItem("lang", "fr"); }
 
+
+    if (language === 'ar') {
+      localStorage.setItem("isRTL", "true"); window.location.reload(); return;
+    } else { localStorage.setItem("isRTL", "false"); window.location.reload(); }
+    return
 
   }
 }

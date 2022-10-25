@@ -41,7 +41,7 @@
         {{'welcomePage.program' | translate}} {{year}}
       </div>
       <div class="wlc-page-countries-cont language-menu" id="lang-list" style="">
-        <div *ngFor="let language of languages" class="country-cont lang" (click)="navigateInnerPage()">
+        <div *ngFor="let language of languages" class="country-cont lang" (click)="navigateInnerPage(language)">
           <div class="country-content languages">
             {{language.toUpperCase()}}
           </div>

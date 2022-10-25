@@ -20,8 +20,8 @@ export class InnerPageComponent implements OnInit {
   planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder"
   title: string = '';
   isOpen = false;
-  languages: string[] = ["english", "arabic", "french"]
-
+  languages: string[] = ["English", "Arabic", "French"]
+  isRtl: any = localStorage.getItem('isRTL')
 
   // Injection dependencies If needed + 
   constructor(
@@ -111,9 +111,9 @@ export class InnerPageComponent implements OnInit {
 
   changeLanguage(language: string = "english") {
     //Change language here
-    if (language === "english") { language = "en"; localStorage.setItem("lang", "en"); }
-    else if (language === "arabic") { language = "ar"; localStorage.setItem("lang", "ar"); }
-    else if (language === "french") { language = "fr"; localStorage.setItem("lang", "fr"); }
+    if (language === "English") { language = "en"; localStorage.setItem("lang", "en"); }
+    else if (language === "Arabic") { language = "ar"; localStorage.setItem("lang", "ar"); }
+    else if (language === "French") { language = "fr"; localStorage.setItem("lang", "fr"); }
 
 
     if (language === 'ar') {

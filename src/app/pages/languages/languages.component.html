@@ -40,7 +40,7 @@
         <span class="wingman-title">{{siteName}}</span><br>
         {{'welcomePage.program' | translate}} {{year}}
       </div>
-      <div class="wlc-page-countries-cont language-menu" id="lang-list" style="">
+      <div class="wlc-page-countries-cont language-menu" id="lang-list">
         <div *ngFor="let language of languages" class="country-cont lang" (click)="navigateInnerPage(language)">
           <div class="country-content languages">
             {{language.toUpperCase()}}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gift-table',
@@ -18,7 +19,7 @@ export class GiftTableComponent implements OnInit {
 
   // Injection dependencies If needed + 
   constructor(
-
+    private router: Router
   ) { }
 
   //Lifecycle hooks
@@ -42,6 +43,8 @@ export class GiftTableComponent implements OnInit {
 
 
 
-
+  navigateInnerVipPage() {
+    this.router.navigate(['/vip-inner-page']);
+  }
 
 }

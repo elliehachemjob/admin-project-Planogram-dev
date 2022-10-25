@@ -840,3 +840,53 @@ th {
  width: 24px;
  height: 24px
 }
+
+
+
+[dir=rtl] .discover-proceed-arrow {
+ left: 10px;
+ bottom: 10px;
+ right: inherit;
+ transform: rotate(180deg);
+}
+
+
+[dir=rtl] .discover-category::before {
+ left: 0px;
+ right: inherit;
+}
+
+
+[dir=rtl] .search-input-cont input {
+ padding-right: 10px;
+}
+
+
+
+[dir=rtl] .sub-cat-accordion-cont {
+ right: inherit;
+ left: 0;
+}
+
+[dir=rtl] .sub-cat-accordion-cont.vip-arrow .sub-cat-accordion svg {
+ transform: rotate(180deg);
+ position: inherit;
+ top: inherit;
+ left: inherit;
+}
+
+[dir=rtl] .sub-cat-accordion {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+[dir=rtl] .discover-category::before {
+ border-right: 60px solid transparent;
+ border-left: none;
+}
+
+[dir=rtl] .mat-expansion-indicator::after {
+ right: 20px;
+ left: inherit;
+}

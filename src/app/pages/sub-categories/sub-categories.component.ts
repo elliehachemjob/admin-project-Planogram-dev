@@ -2,6 +2,7 @@ import { LogoService } from './../../services/logo.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatAccordion } from '@angular/material/expansion';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-sub-categories',
@@ -15,7 +16,7 @@ export class SubCategoriesComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
   subCategoryName: string = "impulse";
-  subCategories: any = [{ title: "Impulse A", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png", flow: "Traffic Flow", isEmptyContent: false } }, { title: "Impulse B", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png", flow: "Traffic Flow", isEmptyContent: false } }, { title: "Impulse C", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png", flow: "Traffic Flow", isEmptyContent: false } }]
+  subCategories: any[] = this.database.subCategories;
 
   @ViewChild(MatAccordion) accordion: any;
 
@@ -25,6 +26,7 @@ export class SubCategoriesComponent implements OnInit {
   // Injection dependencies If needed + 
   constructor(
     private router: Router,
+    private database: DatabaseService
   ) { }
 
   //Lifecycle hooks
@@ -35,6 +37,7 @@ export class SubCategoriesComponent implements OnInit {
     if (this.router.url.startsWith("/sub-categories")) {
       this.isLogoActive = true;
     }
+
   }
 
   //When component Destroyed

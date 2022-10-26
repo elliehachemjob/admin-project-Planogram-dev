@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { DatabaseService } from 'src/app/services/database.service';
 import { LogoService } from 'src/app/services/logo.service';
 import { TranslationService } from 'src/app/services/translation.service';
 
@@ -22,12 +23,15 @@ export class InnerPageComponent implements OnInit {
   isOpen = false;
   languages: string[] = ["English", "Arabic", "French"]
   isRtl: any = localStorage.getItem('isRTL')
-  data: any = ''
+  searchedData: any = ''
+  isSearchEmpty: boolean = false;
+
   // Injection dependencies If needed + 
   constructor(
     private router: Router,
     private translate: TranslateService,
-    private translation: TranslationService
+    private translation: TranslationService,
+    private database: DatabaseService
   ) { }
 
   //Lifecycle hooks
@@ -43,6 +47,8 @@ export class InnerPageComponent implements OnInit {
     //   console.log(data.title, "data")
     //   this.title = data.title;
     // })
+
+    console.log(this.database.subCategories)
   }
 
   //When component Destroyed
@@ -124,16 +130,29 @@ export class InnerPageComponent implements OnInit {
   }
 
   handleSearchChange(e: any) {
-    const test = this.categories.filter((category: any) => category.title.startsWith((e)));
+    const searchData = this.categories.filter((category: any) => category.title.includes((e.target.value)) || category.title.includes((e.target.value.toLowerCase())) || category.title.includes((e.target.value.toUpperCase())));
 
-    this.categories = [...test]
+
+    this.categories = [...searchData]
 
     if (this.categories.length === 0) {
-      this.categories = [{ title: "Error 404", background: "impulse" }]
+      this.categories = [{ title: "Error 404", background: "" }]
+      this.isSearchEmpty = true;
+    } else {
+      this.isSearchEmpty = false;
+      return;
     }
 
-    if (e.length === 0) {
+
+    if (e.target.value.length === 0) {
       this.categories = [{ title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }]
+    }
+
+    const searchSubCategoryData = this.database.subCategories.filter((category: any) => (category.title.includes(e.target.value) || category.subTitle.includes(e.target.value) || category.title.includes(e.target.value.toUpperCase()) || category.subTitle.includes(e.target.value.toUpperCase()) || category.title.includes(e.target.value.toLowerCase()) || category.subTitle.includes(e.target.value.toLowerCase())) && e.target.value);
+
+
+    if (searchSubCategoryData.length > 0) {
+      this.router.navigate(['/sub-categories']);
     }
 
   }

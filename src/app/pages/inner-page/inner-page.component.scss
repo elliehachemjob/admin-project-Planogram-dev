@@ -33,3 +33,9 @@
  right: 60px;
  bottom: 40px;
 }
+
+
+.hideBackground::before,
+.hideArrow {
+ display: none;
+}

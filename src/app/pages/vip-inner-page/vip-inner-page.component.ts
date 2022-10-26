@@ -75,7 +75,7 @@ export class VipInnerPageComponent implements OnInit {
   }
 
   navigateVipPage() {
-    this.router.navigate(['/vip']);
+    this.router.navigate(['/vip'], { replaceUrl: true });
   }
 
   navigateInnerPage() {

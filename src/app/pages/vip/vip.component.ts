@@ -81,7 +81,7 @@ export class VipComponent implements OnInit {
   }
 
   navigateInnerVipPage() {
-    this.router.navigate(['/vip-inner-page']);
+    this.router.navigate(['/vip-inner-page'], { replaceUrl: true });
   }
 
   subCatsAccordion(isEmptyContent: boolean = true) {

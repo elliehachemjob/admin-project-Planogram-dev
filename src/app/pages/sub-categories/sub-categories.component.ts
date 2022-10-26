@@ -68,7 +68,7 @@ export class SubCategoriesComponent implements OnInit {
   }
 
   navigateInnerPage() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home'], { replaceUrl: true });
   }
 
   navigateInnerVipPage() {

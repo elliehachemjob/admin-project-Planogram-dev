@@ -45,7 +45,8 @@ export class GiftTableComponent implements OnInit {
 
 
   navigateInnerVipPage() {
-    this.router.navigate(['/vip-inner-page']);
+    //Do the same for the function, when you navigate here
+    this.router.navigate(['/vip-inner-page'], { replaceUrl: true });
   }
 
 }

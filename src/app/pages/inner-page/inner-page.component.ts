@@ -105,7 +105,7 @@ export class InnerPageComponent implements OnInit {
   }
 
   navigateSubCategory() {
-    this.router.navigate(['/sub-categories']);
+    this.router.navigate(['/sub-categories'], { replaceUrl: true });
   }
 
   subCatsAccordion(isEmptyContent: boolean = true) {

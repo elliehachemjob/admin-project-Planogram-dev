@@ -22,8 +22,7 @@
   <div class="sub-categories-container">
     <div class="sub-categories-content">
       <mat-accordion>
-        <mat-expansion-panel [@.disabled]="true" *ngFor="let subCategory of subCategories"
-          (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel *ngFor="let subCategory of subCategories" (opened)="panelOpenState = true">
           <mat-panel-description *ngIf='panelOpenState && !subCategory.nestedDetails.isEmptyContent'>
             <div class="sub-cats-inner-page-cont">
               <div class="sub-cats-inner-page">
@@ -39,8 +38,6 @@
               </div>
             </div>
           </mat-panel-description>
-          <mat-expansion-panel hideToggle>
-          </mat-expansion-panel>
           <mat-expansion-panel-header>
             <div class="sub-categories-content">
               <mat-panel-title class='sub-cats-title'>{{subCategory.title | translate}}

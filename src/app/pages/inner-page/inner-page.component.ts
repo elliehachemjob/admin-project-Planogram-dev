@@ -22,7 +22,7 @@ export class InnerPageComponent implements OnInit {
   isOpen = false;
   languages: string[] = ["English", "Arabic", "French"]
   isRtl: any = localStorage.getItem('isRTL')
-
+  data: any = ''
   // Injection dependencies If needed + 
   constructor(
     private router: Router,
@@ -122,5 +122,22 @@ export class InnerPageComponent implements OnInit {
     return
 
   }
+
+  handleSearchChange(e: any) {
+    const test = this.categories.filter((category: any) => category.title.startsWith((e)));
+
+    this.categories = [...test]
+
+    if (this.categories.length === 0) {
+      this.categories = [{ title: "Error 404", background: "impulse" }]
+    }
+
+    if (e.length === 0) {
+      this.categories = [{ title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }]
+    }
+
+  }
+
+
 }
 

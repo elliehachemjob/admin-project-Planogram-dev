@@ -16,6 +16,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -31,6 +32,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     CommonModule,
     SharedRoutingModule,
     TranslateModule,
+    FormsModule
   ]
 })
 export class SharedModule { }

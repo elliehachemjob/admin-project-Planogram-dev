@@ -9,7 +9,8 @@
 
       <div class="search-input-cont">
         <div style='width:100%'>
-          <input type="search" name="" value="" placeholder="{{planogramQuickSearchPlaceHolder | translate}}">
+          <input [ngModel]="data" (ngModelChange)='handleSearchChange($event)' type="search" name="" value=""
+            placeholder="{{planogramQuickSearchPlaceHolder | translate}}">
         </div>
       </div>
 

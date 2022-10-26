@@ -1,5 +1,5 @@
 import { LogoService } from './../../services/logo.service';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatAccordion } from '@angular/material/expansion';
 import { DatabaseService } from 'src/app/services/database.service';
@@ -7,7 +7,8 @@ import { DatabaseService } from 'src/app/services/database.service';
 @Component({
   selector: 'app-sub-categories',
   templateUrl: './sub-categories.component.html',
-  styleUrls: ['./sub-categories.component.scss']
+  styleUrls: ['./sub-categories.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SubCategoriesComponent implements OnInit {
 
@@ -26,7 +27,7 @@ export class SubCategoriesComponent implements OnInit {
   // Injection dependencies If needed + 
   constructor(
     private router: Router,
-    private database: DatabaseService
+    private database: DatabaseService,
   ) { }
 
   //Lifecycle hooks

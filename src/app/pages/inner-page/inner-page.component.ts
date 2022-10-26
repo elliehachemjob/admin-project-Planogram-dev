@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { DatabaseService } from 'src/app/services/database.service';
@@ -9,7 +9,8 @@ import { TranslationService } from 'src/app/services/translation.service';
 @Component({
   selector: 'app-inner-page',
   templateUrl: './inner-page.component.html',
-  styleUrls: ['./inner-page.component.scss']
+  styleUrls: ['./inner-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InnerPageComponent implements OnInit {
 
@@ -31,7 +32,7 @@ export class InnerPageComponent implements OnInit {
     private router: Router,
     private translate: TranslateService,
     private translation: TranslationService,
-    private database: DatabaseService
+    private database: DatabaseService,
   ) { }
 
   //Lifecycle hooks

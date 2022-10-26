@@ -1,10 +1,11 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-languages',
   templateUrl: './languages.component.html',
-  styleUrls: ['./languages.component.scss']
+  styleUrls: ['./languages.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LanguagesComponent implements OnInit, OnDestroy, AfterViewInit {
 
@@ -17,7 +18,7 @@ export class LanguagesComponent implements OnInit, OnDestroy, AfterViewInit {
 
   // Injection dependencies If needed + 
   constructor(
-    private router: Router
+    private router: Router,
   ) { }
 
   //Lifecycle hooks

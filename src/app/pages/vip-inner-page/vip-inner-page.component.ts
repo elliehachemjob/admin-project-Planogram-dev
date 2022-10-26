@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LogoService } from 'src/app/services/logo.service';
 
 @Component({
   selector: 'app-vip-inner-page',
   templateUrl: './vip-inner-page.component.html',
-  styleUrls: ['./vip-inner-page.component.scss']
+  styleUrls: ['./vip-inner-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VipInnerPageComponent implements OnInit {
 

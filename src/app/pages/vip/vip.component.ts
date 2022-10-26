@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LogoService } from 'src/app/services/logo.service';
 
 @Component({
   selector: 'app-vip',
   templateUrl: './vip.component.html',
-  styleUrls: ['./vip.component.scss']
+  styleUrls: ['./vip.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VipComponent implements OnInit {
 
@@ -19,7 +20,7 @@ export class VipComponent implements OnInit {
 
   // Injection dependencies If needed + 
   constructor(
-    private router: Router
+    private router: Router,
   ) { }
 
   //Lifecycle hooks

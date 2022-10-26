@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gift-table',
   templateUrl: './gift-table.component.html',
-  styleUrls: ['./gift-table.component.scss']
+  styleUrls: ['./gift-table.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GiftTableComponent implements OnInit {
 

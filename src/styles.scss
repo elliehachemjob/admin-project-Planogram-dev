@@ -888,3 +888,23 @@ th {
  right: 20px;
  left: inherit;
 }
+
+
+// .category-title {
+//  font-size: 20px;
+// }
+
+
+//Small Screens mainly Iphone SE and Samsung galaxy S8+
+@media only screen and (max-width: 376px) {
+ .category-title {
+  font-size: 20px;
+ }
+}
+
+//Galaxy Fold specific styles (super small)
+@media only screen and (max-width: 280px) {
+ .category-title {
+  font-size: 16px;
+ }
+}

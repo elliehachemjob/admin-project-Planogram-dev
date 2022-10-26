@@ -15,7 +15,7 @@ export class VipInnerPageComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
   vipCategoriesDetailsHeader: string = "VIP CATEGORY A";
-  vipCategoriesDetailsContent: any[] = [{ title: "Main Placement Chilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min 13 facings", path: "https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "Min 12 facings", path: "https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png" }, { title: "Main Placement New", numberedElementPartOne: " #3", numberedElementPartTwo: "Min 13 facings", path: "https://wingmanapi.rbprojects.me/public/uploads/product/1630222037.png" }];
+  vipCategoriesDetailsContent: any[] = [{ title: "Main Placement Chilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min 13 facings", path: "/assets/vip/1.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "Min 12 facings", path: "/assets/vip/1.png" }, { title: "Main Placement New", numberedElementPartOne: " #3", numberedElementPartTwo: "Min 13 facings", path: "/assets/vip/1.png" }];
 
 
 

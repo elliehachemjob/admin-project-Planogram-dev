@@ -6,9 +6,9 @@ $color_5: #fff;
 $font-family_1: 'Bull', 'Arial';
 $font-family_2: "Bull", Arial;
 $font-family_3: 'Bull', Arial;
-$font-family_4: 'NotoKu ', 'Arial';
-$font-family_5: "NotoKu ", Arial;
-$font-family_6: 'NotoKu ', Arial;
+$font-family_4: 'NotoKu', 'Arial';
+$font-family_5: "NotoKu", Arial;
+$font-family_6: 'NotoKu', Arial;
 
 $background-color_1: white;
 $background-color_2: #db0b41;
@@ -26,6 +26,17 @@ $background-color_5: #e0e3e5;
 }
 
 @font-face {
+ font-family: 'NotoKu';
+ src: url('./assets/font/NotoKufiArabic-Regular.eot');
+ src: url('./assets/font/NotoKufiArabic-Regular.eot?#iefix') format('embedded-opentype'), url('./assets/font/NotoKufiArabic-Regular.woff2') format('woff2'), url('./assets/font/NotoKufiArabic-Regular.woff') format('woff'), url('./assets/font/NotoKufiArabic-Regular.ttf') format('truetype');
+ font-weight: 300;
+ font-style: normal;
+ font-display: swap;
+}
+
+
+
+@font-face {
  font-family: 'Bull';
  src: url('./assets/font/Bull-Bold.eot');
  src: url('./assets/font/Bull-Bold.eot?#iefix') format('embedded-opentype'), url('./assets/font/Bull-Bold.woff2') format('woff2'), url('./assets/font/Bull-Bold.woff') format('woff'), url('./assets/font/Bull-Bold.ttf') format('truetype');
@@ -33,6 +44,17 @@ $background-color_5: #e0e3e5;
  font-style: normal;
  font-display: swap;
 }
+
+
+@font-face {
+ font-family: 'NotoKu';
+ src: url('./assets/font/NotoKufiArabic-Bold.eot');
+ src: url('./assets/font/NotoKufiArabic-Bold.eot?#iefix') format('embedded-opentype'), url('./assets/font/NotoKufiArabic-Bold.woff2') format('woff2'), url('./assets/font/NotoKufiArabic-Bold.woff') format('woff'), url('./assets/font/NotoKufiArabic-Bold.ttf') format('truetype');
+ font-weight: 700;
+ font-style: normal;
+ font-display: swap;
+}
+
 
 @font-face {
  font-family: 'Bull';
@@ -43,6 +65,7 @@ $background-color_5: #e0e3e5;
  font-display: swap;
 }
 
+
 @font-face {
  font-family: 'Bull';
  src: url('./assets/font/Bull-Heavy1.eot');
@@ -51,6 +74,10 @@ $background-color_5: #e0e3e5;
  font-style: normal;
  font-display: swap;
 }
+
+
+
+
 
 @import '~@angular/cdk/overlay-prebuilt.css';
 
@@ -70,6 +97,14 @@ body {
  margin: 0;
  font-family: $font-family_1;
 }
+
+
+body [dir=rtl] {
+ font-family: $font-family_4;
+}
+
+
+
 
 .plano-wlc-page-wrapper {
  max-width: 1920px;
@@ -342,6 +377,15 @@ body {
    font-family: $font-family_2;
    font-weight: 300;
   }
+
+  [dir=rtl] &::placeholder {
+   font-size: 15px;
+   opacity: 1;
+   display: block;
+   font-family: $font-family_5;
+   font-weight: 300;
+  }
+
  }
 }
 
@@ -775,6 +819,10 @@ table {
  font-family: $font-family_3;
  width: 100%;
  border-collapse: collapse;
+}
+
+[dir=rtl] table {
+ font-family: $font-family_6;
 }
 
 tr {

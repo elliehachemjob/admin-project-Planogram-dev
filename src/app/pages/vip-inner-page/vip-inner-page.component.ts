@@ -92,7 +92,7 @@ export class VipInnerPageComponent implements OnInit {
 
 
   navigateGiftTablePage(): void {
-    this.router.navigate(['/gift-table']);
+    this.router.navigate(['/gift-table'], { replaceUrl: true });
   }
 
 

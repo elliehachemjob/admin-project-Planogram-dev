@@ -908,3 +908,10 @@ th {
   font-size: 16px;
  }
 }
+
+.sub-categories-content {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding: 6px 0;
+}

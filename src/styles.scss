@@ -885,6 +885,11 @@ th {
  }
 }
 
+// .search-input-cont input {
+//  padding-left: 30px;
+// }
+
+
 
 .sub-cats-inner-page-img {
  overflow: hidden;
@@ -912,7 +917,7 @@ th {
 
 
 [dir=rtl] .search-input-cont input {
- padding-right: 10px;
+ padding-right: 45px;
 }
 
 
@@ -970,4 +975,10 @@ th {
  flex-direction: column;
  justify-content: center;
  padding: 6px 0;
+}
+
+
+[dir=rtl] .magnifying-glass-cont {
+ right: 45px;
+ left: inherit;
 }

@@ -21,10 +21,11 @@
   <!-- sub Category data -->
   <div class="sub-categories-container">
     <div class="sub-categories-content">
-      <mat-accordion>
-        <mat-expansion-panel *ngFor="let subCategory of subCategories" (opened)="panelOpenState = true">
+      <mat-accordion class="mat-elevation-z3">
+        <mat-expansion-panel class="mat-elevation-z3" *ngFor="let subCategory of subCategories"
+          (opened)="panelOpenState = true">
           <mat-panel-description *ngIf='panelOpenState && !subCategory.nestedDetails.isEmptyContent'>
-            <div class="sub-cats-inner-page-cont">
+            <div class="sub-cats-inner-page-cont ">
               <div class="sub-cats-inner-page">
                 <div class="sub-cats-inner-page-title">
                   {{subCategory.nestedDetails.title | translate}}

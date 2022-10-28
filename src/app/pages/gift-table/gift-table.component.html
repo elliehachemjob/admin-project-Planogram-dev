@@ -2,7 +2,7 @@
   <div class="fxd-header-sect-cont sub-categories">
     <div class="fxd-header-sect">
       <div class="fxd-header-content">
-        {{categoryName}}
+        {{categoryName | translate}}
       </div>
       <div class="discover-proceed-arrow back-arrow">
         <a (click)="navigateInnerVipPage()"><svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083"
@@ -19,14 +19,14 @@
       <div class="gift-table-content">
         <table>
           <tr>
-            <th>{{categoryHeaderName.title}}</th>
-            <th>{{categoryHeaderName.before}}</th>
-            <th>{{categoryHeaderName.after}}</th>
+            <th>{{categoryHeaderName.title | translate}}</th>
+            <th>{{categoryHeaderName.before | translate}}</th>
+            <th>{{categoryHeaderName.after | translate}}</th>
           </tr>
           <tr *ngFor="let category of categoriesTableContent">
-            <td>{{category.title}}</td>
-            <td>{{category.beforeValue}}</td>
-            <td>{{category.afterValue}}</td>
+            <td>{{category.title | translate }}</td>
+            <td>{{category.beforeValue | translate }}</td>
+            <td>{{category.afterValue | translate}}</td>
           </tr>
         </table>
       </div>

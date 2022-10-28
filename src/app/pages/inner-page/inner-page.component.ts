@@ -141,7 +141,6 @@ export class InnerPageComponent implements OnInit {
       this.isSearchEmpty = true;
     } else {
       this.isSearchEmpty = false;
-      return;
     }
 
 

@@ -8,19 +8,15 @@ import { TranslationService } from './services/translation.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
-  //variable sections
+export class AppComponent {
   isRTL: boolean = false;
   language: any = localStorage.getItem("lang")
 
-  // Injection dependencies If needed + 
   constructor(private translate: TranslateService,
     private translation: TranslationService
   ) {
-    //Default fallback language
     translate.setDefaultLang('en');
 
-    //Change language here
     translate.use(this.language);
 
     if (localStorage.getItem("isRTL") === "true") {
@@ -29,36 +25,5 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     } else {
       this.isRTL = false;
     }
-
-
   }
-
-
-  //Lifecycle hooks
-
-  //When component initiate / useEffect without empty dependencies
-  ngOnInit(): void {
-
-    console.log(localStorage.getItem("lang"), "test")
-  }
-
-  //When component Destroyed
-  ngOnDestroy(): void {
-
-  }
-
-  //To Control Dom elements / UseRef of react
-  ngAfterViewInit() {
-
-  }
-
-  // Function Sections
-  valueChange(): void {
-
-  }
-
-
-
-
-
 }

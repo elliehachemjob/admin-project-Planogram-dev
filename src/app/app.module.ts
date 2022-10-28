@@ -31,11 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    // ngx-translate and the loader module
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -51,9 +48,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export class AppModule { }
 
-
-
-// required for AOT compilation => for angular 9 and above
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }

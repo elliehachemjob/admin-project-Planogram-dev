@@ -8,9 +8,6 @@ export class TranslationService {
   isRtl = new BehaviorSubject(false);
 
   constructor() { }
-  translatePage() {
-
-  }
 
   getIsRtl() {
     return this.isRtl;

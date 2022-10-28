@@ -8,8 +8,7 @@ import { LogoService } from 'src/app/services/logo.service';
   styleUrls: ['./insights.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InsightsComponent implements OnInit, OnDestroy, AfterViewInit {
-  //variable sections
+export class InsightsComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
   insights: any = [{
@@ -27,41 +26,19 @@ export class InsightsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
   ];
 
-  // Injection dependencies If needed + 
   constructor(
     private router: Router,
     public logoService: LogoService,
   ) { }
 
-  //Lifecycle hooks
-
-  //When component initiate / useEffect without empty dependencies
   ngOnInit(): void {
-    console.log(this.router.url, 'router')
     if (this.router.url.startsWith("/insights")) {
       this.isLogoActive = true;
     }
   }
 
-  //When component Destroyed
-  ngOnDestroy(): void {
-  }
-
-  //To Control Dom elements / UseRef of react
-  ngAfterViewInit() {
-
-  }
-
-  // Function Sections
-  navigateLanguagesPage(): void {
-    this.router.navigate(['/languages']);
-  }
-
   navigateInsightsPage(): void {
     this.router.navigate(['/insights']);
-  }
-
-  logoActivation() {
   }
 
   navigateVipPage() {
@@ -71,15 +48,5 @@ export class InsightsComponent implements OnInit, OnDestroy, AfterViewInit {
   navigateInnerPage() {
     this.router.navigate(['/home']);
   }
-
-  navigateInnerVipPage() {
-    this.router.navigate(['/vip-inner-page']);
-  }
-
-  subCatsAccordion(isEmptyContent: boolean = true) {
-    if (!isEmptyContent) this.isHidden = !this.isHidden;
-  }
-
-
 
 }

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { CommonService } from 'src/app/services/common.service';
 import { DatabaseService } from 'src/app/services/database.service';
 import { LogoService } from 'src/app/services/logo.service';
 import { TranslationService } from 'src/app/services/translation.service';
@@ -46,6 +47,7 @@ export class InnerPageComponent implements OnInit {
     private translate: TranslateService,
     private translation: TranslationService,
     private database: DatabaseService,
+    private common: CommonService
   ) { }
 
   ngOnInit(): void {
@@ -53,7 +55,10 @@ export class InnerPageComponent implements OnInit {
     if (this.router.url.startsWith("/home")) {
       this.isLogoActive = true;
     }
-    this.chooseCountry("lebanon", this.categories)
+    console.log(this.common.getCountry().subscribe((country) => {
+      this.countryChosen = country;
+    }))
+    this.chooseCountry(this.countryChosen, this.categories)
   }
 
   chooseCountry(countryChosen: any, listOfCountries: any): void {

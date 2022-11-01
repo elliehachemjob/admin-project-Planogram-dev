@@ -18,6 +18,7 @@ export class VipComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     if (this.router.url.startsWith("/vip")) {
       this.isLogoActive = true;
     }

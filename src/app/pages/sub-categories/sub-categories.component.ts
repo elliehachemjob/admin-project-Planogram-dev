@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatAccordion } from '@angular/material/expansion';
 import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
@@ -14,7 +13,6 @@ export class SubCategoriesComponent implements OnInit {
   isLogoActive: boolean = false;
   subCategoryName: string = "impulse";
   subCategories: any[] = this.database.subCategories;
-  @ViewChild(MatAccordion) accordion: any;
   panelOpenState = false;
 
   constructor(

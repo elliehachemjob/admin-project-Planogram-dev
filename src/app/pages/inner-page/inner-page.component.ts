@@ -32,6 +32,7 @@ export class InnerPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     if (this.router.url.startsWith("/home")) {
       this.isLogoActive = true;
     }

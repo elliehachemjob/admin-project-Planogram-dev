@@ -32,6 +32,7 @@ export class InsightsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     if (this.router.url.startsWith("/insights")) {
       this.isLogoActive = true;
     }

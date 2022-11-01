@@ -7,12 +7,10 @@
     "program": "program",
     "selectALanguageToStart": "Select language from above to start"
   },
-  "vipPage": {
-    "vipHeaderText": "This is a special members club where you will receive discounts based on counterparts in store that will drive incremental sales, helping you earn more profit!",
-    "Category A": "Category A ",
-    "Category B": "Category B ",
-    "Category C": "Category C "
-  },
+  "This is a special members club where you will receive discounts based on counterparts in store that will drive incremental sales, helping you earn more profit!": "This is a special members club where you will receive discounts based on counterparts in store that will drive incremental sales, helping you earn more profit!",
+  "Category A": "Category A ",
+  "Category B": "Category B ",
+  "Category C": "Category C ",
   "insightsPage": {
     "headerContent": "Good Read",
     "explore": "Explore"

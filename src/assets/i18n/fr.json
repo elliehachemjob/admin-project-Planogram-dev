@@ -7,9 +7,7 @@
     "program": "program",
     "selectALanguageToStart": "Select language from above to start"
   },
-  "vipPage": {
-    "vipHeaderText": "Il s'agit d'un club de membres spécial où vous recevrez des remises basées sur les homologues en magasin qui généreront des ventes supplémentaires, vous aidant à gagner plus de profit !"
-  },
+  "This is a special members club where you will receive discounts based on counterparts in store that will drive incremental sales, helping you earn more profit!": "Il s'agit d'un club de membres spécial où vous recevrez des remises basées sur les homologues en magasin qui généreront des ventes supplémentaires, vous aidant à gagner plus de profit !",
   "insightsPage": {
     "headerContent": "bonne lecture ",
     "explore": "explorer"

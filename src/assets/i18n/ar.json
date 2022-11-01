@@ -7,9 +7,7 @@
     "program": "program",
     "selectALanguageToStart": "Select language from above to start"
   },
-  "vipPage": {
-    "vipHeaderText": "هذا نادي خاص للأعضاء حيث ستتلقى خصومات بناءً على نظرائك في المتجر والتي ستؤدي إلى زيادة المبيعات ، مما يساعدك على كسب المزيد من الأرباح!"
-  },
+  "This is a special members club where you will receive discounts based on counterparts in store that will drive incremental sales, helping you earn more profit!": "هذا نادي خاص للأعضاء حيث ستتلقى خصومات بناءً على نظرائك في المتجر والتي ستؤدي إلى زيادة المبيعات ، مما يساعدك على كسب المزيد من الأرباح!",
   "insightsPage": {
     "headerContent": "قراءة جيدة ",
     "explore": "استكشف"

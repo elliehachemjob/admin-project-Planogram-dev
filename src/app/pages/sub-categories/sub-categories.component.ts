@@ -33,8 +33,6 @@ export class SubCategoriesComponent implements OnInit {
   chooseSubCategory(countryChosen: any, listOfCountries: any): void {
     this.subCategories = listOfCountries.filter((data: any) => data.country.toLowerCase() === countryChosen.toLowerCase());
     this.subCategories.map(item => this.subCategories = item.content)
-
-
   }
 
 

@@ -17,10 +17,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [GiftTableComponent, InnerPageComponent, InsightsComponent, LanguagesComponent, SubCategoriesComponent, VipComponent, VipInnerPageComponent, WelcomePageComponent],
   imports: [
+    NoopAnimationsModule,
     OverlayModule,
     MatFormFieldModule,
     MatExpansionModule,

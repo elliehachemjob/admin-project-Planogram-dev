@@ -14,6 +14,8 @@ export class SubCategoriesComponent implements OnInit {
   subCategoryName: string = "impulse";
   subCategories: any[] = this.database.subCategories;
   panelOpenState = false;
+  countryChosen: any = "";
+
 
   constructor(
     private router: Router,
@@ -23,7 +25,19 @@ export class SubCategoriesComponent implements OnInit {
     if (this.router.url.startsWith("/sub-categories")) {
       this.isLogoActive = true;
     }
+    this.chooseSubCategory(localStorage.getItem("country")?.toLowerCase(), this.subCategories)
+
+
   }
+
+  chooseSubCategory(countryChosen: any, listOfCountries: any): void {
+    this.subCategories = listOfCountries.filter((data: any) => data.country.toLowerCase() === countryChosen.toLowerCase());
+    this.subCategories.map(item => this.subCategories = item.content)
+
+
+  }
+
+
 
   navigateInsightsPage(): void {
     this.router.navigate(['/insights']);

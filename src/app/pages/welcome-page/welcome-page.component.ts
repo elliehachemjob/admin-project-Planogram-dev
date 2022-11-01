@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,11 +14,12 @@ export class WelcomePageComponent {
   ];
 
   constructor(
-    private router: Router
+    private router: Router,
   ) { }
 
-  navigateLanguagesPage(): void {
-    this.router.navigate(['/languages']);
+  navigateLanguagesPage(country: string): void {
+    window.localStorage.setItem("country", country)
+    this.router.navigate(['/languages'])
   }
 
 }

@@ -22,6 +22,9 @@ export class LanguagesComponent {
     else if (language.toLowerCase() === "french") { language = "fr"; localStorage.setItem("lang", "fr"); }
     if (language === 'ar') {
       localStorage.setItem("isRTL", "true");
+      this.router.navigate(['/home']).then(() => {
+        window.location.reload();
+      });
     } else { localStorage.setItem("isRTL", "false"); }
     this.router.navigate(['/home']).then(() => {
       window.location.reload();

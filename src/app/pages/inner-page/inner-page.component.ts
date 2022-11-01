@@ -15,7 +15,22 @@ import { TranslationService } from 'src/app/services/translation.service';
 export class InnerPageComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  categories: any = [{ title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }]
+  categories: any = [
+    {
+      "country": "Lebanon",
+      "content": [
+        { title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }
+      ]
+    },
+    {
+      "country": "Qatar",
+      "content": [
+        { title: "impulse", background: "impulse" }
+      ]
+    },
+  ];
+
+
   planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder"
   title: string = '';
   isOpen = false;
@@ -23,6 +38,8 @@ export class InnerPageComponent implements OnInit {
   isRtl: any = localStorage.getItem('isRTL')
   searchedData: any = ''
   isSearchEmpty: boolean = false;
+  categoryChosen: any = [];
+  countryChosen: any = "lebanon";
 
   constructor(
     private router: Router,
@@ -36,6 +53,12 @@ export class InnerPageComponent implements OnInit {
     if (this.router.url.startsWith("/home")) {
       this.isLogoActive = true;
     }
+    this.chooseCountry("lebanon", this.categories)
+  }
+
+  chooseCountry(countryChosen: any, listOfCountries: any): void {
+    this.categoryChosen = listOfCountries.filter((data: any) => data.country.toLowerCase() === countryChosen.toLowerCase());
+    console.log(this.categoryChosen)
   }
 
   navigateInsightsPage(): void {

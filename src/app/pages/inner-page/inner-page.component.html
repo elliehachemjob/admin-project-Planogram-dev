@@ -1,9 +1,7 @@
 <div class="plano-inner-page-wrapper">
   <div class="fxd-header-sect-cont">
     <div class="fxd-header-sect">
-
       <div class="magnifying-glass-cont">
-
         <div class="magnifying-glass"></div>
       </div>
       <div class="search-input-cont">
@@ -12,13 +10,11 @@
             placeholder="{{planogramQuickSearchPlaceHolder | translate}}">
         </div>
       </div>
-
       <div class="lang-selector-cont default-icon-size">
         <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen"
           (overlayOutsideClick)="isOpen = false">
           <ul class="overlay-list" [ngClass]="{'overlay-list-arabic':isRtl === 'true' }">
             <li *ngFor="let language of languages" class='inner-overlay' (click)='changeLanguage(language)'>{{language}}
-
             </li>
           </ul>
         </ng-template>
@@ -36,25 +32,26 @@
   <div (click)='navigateSubCategory()' class="plano-inner-page-cont">
     <div class="plano-inner-page-content">
       <div class="discover-categories-wrapper">
-        <div *ngFor="let category of categories" class="discover-categories-container">
-          <div class="discover-category   {{category.background}}" [ngClass]="{'hideBackground':isSearchEmpty }">
-            <div class="category-title">
-              {{category.title | translate }}
-            </div>
-            <div class="discover-proceed-arrow" [ngClass]="{'hideArrow':isSearchEmpty }">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083" viewBox="0 0 18.613 14.083">
-                <path class="a"
-                  d="M2.814,21.877l6,6A1.039,1.039,0,1,0,10.279,26.4L6.066,22.17H20.075a1.039,1.039,0,1,0,0-2.077H6.066l4.212-4.212a1.028,1.028,0,0,0,0-1.469,1.07,1.07,0,0,0-.745-.314,1.024,1.024,0,0,0-.745.314L2.814,20.387a1.04,1.04,0,0,0,0,1.489Z"
-                  transform="translate(21.113 28.181) rotate(180)" />
-              </svg>
+        <div *ngFor="let category of categoryChosen" class="discover-categories-container">
+          <div *ngFor="let categoryChosenData of category.content">
+            <div class="discover-category   {{categoryChosenData.background}}"
+              [ngClass]="{'hideBackground':isSearchEmpty }">
+              <div class="category-title">
+                {{categoryChosenData.title | translate }}
+              </div>
+              <div class="discover-proceed-arrow" [ngClass]="{'hideArrow':isSearchEmpty }">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083" viewBox="0 0 18.613 14.083">
+                  <path class="a"
+                    d="M2.814,21.877l6,6A1.039,1.039,0,1,0,10.279,26.4L6.066,22.17H20.075a1.039,1.039,0,1,0,0-2.077H6.066l4.212-4.212a1.028,1.028,0,0,0,0-1.469,1.07,1.07,0,0,0-.745-.314,1.024,1.024,0,0,0-.745.314L2.814,20.387a1.04,1.04,0,0,0,0,1.489Z"
+                    transform="translate(21.113 28.181) rotate(180)" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- footer -->
   <div class="fxd-footer-sect-cont">
     <div class="fxd-footer-sect">
       <div class="footer-elements-wrapper">
@@ -103,4 +100,3 @@
       </div>
     </div>
   </div>
-  <!-- footer -->

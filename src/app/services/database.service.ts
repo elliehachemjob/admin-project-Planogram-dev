@@ -11,7 +11,7 @@ export class DatabaseService {
   // 3. For each country chosen we go to a new endpoint (done)
 
   siteName: string = "WINGMAN";
-  planogramQuickSearchPlaceHolder: any = " Planogram Quick Search";
+  planogramQuickSearchPlaceHolder: any = "Planogram Quick Search";
   tableCategoryName: string = 'CATEGORY A';
   tableCategoryHeaderName: any = [{ title: "Impulse VIP A", before: "before", after: "after" }];
   chosenLanguages: any = ["English", "Arabic", "French"];

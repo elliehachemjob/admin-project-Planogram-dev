@@ -27,6 +27,9 @@ export class InnerPageComponent implements OnInit {
   categoryChosen: any = [];
   countryChosen: any = "";
   langSelected: any;
+  languageArrayBeforeParse: any;
+  languageArrayAfterParse: any;
+
 
   constructor(
     private router: Router,
@@ -43,9 +46,13 @@ export class InnerPageComponent implements OnInit {
     this.getCountry(localStorage.getItem("country")?.toLowerCase(), this.categories);
     this.isRtl = localStorage.getItem('isRTL');
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
+    // this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
+
 
     //Variables goes here and they way its structured from the backend 
+    this.languageArrayBeforeParse = localStorage.getItem('translationObject');
+    this.languageArrayAfterParse = JSON.parse(this.languageArrayBeforeParse);
+
 
   }
 

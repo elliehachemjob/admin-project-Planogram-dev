@@ -7,7 +7,7 @@
       <div class="search-input-cont">
         <div style='width:100%'>
           <input [ngModel]="searchedData" (keyup.enter)="handleSearchChange($event)" name="" value=""
-            placeholder="{{planogramQuickSearchPlaceHolder | translate}}">
+            placeholder="{{planogramQuickSearchPlaceHolder  | CustomTranslation:langSelected}}">
         </div>
       </div>
       <div class="lang-selector-cont default-icon-size">
@@ -37,7 +37,7 @@
             <div class="discover-category   {{categoryChosenData.background}}"
               [ngClass]="{'hideBackground':isSearchEmpty }">
               <div class="category-title">
-                {{categoryChosenData.title | translate }}
+                {{categoryChosenData.title | CustomTranslation:langSelected }}
               </div>
               <div class="discover-proceed-arrow" [ngClass]="{'hideArrow':isSearchEmpty }">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083" viewBox="0 0 18.613 14.083">
@@ -65,7 +65,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt">
-              {{"Discover" | translate}}
+              {{"Discover" | CustomTranslation:langSelected}}
             </div>
           </a>
         </div>
@@ -79,7 +79,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt">
-              {{"VIP" | translate}}
+              {{"VIP" | CustomTranslation:langSelected}}
             </div>
           </a>
         </div>
@@ -93,7 +93,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt ">
-              {{"INSIGHTS" | translate}}
+              {{"INSIGHTS" | CustomTranslation:langSelected}}
             </div>
           </a>
         </div>

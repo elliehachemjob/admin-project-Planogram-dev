@@ -4,6 +4,24 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DatabaseService {
+
+  categories: any = [
+    {
+      "country": "Lebanon",
+      "content": [
+        { title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }
+      ]
+    },
+    {
+      "country": "Qatar",
+      "content": [
+        { title: "impulse", background: "impulse" }
+      ]
+    },
+  ];
+
+
+
   subCategories: any = [
     {
       "country": "Lebanon",
@@ -33,6 +51,21 @@ export class DatabaseService {
         ["Category A", "Category B"]
     },
   ];
+
+
+  vipCategoriesDetailsContent = [
+    {
+      "country": "Lebanon",
+      "content": [{ title: "Main Placement Chilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min 13 facings", path: "/assets/vip/1.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "Min 12 facings", path: "/assets/vip/1.png" }, { title: "Main Placement New", numberedElementPartOne: " #3", numberedElementPartTwo: "Min 13 facings", path: "/assets/vip/1.png" }]
+    },
+    {
+      "country": "Qatar",
+      "content":
+        [{ title: "Main Placement Chilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min 13 facings", path: "/assets/vip/1.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "Min 12 facings", path: "/assets/vip/1.png" }]
+
+    },
+  ];
+
 
 
 
@@ -91,10 +124,22 @@ export class DatabaseService {
 
 
 
+  categoriesTableContent = [
+    {
+      "country": "Lebanon",
+      "content": [{ title: "RECOMMENDED SHELF PRICE", beforeValue: "10.00", afterValue: "10.00" }, { title: "VAT", beforeValue: "0.48", afterValue: "0.48" }, { title: "SHELF PRICE EXCLUDING VAT", beforeValue: "53.70	", afterValue: "55.337" }, { title: "EXCISE TAX", beforeValue: "10.00", afterValue: "10.00	" }, { title: "REBATE %", beforeValue: "10.00", afterValue: "55.337" }, { title: "TOTAL REBATES", beforeValue: "14.00", afterValue: "11" }, { title: "RECOMMENDED SHELF PRICE", beforeValue: "27.120", afterValue: "10" }]
+    },
+    {
+      "country": "Qatar",
+      "content":
+        [{ title: "RECOMMENDED SHELF PRICE", beforeValue: "10.00", afterValue: "10.00" }, { title: "VAT", beforeValue: "0.48", afterValue: "0.48" }, { title: "SHELF PRICE EXCLUDING VAT", beforeValue: "53.70	", afterValue: "55.337" }, { title: "EXCISE TAX", beforeValue: "10.00", afterValue: "10.00	" }]
+    },
+  ];
 
 
+  countries: string[] = ["UAE", "MALDIVES", "PAKISTAN", "SRI LANKA", "ALGERIA", "NIGERIA", "ANGOLA", "MAURITIUS", "KENYA", "EGYPT", "OMAN", "KUWAIT", "QATAR", "JORDAN", "BAHRAIN", "KSA", "LEBANON", "GHANA"];
 
-
+  languages: string[] = ["Portuguese", "Sinhala", "Dhivehi", "Malayalam", "Arabic", "French", "Urdu", "English"];
 
 
 }

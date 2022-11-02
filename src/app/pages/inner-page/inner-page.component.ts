@@ -14,20 +14,7 @@ import { TranslationService } from 'src/app/services/translation.service';
 export class InnerPageComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  categories: any = [
-    {
-      "country": "Lebanon",
-      "content": [
-        { title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }
-      ]
-    },
-    {
-      "country": "Qatar",
-      "content": [
-        { title: "impulse", background: "impulse" }
-      ]
-    },
-  ];
+  categories: any = this.database.categories;
 
 
   planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder"
@@ -44,7 +31,7 @@ export class InnerPageComponent implements OnInit {
     private router: Router,
     private translate: TranslateService,
     private translation: TranslationService,
-    private database: DatabaseService,
+    private database: DatabaseService
   ) { }
 
   ngOnInit(): void {

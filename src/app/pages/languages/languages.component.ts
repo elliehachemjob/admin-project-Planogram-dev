@@ -1,5 +1,6 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-languages',
@@ -10,10 +11,11 @@ import { Router } from '@angular/router';
 export class LanguagesComponent {
   siteName: string = "WINGMAN"
   year: Number = new Date().getFullYear();
-  languages: string[] = ["Portuguese", "Sinhala", "Dhivehi", "Malayalam", "Arabic", "French", "Urdu", "English"];
+  languages: string[] = this.database.languages;
 
   constructor(
     private router: Router,
+    private database: DatabaseService
   ) { }
 
   navigateInnerPage(language: string): void {

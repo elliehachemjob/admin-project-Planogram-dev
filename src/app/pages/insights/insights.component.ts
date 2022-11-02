@@ -17,7 +17,7 @@ export class InsightsComponent implements OnInit {
   constructor(
     private router: Router,
     public logoService: LogoService,
-    private database: DatabaseService,
+    private database: DatabaseService
   ) { }
 
   ngOnInit(): void {

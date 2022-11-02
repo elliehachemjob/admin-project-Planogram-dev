@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-welcome-page',
@@ -10,11 +11,12 @@ import { Router } from '@angular/router';
 export class WelcomePageComponent {
   siteName: string = "WINGMAN"
   year: Number = new Date().getFullYear();
-  countries: string[] = ["UAE", "MALDIVES", "PAKISTAN", "SRI LANKA", "ALGERIA", "NIGERIA", "ANGOLA", "MAURITIUS", "KENYA", "EGYPT", "OMAN", "KUWAIT", "QATAR", "JORDAN", "BAHRAIN", "KSA", "LEBANON", "GHANA"
-  ];
+  countries: string[] = this.database.countries;
+
 
   constructor(
     private router: Router,
+    private database: DatabaseService
   ) { }
 
   navigateLanguagesPage(country: string): void {

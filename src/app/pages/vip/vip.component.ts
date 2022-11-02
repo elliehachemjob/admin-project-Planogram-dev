@@ -20,7 +20,7 @@ export class VipComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private database: DatabaseService,
+    private database: DatabaseService
   ) { }
 
 

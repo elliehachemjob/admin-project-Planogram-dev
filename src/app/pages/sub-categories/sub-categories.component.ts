@@ -19,14 +19,13 @@ export class SubCategoriesComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private database: DatabaseService,
+    private database: DatabaseService
   ) { }
   ngOnInit(): void {
     if (this.router.url.startsWith("/sub-categories")) {
       this.isLogoActive = true;
     }
     this.chooseSubCategory(localStorage.getItem("country")?.toLowerCase(), this.subCategories)
-
 
   }
 

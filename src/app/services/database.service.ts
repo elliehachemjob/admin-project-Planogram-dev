@@ -133,16 +133,23 @@ export class DatabaseService {
     },
   ];
   countries: string[] = ["UAE", "MALDIVES", "PAKISTAN", "SRI LANKA", "ALGERIA", "NIGERIA", "ANGOLA", "MAURITIUS", "KENYA", "EGYPT", "OMAN", "KUWAIT", "QATAR", "JORDAN", "BAHRAIN", "KSA", "LEBANON", "GHANA"];
-  languages: string[] = ["Portuguese", "Sinhala", "Dhivehi", "Malayalam", "Arabic", "French", "Urdu", "English"];
 
 
+  languages = [
+    {
+      "country": "Lebanon",
+      "content": [
+        "Arabic", "French", "Urdu", "English"
+      ]
+    },
+    {
+      "country": "Qatar",
+      "content":
+        ["Arabic", "English"]
+    },
+  ];
 
 
-  // create 1 object for proper translation 
-
-
-
-  // search for translation 
 
 
 }

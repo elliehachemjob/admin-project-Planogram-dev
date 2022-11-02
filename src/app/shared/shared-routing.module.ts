@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'gift-table', component: GiftTableComponent },
   { path: 'home', component: InnerPageComponent },
   { path: 'insights', component: InsightsComponent },
-  { path: 'languages', component: LanguagesComponent },
+  { path: 'languages/:country', component: LanguagesComponent },
   { path: 'sub-categories', component: SubCategoriesComponent },
   { path: 'vip', component: VipComponent },
   { path: 'vip-inner-page', component: VipInnerPageComponent },

@@ -5,6 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class DatabaseService {
 
+  // Data after going to the backend site
+  // 1. done on welcome page , in the get method which what we need really here
+  // 2. For each country chosen we go to a new endpoint
+
+
+
+
+
+
+  //Data before going to the backend site
   categories: any = [
     {
       "country": "Lebanon",
@@ -20,8 +30,6 @@ export class DatabaseService {
     },
   ];
 
-
-
   subCategories: any = [
     {
       "country": "Lebanon",
@@ -36,8 +44,6 @@ export class DatabaseService {
       ]
     },
   ];
-
-
   vipCategories = [
     {
       "country": "Lebanon",
@@ -51,8 +57,6 @@ export class DatabaseService {
         ["Category A", "Category B"]
     },
   ];
-
-
   vipCategoriesDetailsContent = [
     {
       "country": "Lebanon",
@@ -65,8 +69,6 @@ export class DatabaseService {
 
     },
   ];
-
-
   inSightsCategories = [
     {
       "country": "Lebanon",
@@ -102,8 +104,6 @@ export class DatabaseService {
 
     },
   ];
-
-
   vipHeaderText = [
     {
       "country": "Lebanon",
@@ -119,8 +119,6 @@ export class DatabaseService {
         ]
     },
   ];
-
-
   categoriesTableContent = [
     {
       "country": "Lebanon",
@@ -132,7 +130,6 @@ export class DatabaseService {
         [{ title: "RECOMMENDED SHELF PRICE", beforeValue: "10.00", afterValue: "10.00" }, { title: "VAT", beforeValue: "0.48", afterValue: "0.48" }, { title: "SHELF PRICE EXCLUDING VAT", beforeValue: "53.70	", afterValue: "55.337" }, { title: "EXCISE TAX", beforeValue: "10.00", afterValue: "10.00	" }]
     },
   ];
-
   countries: string[] = ["UAE", "MALDIVES", "PAKISTAN", "SRI LANKA", "ALGERIA", "NIGERIA", "ANGOLA", "MAURITIUS", "KENYA", "EGYPT", "OMAN", "KUWAIT", "QATAR", "JORDAN", "BAHRAIN", "KSA", "LEBANON", "GHANA"];
   languages: string[] = ["Portuguese", "Sinhala", "Dhivehi", "Malayalam", "Arabic", "French", "Urdu", "English"];
 

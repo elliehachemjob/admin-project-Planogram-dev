@@ -21,7 +21,7 @@ export class WelcomePageComponent {
 
   navigateLanguagesPage(country: string): void {
     window.localStorage.setItem("country", country);
-    this.router.navigate(['/languages']);
+    this.router.navigate(['/languages/country']);
   }
 
 }

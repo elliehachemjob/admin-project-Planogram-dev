@@ -6,15 +6,17 @@ import { Injectable } from '@angular/core';
 export class DatabaseService {
 
   // Data after going to the backend site
-  // 1. done on welcome page , in the get method which what we need really here
-  // 2. For each country chosen we go to a new endpoint
+  // 1. done on welcome page , in the get method which what we need really here done (no other methods needed here)
+  // 2. siteName in welcome page
+  // 3. For each country chosen we go to a new endpoint (done)
 
-
-
-
-
-
-  //Data before going to the backend site
+  siteName: string = "WINGMAN";
+  planogramQuickSearchPlaceHolder: any = " Planogram Quick Search";
+  tableCategoryName: string = 'CATEGORY A';
+  tableCategoryHeaderName: any = [{ title: "Impulse VIP A", before: "before", after: "after" }];
+  chosenLanguages: any = ["English", "Arabic", "French"];
+  subCategoryName: any = "impulse";
+  vipCategoriesDetailsHeader: any = "VIP CATEGORY A";
   categories: any = [
     {
       "country": "Lebanon",
@@ -132,6 +134,15 @@ export class DatabaseService {
   ];
   countries: string[] = ["UAE", "MALDIVES", "PAKISTAN", "SRI LANKA", "ALGERIA", "NIGERIA", "ANGOLA", "MAURITIUS", "KENYA", "EGYPT", "OMAN", "KUWAIT", "QATAR", "JORDAN", "BAHRAIN", "KSA", "LEBANON", "GHANA"];
   languages: string[] = ["Portuguese", "Sinhala", "Dhivehi", "Malayalam", "Arabic", "French", "Urdu", "English"];
+
+
+
+
+  // create 1 object for proper translation 
+
+
+
+  // search for translation 
 
 
 }

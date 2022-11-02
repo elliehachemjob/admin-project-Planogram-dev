@@ -9,10 +9,10 @@ import { DatabaseService } from 'src/app/services/database.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GiftTableComponent implements OnInit {
-  categoryName: string = 'CATEGORY A';
-  categoryHeaderName: { title: string; before: string; after: string; } = { title: "Impulse VIP A", before: "before", after: "after" };
+  categoryName: string = this.database.tableCategoryName;
+  categoryHeaderName: any = this.database.tableCategoryHeaderName;
   categoriesTableContent: any[] = this.database.categoriesTableContent;
-  planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder";
+  planogramQuickSearchPlaceHolder: string = this.database.planogramQuickSearchPlaceHolder;
 
   constructor(
     private router: Router,

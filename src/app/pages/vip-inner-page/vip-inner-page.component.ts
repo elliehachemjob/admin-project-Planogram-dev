@@ -11,7 +11,7 @@ import { DatabaseService } from 'src/app/services/database.service';
 export class VipInnerPageComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  vipCategoriesDetailsHeader: string = "VIP CATEGORY A";
+  vipCategoriesDetailsHeader: string = this.database.vipCategoriesDetailsHeader;
   vipCategoriesDetailsContent: any[] = this.database.vipCategoriesDetailsContent;
 
   constructor(

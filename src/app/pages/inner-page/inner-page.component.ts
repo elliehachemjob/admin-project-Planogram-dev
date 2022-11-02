@@ -17,10 +17,10 @@ export class InnerPageComponent implements OnInit {
   categories: any = this.database.categories;
 
 
-  planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder";
+  planogramQuickSearchPlaceHolder: string = this.database.planogramQuickSearchPlaceHolder;
   title: string = '';
   isOpen = false;
-  languages: string[] = ["English", "Arabic", "French"];
+  languages: string[] = this.database.chosenLanguages;
   isRtl: any = localStorage.getItem('isRTL');
   searchedData: any = '';
   isSearchEmpty: boolean = false;

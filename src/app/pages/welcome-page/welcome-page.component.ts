@@ -9,7 +9,7 @@ import { DatabaseService } from 'src/app/services/database.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WelcomePageComponent {
-  siteName: string = "WINGMAN";
+  siteName: string = this.database.siteName;
   year: Number = new Date().getFullYear();
   countries: string[] = this.database.countries;
 
@@ -21,7 +21,7 @@ export class WelcomePageComponent {
 
   navigateLanguagesPage(country: string): void {
     window.localStorage.setItem("country", country);
-    this.router.navigate(['/languages/country']);
+    this.router.navigate(['/languages', country.toLowerCase().replace(/\s+/g, '')]);
   }
 
 }

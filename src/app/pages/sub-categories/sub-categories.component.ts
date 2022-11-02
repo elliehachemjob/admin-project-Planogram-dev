@@ -11,7 +11,7 @@ import { DatabaseService } from 'src/app/services/database.service';
 export class SubCategoriesComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  subCategoryName: string = "impulse";
+  subCategoryName: string = this.database.subCategoryName;
   subCategories: any[] = this.database.subCategories;
   panelOpenState: boolean = false;
   countryChosen: any = "";

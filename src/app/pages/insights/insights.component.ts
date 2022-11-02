@@ -13,7 +13,7 @@ export class InsightsComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
   inSightsCategories: any = this.database.inSightsCategories;
-
+  langSelected: any;
   constructor(
     private router: Router,
     public logoService: LogoService,
@@ -26,6 +26,12 @@ export class InsightsComponent implements OnInit {
       this.isLogoActive = true;
     }
     this.getInsightCategory(localStorage.getItem("country")?.toLowerCase(), this.inSightsCategories);
+    this.langSelected = localStorage.getItem("language");
+    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
+
+    //Variables goes here and they way its structured from the backend 
+
+
   }
 
   getInsightCategory(countryChosen: any, listOfCountries: any): void {

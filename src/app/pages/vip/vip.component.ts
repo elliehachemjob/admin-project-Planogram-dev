@@ -14,7 +14,7 @@ export class VipComponent implements OnInit {
   vipCategories: any = this.database.vipCategories;
   countryChosen: string = "";
   vipHeaderText: any = this.database.vipHeaderText;
-
+  langSelected: any;
 
 
   constructor(
@@ -32,6 +32,11 @@ export class VipComponent implements OnInit {
     }
     this.getVipCategories(localStorage.getItem("country")?.toLowerCase(), this.vipCategories);
     this.getVipHeaderText(localStorage.getItem("country")?.toLowerCase(), this.vipHeaderText);
+
+    this.langSelected = localStorage.getItem("language");
+    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
+
+    //Variables goes here and they way its structured from the backend 
 
   }
 

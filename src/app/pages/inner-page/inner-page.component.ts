@@ -21,11 +21,12 @@ export class InnerPageComponent implements OnInit {
   title: string = '';
   isOpen = false;
   languages: string[] = this.database.chosenLanguages;
-  isRtl: any = localStorage.getItem('isRTL');
+  isRtl: any = '';
   searchedData: any = '';
   isSearchEmpty: boolean = false;
   categoryChosen: any = [];
   countryChosen: any = "";
+  langSelected: any;
 
   constructor(
     private router: Router,
@@ -40,12 +41,24 @@ export class InnerPageComponent implements OnInit {
       this.isLogoActive = true;
     }
     this.getCountry(localStorage.getItem("country")?.toLowerCase(), this.categories);
+    this.isRtl = localStorage.getItem('isRTL');
+    this.langSelected = localStorage.getItem("language");
+    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
+
+    //Variables goes here and they way its structured from the backend 
+
+
+
+
+
 
   }
 
+
+
+
   getCountry(countryChosen: any, listOfCountries: any): void {
     this.categoryChosen = listOfCountries.filter((data: any): boolean => data.country.toLowerCase() === countryChosen.toLowerCase());
-
   }
 
   navigateInsightsPage(): void {

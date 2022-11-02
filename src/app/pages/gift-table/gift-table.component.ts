@@ -13,7 +13,7 @@ export class GiftTableComponent implements OnInit {
   categoryHeaderName: any = this.database.tableCategoryHeaderName;
   categoriesTableContent: any[] = this.database.categoriesTableContent;
   planogramQuickSearchPlaceHolder: string = this.database.planogramQuickSearchPlaceHolder;
-
+  langSelected: any = "";
   constructor(
     private router: Router,
     private database: DatabaseService
@@ -21,6 +21,11 @@ export class GiftTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.getGiftCategory(localStorage.getItem("country")?.toLowerCase(), this.categoriesTableContent);
+    this.langSelected = localStorage.getItem("language");
+    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
+
+    //Variables goes here and they way its structured from the backend 
+
 
   }
 

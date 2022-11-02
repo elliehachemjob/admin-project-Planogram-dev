@@ -47,7 +47,11 @@ export class LanguagesComponent implements OnInit {
 
 
     localStorage.setItem("language", language);
-    // localStorage.setItem("EnTranslation", EnJson);
+    localStorage.setItem(`${language}Translation`, JSON.stringify({
+      planogramQuickSearchPlaceHolder: "Planogram Quick Search", "Discover": "Discover",
+      "VIP": "VIP",
+      "INSIGHTS": "INSIGHTS"
+    }));
 
 
   }

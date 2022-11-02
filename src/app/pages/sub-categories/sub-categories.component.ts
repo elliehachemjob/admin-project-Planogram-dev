@@ -15,7 +15,7 @@ export class SubCategoriesComponent implements OnInit {
   subCategories: any[] = this.database.subCategories;
   panelOpenState: boolean = false;
   countryChosen: any = "";
-
+  langSelected: any;
 
   constructor(
     private router: Router,
@@ -26,6 +26,10 @@ export class SubCategoriesComponent implements OnInit {
       this.isLogoActive = true;
     }
     this.getSubCategory(localStorage.getItem("country")?.toLowerCase(), this.subCategories);
+    this.langSelected = localStorage.getItem("language");
+    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
+
+    //Variables goes here and they way its structured from the backend 
 
   }
 

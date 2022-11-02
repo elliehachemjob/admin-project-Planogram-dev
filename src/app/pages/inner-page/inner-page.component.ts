@@ -47,11 +47,6 @@ export class InnerPageComponent implements OnInit {
 
     //Variables goes here and they way its structured from the backend 
 
-
-
-
-
-
   }
 
 

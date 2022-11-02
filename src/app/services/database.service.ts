@@ -132,9 +132,6 @@ export class DatabaseService {
         [{ title: "RECOMMENDED SHELF PRICE", beforeValue: "10.00", afterValue: "10.00" }, { title: "VAT", beforeValue: "0.48", afterValue: "0.48" }, { title: "SHELF PRICE EXCLUDING VAT", beforeValue: "53.70	", afterValue: "55.337" }, { title: "EXCISE TAX", beforeValue: "10.00", afterValue: "10.00	" }]
     },
   ];
-  countries: string[] = ["UAE", "MALDIVES", "PAKISTAN", "SRI LANKA", "ALGERIA", "NIGERIA", "ANGOLA", "MAURITIUS", "KENYA", "EGYPT", "OMAN", "KUWAIT", "QATAR", "JORDAN", "BAHRAIN", "KSA", "LEBANON", "GHANA"];
-
-
   languages = [
     {
       "country": "Lebanon",
@@ -148,7 +145,7 @@ export class DatabaseService {
         ["Arabic", "English"]
     },
   ];
-
+  countries: string[] = ["UAE", "MALDIVES", "PAKISTAN", "SRI LANKA", "ALGERIA", "NIGERIA", "ANGOLA", "MAURITIUS", "KENYA", "EGYPT", "OMAN", "KUWAIT", "QATAR", "JORDAN", "BAHRAIN", "KSA", "LEBANON", "GHANA"];
 
 
 

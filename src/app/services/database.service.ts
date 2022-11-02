@@ -67,8 +67,6 @@ export class DatabaseService {
   ];
 
 
-
-
   inSightsCategories = [
     {
       "country": "Lebanon",
@@ -123,7 +121,6 @@ export class DatabaseService {
   ];
 
 
-
   categoriesTableContent = [
     {
       "country": "Lebanon",
@@ -136,9 +133,7 @@ export class DatabaseService {
     },
   ];
 
-
   countries: string[] = ["UAE", "MALDIVES", "PAKISTAN", "SRI LANKA", "ALGERIA", "NIGERIA", "ANGOLA", "MAURITIUS", "KENYA", "EGYPT", "OMAN", "KUWAIT", "QATAR", "JORDAN", "BAHRAIN", "KSA", "LEBANON", "GHANA"];
-
   languages: string[] = ["Portuguese", "Sinhala", "Dhivehi", "Malayalam", "Arabic", "French", "Urdu", "English"];
 
 

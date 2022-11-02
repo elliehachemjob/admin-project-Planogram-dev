@@ -11,7 +11,7 @@ import { DatabaseService } from 'src/app/services/database.service';
 export class GiftTableComponent implements OnInit
 {
   categoryName: string = 'CATEGORY A';
-  categoryHeaderName: any = { title: "Impulse VIP A", before: "before", after: "after" };
+  categoryHeaderName: { title: string; before: string; after: string; } = { title: "Impulse VIP A", before: "before", after: "after" };
   categoriesTableContent: any[] = this.database.categoriesTableContent;
 
   planogramQuickSearchPlaceHolder: string = "planogramQuickSearchPlaceHolder";

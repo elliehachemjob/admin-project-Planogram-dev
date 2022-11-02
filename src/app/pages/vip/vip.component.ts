@@ -12,10 +12,10 @@ export class VipComponent implements OnInit
 {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
-  vipCategories: { country: string; content: string[]; }[] = this.database.vipCategories;
+  vipCategories: any = this.database.vipCategories;
   countryChosen: string = "";
 
-  vipHeaderText: { country: string; content: string[]; }[] = this.database.vipHeaderText;
+  vipHeaderText: any = this.database.vipHeaderText;
 
 
 

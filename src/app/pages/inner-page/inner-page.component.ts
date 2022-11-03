@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { getMethod } from 'src/app/helpers/helpers';
+import { InnerPage } from 'src/app/models/inner-page.model';
 import { DatabaseService } from 'src/app/services/database.service';
 import { TranslationService } from 'src/app/services/translation.service';
 
@@ -16,8 +17,6 @@ export class InnerPageComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
   categories: any = this.database.categories;
-
-
   planogramQuickSearchPlaceHolder: string = this.database.planogramQuickSearchPlaceHolder;
   title: string = '';
   isOpen = false;
@@ -50,6 +49,20 @@ export class InnerPageComponent implements OnInit {
     this.langSelected = localStorage.getItem("language");
   }
 
+
+  //Model that could be receive  or send to backend /other component
+  // createSubCategoryMode(backendObject: any) {
+  //   const oneObject = new InnerPage(
+  //     backendObject.categories,
+  //     backendObject.planogramQuickSearchPlaceHolder,
+  //     backendObject.title,
+  //     backendObject.languages,
+  //     backendObject.searchedData,
+  //     backendObject.categoryChosen,
+  //     backendObject.countryChosen,
+  //     backendObject.langSelected
+  //   );
+  // }
 
 
 

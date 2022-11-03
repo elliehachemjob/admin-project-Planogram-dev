@@ -27,10 +27,6 @@ export class SubCategoriesComponent implements OnInit {
     }
     this.getSubCategory(localStorage.getItem("country")?.toLowerCase(), this.subCategories);
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
-
-    //Variables goes here and they way its structured from the backend 
-
   }
 
   getSubCategory(countryChosen: any, listOfCountries: any): void {

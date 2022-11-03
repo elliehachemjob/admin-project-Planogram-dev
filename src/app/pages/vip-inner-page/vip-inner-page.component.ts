@@ -25,13 +25,7 @@ export class VipInnerPageComponent implements OnInit {
       this.isLogoActive = true;
     }
     this.getVipInnerCategory(localStorage.getItem("country")?.toLowerCase(), this.vipCategoriesDetailsContent);
-
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
-
-    //Variables goes here and they way its structured from the backend 
-
-
   }
 
 

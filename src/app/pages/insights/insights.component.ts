@@ -27,11 +27,6 @@ export class InsightsComponent implements OnInit {
     }
     this.getInsightCategory(localStorage.getItem("country")?.toLowerCase(), this.inSightsCategories);
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
-
-    //Variables goes here and they way its structured from the backend 
-
-
   }
 
   getInsightCategory(countryChosen: any, listOfCountries: any): void {

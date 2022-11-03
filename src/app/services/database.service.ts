@@ -62,7 +62,7 @@ export class DatabaseService {
   vipCategoriesDetailsContent = [
     {
       "country": "Lebanon",
-      "content": [{ title: "MainPlacementChilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min13facings", path: "/assets/vip/1.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "MintweleveFacings", path: "/assets/vip/1.png" }, { title: "Main Placement New", numberedElementPartOne: " #3", numberedElementPartTwo: "Min13facings", path: "/assets/vip/1.png" }]
+      "content": [{ title: "MainPlacementChilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min13facings", path: "/assets/vip/1.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "MintweleveFacings", path: "/assets/vip/1.png" }, { title: "MainPlacementNew", numberedElementPartOne: " #3", numberedElementPartTwo: "Min13facings", path: "/assets/vip/1.png" }]
     },
     {
       "country": "Qatar",
@@ -75,7 +75,7 @@ export class DatabaseService {
     {
       "country": "Lebanon",
       "content": [{
-        title: "FUNCTIONAL PLACEMENTS: LARGE FORMATS", description: "On on produce colonel pointed. Just four sold need over how any. In to september suspicion determine he prevailed admitting. On adapted an as affixed limited on. Giving cousin warmly things no spring mr be abroad. Relation breeding be as repeated strictly followed margaret. One gravity son brought shyness waiting regular led ham.",
+        title: "functionalPlacementsLargeFormats", description: "JustFoursold",
         path: "assets/good-read-1.PNG",
         explorePdf: "/assets/pdf/1.pdf"
       }, {
@@ -83,7 +83,7 @@ export class DatabaseService {
         path: "assets/good-read-2.PNG",
         explorePdf: "/assets/pdf/2.pdf"
       }, {
-        title: "FUNCTIONAL PLACEMENTS: MEDIUM FORMATS", description: "beatGate",
+        title: "functionalPlacementsMediumFormats", description: "beatGate",
         path: "assets/good-read-3.PNG",
         explorePdf: "/assets/pdf/3.pdf"
       }
@@ -94,7 +94,7 @@ export class DatabaseService {
       "country": "Qatar",
       "content":
         [{
-          title: "FUNCTIONAL PLACEMENTS: LARGE FORMATS", description: "On on produce colonel pointed. Just four sold need over how any. In to september suspicion determine he prevailed admitting. On adapted an as affixed limited on. Giving cousin warmly things no spring mr be abroad. Relation breeding be as repeated strictly followed margaret. One gravity son brought shyness waiting regular led ham.",
+          title: "functionalPlacementsLargeFormats", description: "JustFoursold",
           path: "assets/good-read-1.PNG",
           explorePdf: "/assets/pdf/1.pdf"
         }, {

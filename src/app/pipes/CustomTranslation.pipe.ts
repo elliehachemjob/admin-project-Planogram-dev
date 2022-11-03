@@ -19,7 +19,7 @@ export class CustomTranslationPipe implements PipeTransform {
       "lang": "en",
       "content": [
         {
-          planogramQuickSearchPlaceHolder: "Planogram Quick Search"
+          planogramQuickSearchPlaceHolder: "Planogram Quick Search",
         }
       ]
     },
@@ -42,19 +42,26 @@ export class CustomTranslationPipe implements PipeTransform {
   ];
 
   transform(value: string, lang: string): any {
-    this.setLanguageSelected(lang);
+    this.setLanguageSelected(lang, this.langObject);
+    Object.entries(this.langObject).forEach(
+      ([key, valueOfObject]: any) => {
+        console.log(key, valueOfObject);
+        if (key === value) {
+          value = valueOfObject;
+        }
+      }
+    );
     return value;
   }
 
-  setLanguageSelected(lang: any) {
-
+  setLanguageSelected(countryChosen: any, listOfCountries: any) {
     //Usually Here will be the api, which will tell us the language chosen 
+    this.langObject = listOfCountries.filter((data: any): boolean => data.lang.toLowerCase() === countryChosen.toLowerCase());
+    this.langObject.map((item: any): any => this.langObject = item.content);
+    this.langObject = this.langObject[0];
 
 
-
-
-
-    localStorage.setItem("translationObject", JSON.stringify(``));
+    localStorage.setItem("translationObject", JSON.stringify(this.langObject));
   }
 
 }

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 import { TranslationService } from 'src/app/services/translation.service';
 
@@ -44,12 +45,9 @@ export class InnerPageComponent implements OnInit {
       this.isLogoActive = true;
     }
     this.getCountry(localStorage.getItem("country")?.toLowerCase(), this.categories);
+    // this.categories = getMethod(this.categories, localStorage.getItem("country")?.toLowerCase());
     this.isRtl = localStorage.getItem('isRTL');
     this.langSelected = localStorage.getItem("language");
-
-
-
-
   }
 
 

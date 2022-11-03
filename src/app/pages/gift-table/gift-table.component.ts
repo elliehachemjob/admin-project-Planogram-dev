@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { DatabaseService } from 'src/app/services/database.service';
 export class GiftTableComponent implements OnInit {
   categoryName: string = this.database.tableCategoryName;
   categoryHeaderName: any = this.database.tableCategoryHeaderName;
-  categoriesTableContent: any[] = this.database.categoriesTableContent;
+  categoriesTableContent: any = this.database.categoriesTableContent;
   planogramQuickSearchPlaceHolder: string = this.database.planogramQuickSearchPlaceHolder;
   langSelected: any = "";
   constructor(
@@ -20,7 +21,7 @@ export class GiftTableComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getGiftCategory(localStorage.getItem("country")?.toLowerCase(), this.categoriesTableContent);
+    this.categoriesTableContent = getMethod(this.categoriesTableContent, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
   }
 
@@ -28,10 +29,7 @@ export class GiftTableComponent implements OnInit {
     this.router.navigate(['/vip-inner-page'], { replaceUrl: true });
   }
 
-  getGiftCategory(countryChosen: any, listOfCountries: any): void {
-    this.categoriesTableContent = listOfCountries.filter((data: any): boolean => data.country.toLowerCase() === countryChosen.toLowerCase());
-    this.categoriesTableContent.map(item => this.categoriesTableContent = item.content);
-  }
+
 
 
 }

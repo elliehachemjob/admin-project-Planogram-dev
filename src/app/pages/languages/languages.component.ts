@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 
 
@@ -23,7 +24,7 @@ export class LanguagesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getLanguage(localStorage.getItem("country")?.toLowerCase(), this.languages);
+    this.languages = getMethod(this.languages, localStorage.getItem("country")?.toLowerCase());
   }
 
 
@@ -39,11 +40,6 @@ export class LanguagesComponent implements OnInit {
     });
 
     localStorage.setItem("language", language);
-  }
-
-  getLanguage(countryChosen: any, listOfCountries: any): void {
-    this.languages = listOfCountries.filter((data: any): boolean => data.country.toLowerCase() === countryChosen.toLowerCase());
-    this.languages.map((item: any): any => this.languages = item.content);
   }
 }
 

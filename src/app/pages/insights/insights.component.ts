@@ -1,5 +1,6 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 import { LogoService } from 'src/app/services/logo.service';
 
@@ -25,13 +26,8 @@ export class InsightsComponent implements OnInit {
     if (this.router.url.startsWith("/insights")) {
       this.isLogoActive = true;
     }
-    this.getInsightCategory(localStorage.getItem("country")?.toLowerCase(), this.inSightsCategories);
+    this.inSightsCategories = getMethod(this.inSightsCategories, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
-  }
-
-  getInsightCategory(countryChosen: any, listOfCountries: any): void {
-    this.inSightsCategories = listOfCountries.filter((data: any): boolean => data.country.toLowerCase() === countryChosen.toLowerCase());
-    this.inSightsCategories.map((item: any): any => this.inSightsCategories = item.content);
   }
 
   navigateInsightsPage(): void {

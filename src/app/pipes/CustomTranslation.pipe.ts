@@ -53,7 +53,7 @@ export class CustomTranslationPipe implements PipeTransform {
           Range: "Range",
           mainPlacementNew: "MainPlacementNew ",
           Min13facings: "Min 13 facings",
-          MintweleveFacings: "Min tweleveFacings",
+          MintweleveFacings: "Min 12 Facings",
           vipCategoryA: "VIP CategoryA ",
           impulse: "IMPULSE",
           cAndg: "c&g",

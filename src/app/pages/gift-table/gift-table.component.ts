@@ -22,11 +22,6 @@ export class GiftTableComponent implements OnInit {
   ngOnInit(): void {
     this.getGiftCategory(localStorage.getItem("country")?.toLowerCase(), this.categoriesTableContent);
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
-
-    //Variables goes here and they way its structured from the backend 
-
-
   }
 
   navigateInnerVipPage(): void {

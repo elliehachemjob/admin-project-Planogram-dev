@@ -16,7 +16,7 @@ export class CustomTranslationPipe implements PipeTransform {
   //Those object to be replaced by the Api
   langObject: any = [
     {
-      "lang": "en",
+      "lang": "english",
       "content": [
         {
           planogramQuickSearchPlaceHolder: "Planogram Quick Search",
@@ -24,7 +24,7 @@ export class CustomTranslationPipe implements PipeTransform {
       ]
     },
     {
-      "lang": "ar",
+      "lang": "arabic",
       "content": [
         {
           planogramQuickSearchPlaceHolder: "بحث سريع"
@@ -32,7 +32,7 @@ export class CustomTranslationPipe implements PipeTransform {
       ]
     },
     {
-      "lang": "fr",
+      "lang": "french",
       "content": [
         {
           planogramQuickSearchPlaceHolder: "بحث سريع"

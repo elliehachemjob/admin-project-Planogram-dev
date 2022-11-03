@@ -28,12 +28,7 @@ export class LanguagesComponent implements OnInit {
 
 
   navigateInnerPage(language: string): void {
-    if (language.toLowerCase() === "english") {
-      language = "en";
-    }
-    else if (language.toLowerCase() === "arabic") { language = "ar"; localStorage.setItem("lang", "ar"); }
-    else if (language.toLowerCase() === "french") { language = "fr"; localStorage.setItem("lang", "fr"); }
-    if (language === 'ar') {
+    if (language === 'arabic') {
       localStorage.setItem("isRTL", "true");
       this.router.navigate(['/home']).then((): void => {
         window.location.reload();
@@ -43,17 +38,7 @@ export class LanguagesComponent implements OnInit {
       window.location.reload();
     });
 
-
-
-
     localStorage.setItem("language", language);
-    localStorage.setItem(`${language}Translation`, JSON.stringify({
-      planogramQuickSearchPlaceHolder: "Planogram Quick Search", "Discover": "Discover",
-      "VIP": "VIP",
-      "INSIGHTS": "INSIGHTS"
-    }));
-
-
   }
 
   getLanguage(countryChosen: any, listOfCountries: any): void {

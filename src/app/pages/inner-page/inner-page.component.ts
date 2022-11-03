@@ -49,9 +49,6 @@ export class InnerPageComponent implements OnInit {
     // this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
 
 
-    //Variables goes here and they way its structured from the backend 
-    this.languageArrayBeforeParse = localStorage.getItem('translationObject');
-    this.languageArrayAfterParse = JSON.parse(this.languageArrayBeforeParse);
 
 
   }
@@ -81,13 +78,14 @@ export class InnerPageComponent implements OnInit {
   }
 
   changeLanguage(language: string = "english"): void {
-    if (language === "English") { language = "en"; localStorage.setItem("lang", "en"); }
-    else if (language === "Arabic") { language = "ar"; localStorage.setItem("lang", "ar"); }
-    else if (language === "French") { language = "fr"; localStorage.setItem("lang", "fr"); }
-    if (language === 'ar') {
+    localStorage.setItem("language", language);
+
+    if (language.toLowerCase() === 'arabic') {
       localStorage.setItem("isRTL", "true"); window.location.reload(); return;
     } else { localStorage.setItem("isRTL", "false"); window.location.reload(); }
     return;
+
+
 
   }
 

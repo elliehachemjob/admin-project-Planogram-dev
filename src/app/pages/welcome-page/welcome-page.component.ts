@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DatabaseService } from 'src/app/services/database.service';
 
@@ -8,19 +8,24 @@ import { DatabaseService } from 'src/app/services/database.service';
   styleUrls: ['./welcome-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class WelcomePageComponent {
+export class WelcomePageComponent implements OnInit {
   //All countries should be listed here by default so the logic here is to get + navigate to other page
   //when navigating take in consideration  the dynamic navigation and fix possible bugs like spacing between countries
 
   siteName: string = this.database.siteName;
   year: Number = new Date().getFullYear();
   countries: string[] = this.database.countries;
+  langSelected: any;
 
 
   constructor(
     private router: Router,
     private database: DatabaseService
   ) { }
+
+  ngOnInit(): void {
+    this.langSelected = localStorage.getItem("language");
+  }
 
   navigatelanguagesPageSelectALanguageToStart(country: string): void {
     window.localStorage.setItem("country", country);

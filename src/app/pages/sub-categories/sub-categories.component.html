@@ -2,7 +2,7 @@
   <div class="fxd-header-sect-cont sub-categories">
     <div class="fxd-header-sect">
       <div class="fxd-header-content">
-        {{subCategoryName | translate}}
+        {{subCategoryName | CustomTranslation:langSelected}}
       </div>
       <div (click)='navigateInnerPage()' class="discover-proceed-arrow back-arrow"
         [ngClass]="{'footer-element-selected':isLogoActive }">
@@ -23,22 +23,22 @@
             <div class="sub-cats-inner-page-cont ">
               <div class="sub-cats-inner-page">
                 <div class="sub-cats-inner-page-title">
-                  {{subCategory.nestedDetails.title | translate}}
+                  {{subCategory.nestedDetails.title | CustomTranslation:langSelected}}
                 </div>
                 <div class="sub-cats-inner-page-img">
                   <img src="{{subCategory.nestedDetails.imagePath}}" alt="">
                 </div>
                 <div class="sub-cats-inner-page-flow">
-                  {{subCategory.nestedDetails.flow | translate }}
+                  {{subCategory.nestedDetails.flow | CustomTranslation:langSelected }}
                 </div>
               </div>
             </div>
           </mat-panel-description>
           <mat-expansion-panel-header>
             <div class="sub-categories-content">
-              <mat-panel-title class='sub-cats-title'>{{subCategory.title | translate}}
+              <mat-panel-title class='sub-cats-title'>{{subCategory.title | CustomTranslation:langSelected}}
               </mat-panel-title>
-              <mat-panel-title class='sub-cats-sub-title'> {{subCategory.subTitle | translate}}
+              <mat-panel-title class='sub-cats-sub-title'> {{subCategory.subTitle | CustomTranslation:langSelected}}
               </mat-panel-title>
             </div>
           </mat-expansion-panel-header>
@@ -59,7 +59,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt">
-              {{"Discover" | translate }}
+              {{"Discover" | CustomTranslation:langSelected }}
             </div>
           </a>
         </div>
@@ -73,7 +73,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt">
-              {{"VIP" | translate}}
+              {{"VIP" | CustomTranslation:langSelected}}
             </div>
           </a>
         </div>
@@ -87,7 +87,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt ">
-              {{"INSIGHTS" | translate}}
+              {{"INSIGHTS" | CustomTranslation:langSelected}}
             </div>
           </a>
         </div>

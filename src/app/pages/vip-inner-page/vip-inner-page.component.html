@@ -2,7 +2,7 @@
   <div class="fxd-header-sect-cont sub-categories">
     <div class="fxd-header-sect">
       <div class="fxd-header-content">
-        {{ vipCategoriesDetailsHeader | translate }} </div>
+        {{ vipCategoriesDetailsHeader | CustomTranslation:langSelected }} </div>
       <div class="discover-proceed-arrow back-arrow">
         <a (click)="navigateVipPage()"><svg xmlns="http://www.w3.org/2000/svg" width="18.613" height="14.083"
             viewbox="0 0 18.613 14.083">
@@ -27,12 +27,12 @@
       <div class="sub-cats-container">
         <div class="sub-cats vip-inner">
           <div class="sub-cats-title">
-            {{vipCategoryDetailContent.title | translate}}
+            {{vipCategoryDetailContent.title | CustomTranslation:langSelected}}
           </div>
           <div class="sub-cat-accordion-cont numbered-circle">
             <div class="sub-cat-accordion">
               <div class="numbered-elements">
-                {{vipCategoryDetailContent.numberedElementPartOne | translate}}
+                {{vipCategoryDetailContent.numberedElementPartOne | CustomTranslation:langSelected}}
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@
               <div class="sub-cats-inner-page-img"><img src="{{vipCategoryDetailContent.path}}" alt="1630222037"></div>
             </div>
             <div class="numbered-elements numbered-elements-part-two">
-              {{vipCategoryDetailContent.numberedElementPartTwo | translate}}
+              {{vipCategoryDetailContent.numberedElementPartTwo | CustomTranslation:langSelected}}
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@
                 </svg>
               </div>
               <div class="footer-elements-txt">
-                {{"Discover" | translate}}
+                {{"Discover" | CustomTranslation:langSelected}}
               </div>
             </a>
           </div>
@@ -76,7 +76,7 @@
                 </svg>
               </div>
               <div class="footer-elements-txt">
-                {{"VIP" | translate}}
+                {{"VIP" | CustomTranslation:langSelected}}
               </div>
             </a>
           </div>
@@ -90,7 +90,7 @@
                 </svg>
               </div>
               <div class="footer-elements-txt ">
-                {{"INSIGHTS" | translate}}
+                {{"INSIGHTS" | CustomTranslation:langSelected}}
               </div>
             </a>
           </div>

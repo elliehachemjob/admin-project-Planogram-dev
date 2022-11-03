@@ -17,7 +17,7 @@ export class LanguagesComponent implements OnInit {
   siteName: string = "WINGMAN";
   year: Number = new Date().getFullYear();
   languages: any = this.database.languages;
-
+  langSelected: any;
   constructor(
     private router: Router,
     private database: DatabaseService
@@ -25,6 +25,9 @@ export class LanguagesComponent implements OnInit {
 
   ngOnInit() {
     this.languages = getMethod(this.languages, localStorage.getItem("country")?.toLowerCase());
+    this.langSelected = localStorage.getItem("language");
+
+
   }
 
 

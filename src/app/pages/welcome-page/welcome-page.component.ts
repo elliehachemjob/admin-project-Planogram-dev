@@ -22,7 +22,7 @@ export class WelcomePageComponent {
     private database: DatabaseService
   ) { }
 
-  navigateLanguagesPage(country: string): void {
+  navigatelanguagesPageSelectALanguageToStart(country: string): void {
     window.localStorage.setItem("country", country);
     this.router.navigate(['/languages', country.toLowerCase().replace(/\s+/g, '')]);
   }

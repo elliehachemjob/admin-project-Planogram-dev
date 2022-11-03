@@ -98,7 +98,7 @@ export class InnerPageComponent implements OnInit {
       this.isSearchEmpty = false;
     }
     if (e.target.value.length === 0) {
-      this.categories = [{ title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }];
+      this.categories = [{ title: "impulse", background: "impulse" }, { title: "cAndg", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }];
     }
     const searchSubCategoryData: any = this.database.subCategories.filter((category: any) => (category.title.includes(e.target.value) || category.subTitle.includes(e.target.value) || category.title.includes(e.target.value.toUpperCase()) || category.subTitle.includes(e.target.value.toUpperCase()) || category.title.includes(e.target.value.toLowerCase()) || category.subTitle.includes(e.target.value.toLowerCase())) && e.target.value);
     if (searchSubCategoryData.length > 0) {

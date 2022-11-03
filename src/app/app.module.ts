@@ -14,8 +14,8 @@ import { CommonModule } from '@angular/common';
 // Needed for frontend translation to work
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { SharedModule } from "./shared/shared.module"
+import { HttpClient, HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
+import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -33,6 +33,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       enabled: environment.production,
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    HttpClientXsrfModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

@@ -1,4 +1,3 @@
-import { VipComponent } from './pages/vip/vip.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { GiftTableComponent } from './pages/gift-table/gift-table.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -14,9 +12,11 @@ import { CommonModule } from '@angular/common';
 // Needed for frontend translation to work
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { SharedModule } from "./shared/shared.module"
+import { HttpClient, HttpClientModule, HttpClientXsrfModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { JwtTokenInterceptor } from './interceptors/jwt-token.interceptor';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       enabled: environment.production,
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    HttpClientXsrfModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -43,7 +44,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     })
 
   ],
-  providers: [],
+  providers: [AuthGuard, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtTokenInterceptor,
+    multi: true // To be able to use multiple interceptors
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

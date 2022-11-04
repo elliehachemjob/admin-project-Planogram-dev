@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class SubCategoriesComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
   subCategoryName: string = this.database.subCategoryName;
-  subCategories: any[] = this.database.subCategories;
+  subCategories: any = this.database.subCategories;
   panelOpenState: boolean = false;
   countryChosen: any = "";
   langSelected: any;
@@ -25,20 +26,9 @@ export class SubCategoriesComponent implements OnInit {
     if (this.router.url.startsWith("/sub-categories")) {
       this.isLogoActive = true;
     }
-    this.getSubCategory(localStorage.getItem("country")?.toLowerCase(), this.subCategories);
+    this.subCategories = getMethod(this.subCategories, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
-
-    //Variables goes here and they way its structured from the backend 
-
   }
-
-  getSubCategory(countryChosen: any, listOfCountries: any): void {
-    this.subCategories = listOfCountries.filter((data: any): boolean => data.country.toLowerCase() === countryChosen.toLowerCase());
-    this.subCategories.map((item: any): any => this.subCategories = item.content);
-  }
-
-
 
   navigateInsightsPage(): void {
     this.router.navigate(['/insights']);

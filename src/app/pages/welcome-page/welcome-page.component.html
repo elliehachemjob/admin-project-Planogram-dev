@@ -4,16 +4,17 @@
       <div class="plano-bull-logo-cont"><img src="assets/logo.png" alt="Red Bull"></div>
       <div class="plano-wing-titles-cont">
         <span class="wingman-title">{{siteName}}</span><br>
-        {{'welcomePage.program' | translate}} {{year}}
+        {{'welcomeProgram' | CustomTranslation:langSelected}} {{year}}
       </div>
       <div class="wlc-page-countries-cont countries-list" id="country-list">
         <div *ngFor="let country of countries" class="country-cont">
-          <div (click)="navigateLanguagesPage(country)" class="country-content {{country.toLowerCase()}}">
-            {{country.toUpperCase() | translate}}
+          <div (click)="navigatelanguagesPageSelectALanguageToStart(country)"
+            class="country-content {{country.toLowerCase()}}">
+            {{country.toUpperCase() | CustomTranslation:langSelected}}
           </div>
         </div>
         <div class="select-country">
-          {{'welcomePage.selectACountryToStart' | translate}}
+          {{'welcomeSelectACountryToStart' | CustomTranslation:langSelected}}
         </div>
       </div>
     </div>

@@ -18,9 +18,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomTranslationPipe } from '../pipes/CustomTranslation.pipe';
 
 @NgModule({
-  declarations: [GiftTableComponent, InnerPageComponent, InsightsComponent, LanguagesComponent, SubCategoriesComponent, VipComponent, VipInnerPageComponent, WelcomePageComponent],
+  declarations: [GiftTableComponent, InnerPageComponent, InsightsComponent, LanguagesComponent, SubCategoriesComponent, VipComponent, VipInnerPageComponent, WelcomePageComponent, CustomTranslationPipe],
   imports: [
     NoopAnimationsModule,
     OverlayModule,

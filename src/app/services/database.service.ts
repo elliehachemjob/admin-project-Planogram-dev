@@ -11,17 +11,17 @@ export class DatabaseService {
   // 3. For each country chosen we go to a new endpoint (done)
 
   siteName: string = "WINGMAN";
-  planogramQuickSearchPlaceHolder: any = " Planogram Quick Search";
-  tableCategoryName: string = 'CATEGORY A';
+  planogramQuickSearchPlaceHolder: any = "planogramQuickSearchPlaceHolder";
+  tableCategoryName: string = 'CategoryA';
   tableCategoryHeaderName: any = [{ title: "Impulse VIP A", before: "before", after: "after" }];
   chosenLanguages: any = ["English", "Arabic", "French"];
   subCategoryName: any = "impulse";
-  vipCategoriesDetailsHeader: any = "VIP CATEGORY A";
+  vipCategoriesDetailsHeader: any = "vipCategoryA";
   categories: any = [
     {
       "country": "Lebanon",
       "content": [
-        { title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }
+        { title: "impulse", background: "impulse" }, { title: "cAndG", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }
       ]
     },
     {
@@ -36,13 +36,13 @@ export class DatabaseService {
     {
       "country": "Lebanon",
       "content": [
-        { title: "Impulse A", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "/assets/subCategory/1.png", flow: "Traffic Flow", isEmptyContent: false } }, { title: "Impulse B", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "/assets/subCategory/1.png", flow: "Traffic Flow", isEmptyContent: false } }, { title: "Impulse C", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "/assets/subCategory/1.png", flow: "Traffic Flow", isEmptyContent: false } }
+        { title: "impulseA", subTitle: "shelfMainPlacement", nestedDetails: { title: "MinTwelveFacings", imagePath: "/assets/subCategory/1.png", flow: "TrafficFlow", isEmptyContent: false } }, { title: "impulseB", subTitle: "shelfMainPlacement", nestedDetails: { title: "MinTwelveFacings", imagePath: "/assets/subCategory/1.png", flow: "TrafficFlow", isEmptyContent: false } }, { title: "impulseC", subTitle: "shelfMainPlacement", nestedDetails: { title: "MinTwelveFacings", imagePath: "/assets/subCategory/1.png", flow: "TrafficFlow", isEmptyContent: false } }
       ]
     },
     {
       "country": "Qatar",
       "content": [
-        { title: "Impulse A", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "/assets/subCategory/1.png", flow: "Traffic Flow", isEmptyContent: false } }, { title: "Impulse B", subTitle: "1 shelf - main placement", nestedDetails: { title: "12 Facings", imagePath: "/assets/subCategory/1.png", flow: "Traffic Flow", isEmptyContent: false } }
+        { title: "Impulse A", subTitle: "shelfMainPlacement", nestedDetails: { title: "MinTwelveFacings", imagePath: "/assets/subCategory/1.png", flow: "TrafficFlow", isEmptyContent: false } }, { title: "impulseB", subTitle: "shelfMainPlacement", nestedDetails: { title: "MinTwelveFacings", imagePath: "/assets/subCategory/1.png", flow: "TrafficFlow", isEmptyContent: false } }
       ]
     },
   ];
@@ -50,24 +50,24 @@ export class DatabaseService {
     {
       "country": "Lebanon",
       "content": [
-        "Category A", "Category B", "Category C"
+        "CategoryA", "CategoryB", "CategoryC"
       ]
     },
     {
       "country": "Qatar",
       "content":
-        ["Category A", "Category B"]
+        ["CategoryA", "CategoryB"]
     },
   ];
   vipCategoriesDetailsContent = [
     {
       "country": "Lebanon",
-      "content": [{ title: "Main Placement Chilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min 13 facings", path: "/assets/vip/1.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "Min 12 facings", path: "/assets/vip/1.png" }, { title: "Main Placement New", numberedElementPartOne: " #3", numberedElementPartTwo: "Min 13 facings", path: "/assets/vip/1.png" }]
+      "content": [{ title: "MainPlacementChilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min13facings", path: "/assets/vip/1.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "MinTwelveFacings", path: "/assets/vip/1.png" }, { title: "Min13facings", numberedElementPartOne: " #3", numberedElementPartTwo: "Min13facings", path: "/assets/vip/1.png" }]
     },
     {
       "country": "Qatar",
       "content":
-        [{ title: "Main Placement Chilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min 13 facings", path: "/assets/vip/1.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "Min 12 facings", path: "/assets/vip/1.png" }]
+        [{ title: "MainPlacementChilled", numberedElementPartOne: "#1", numberedElementPartTwo: "Min13facings", path: "/assets/vip/1.png" }, { title: "Range", numberedElementPartOne: " #2", numberedElementPartTwo: "MinTwelveFacings", path: "/assets/vip/1.png" }]
 
     },
   ];
@@ -75,15 +75,15 @@ export class DatabaseService {
     {
       "country": "Lebanon",
       "content": [{
-        title: "FUNCTIONAL PLACEMENTS: LARGE FORMATS", description: "On on produce colonel pointed. Just four sold need over how any. In to september suspicion determine he prevailed admitting. On adapted an as affixed limited on. Giving cousin warmly things no spring mr be abroad. Relation breeding be as repeated strictly followed margaret. One gravity son brought shyness waiting regular led ham.",
+        title: "insightTitleOne", description: "insightDescriptionTwo",
         path: "assets/good-read-1.PNG",
         explorePdf: "/assets/pdf/1.pdf"
       }, {
-        title: "FUNCTIONAL PLACEMENTS: SMALL FORMATS", description: "She wholly fat who window extent either formal. Removing welcomed civility or hastened is. Justice elderly but perhaps expense six her are another passage. Full her ten open fond walk not down. For request general express unknown are. He in just mr door body held john down he. So journey greatly or garrets. Draw door kept do so come on open mean. Estimating stimulated how reasonably precaution diminution she simplicity sir but. Questions am sincerity zealously concluded consisted or no gentleman it.",
+        title: "insightTitleTwo", description: "insightDescriptionTwo",
         path: "assets/good-read-2.PNG",
         explorePdf: "/assets/pdf/2.pdf"
       }, {
-        title: "FUNCTIONAL PLACEMENTS: MEDIUM FORMATS", description: "So feel been kept be at gate. Be september it extensive oh concluded of certainty. In read most gate at body held it ever no. Talking justice welcome message inquiry in started of am me. Led own hearted highest visited lasting sir through compass his. Guest tiled he quick by so these trees am. It announcing alteration at surrounded comparison.",
+        title: "insightTitleThree", description: "insightDescriptionThree",
         path: "assets/good-read-3.PNG",
         explorePdf: "/assets/pdf/3.pdf"
       }
@@ -94,11 +94,11 @@ export class DatabaseService {
       "country": "Qatar",
       "content":
         [{
-          title: "FUNCTIONAL PLACEMENTS: LARGE FORMATS", description: "On on produce colonel pointed. Just four sold need over how any. In to september suspicion determine he prevailed admitting. On adapted an as affixed limited on. Giving cousin warmly things no spring mr be abroad. Relation breeding be as repeated strictly followed margaret. One gravity son brought shyness waiting regular led ham.",
+          title: "insightTitleOne", description: "insightDescriptionTwo",
           path: "assets/good-read-1.PNG",
           explorePdf: "/assets/pdf/1.pdf"
         }, {
-          title: "FUNCTIONAL PLACEMENTS: SMALL FORMATS", description: "She wholly fat who window extent either formal. Removing welcomed civility or hastened is. Justice elderly but perhaps expense six her are another passage. Full her ten open fond walk not down. For request general express unknown are. He in just mr door body held john down he. So journey greatly or garrets. Draw door kept do so come on open mean. Estimating stimulated how reasonably precaution diminution she simplicity sir but. Questions am sincerity zealously concluded consisted or no gentleman it.",
+          title: "insightTitleThree", description: "insightDescriptionTwo",
           path: "assets/good-read-2.PNG",
           explorePdf: "/assets/pdf/2.pdf"
         }
@@ -110,7 +110,7 @@ export class DatabaseService {
     {
       "country": "Lebanon",
       "content": [
-        "This is a special members club where you will receive discounts based on counterparts in store that will drive incremental sales, helping you earn more profit!"
+        "specialPromotion"
       ]
     },
     {

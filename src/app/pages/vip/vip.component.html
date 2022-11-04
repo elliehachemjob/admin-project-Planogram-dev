@@ -5,7 +5,7 @@
         <div class="vip-top-img-wrapper"><img src="assets/top-img.png" alt="top-img"></div>
         <div class="vip-rb-cans-wrapper"><img src="assets/rb-cans.png" alt="rb-cans"></div>
         <div class="vip-header-txt">
-          {{vipHeaderText[0] | translate}}
+          {{vipHeaderText[0] | CustomTranslation:langSelected}}
         </div>
       </div>
       <div class="sub-categories-container vip-cat-container">
@@ -13,7 +13,7 @@
           <div class="sub-cats-container">
             <div *ngFor="let vipCategory of vipCategories" class="sub-cats vip-cats default-margin">
               <div class="sub-cats-title vip-cats-title">
-                {{vipCategory | translate }}
+                {{vipCategory | CustomTranslation:langSelected }}
               </div>
               <div class="vip-cats-redirect">
                 <a (click)="navigateInnerVipPage()"></a>
@@ -46,7 +46,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt">
-              {{"Discover" | translate}}
+              {{"Discover" | CustomTranslation:langSelected}}
             </div>
           </a>
         </div>
@@ -60,7 +60,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt">
-              {{"VIP" | translate}}
+              {{"VIP" | CustomTranslation:langSelected}}
             </div>
           </a>
         </div>
@@ -74,7 +74,7 @@
               </svg>
             </div>
             <div class="footer-elements-txt ">
-              {{"INSIGHTS" | translate}}
+              {{"INSIGHTS" | CustomTranslation:langSelected}}
             </div>
           </a>
         </div>

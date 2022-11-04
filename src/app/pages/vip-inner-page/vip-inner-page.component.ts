@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class VipInnerPageComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
   vipCategoriesDetailsHeader: string = this.database.vipCategoriesDetailsHeader;
-  vipCategoriesDetailsContent: any[] = this.database.vipCategoriesDetailsContent;
+  vipCategoriesDetailsContent: any = this.database.vipCategoriesDetailsContent;
   langSelected: any;
 
   constructor(
@@ -24,20 +25,8 @@ export class VipInnerPageComponent implements OnInit {
     if (this.router.url.startsWith("/vip-inner-page")) {
       this.isLogoActive = true;
     }
-    this.getVipInnerCategory(localStorage.getItem("country")?.toLowerCase(), this.vipCategoriesDetailsContent);
-
+    this.vipCategoriesDetailsContent = getMethod(this.vipCategoriesDetailsContent, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
-
-    //Variables goes here and they way its structured from the backend 
-
-
-  }
-
-
-  getVipInnerCategory(countryChosen: any, listOfCountries: any): void {
-    this.vipCategoriesDetailsContent = listOfCountries.filter((data: any): boolean => data.country.toLowerCase() === countryChosen.toLowerCase());
-    this.vipCategoriesDetailsContent.map((item: any): any => this.vipCategoriesDetailsContent = item.content);
   }
 
   navigateInsightsPage(): void {

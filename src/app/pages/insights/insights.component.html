@@ -2,7 +2,7 @@
   <div class="fxd-header-sect-cont sub-categories">
     <div class="fxd-header-sect">
       <div class="fxd-header-content">
-        {{"insightsPage.headerContent" | translate }}
+        {{"insightsPageHeaderContent" | CustomTranslation:langSelected }}
       </div>
     </div>
   </div>
@@ -12,15 +12,14 @@
         <div class="good-read-section">
           <div class="good-read-image"><img src="{{insight.path}}" alt="good-read-1"></div>
           <div class="good-read-title">
-            {{insight.title | translate}}
+            {{insight.title | CustomTranslation:langSelected}}
           </div>
           <div class="good-read-description">
-            {{insight.description | translate}}
+            {{insight.description | CustomTranslation:langSelected}}
           </div>
           <div class="good-read-explore-btn">
             <a href="https://wingmanapi.rbprojects.me/public/uploads/anouncementPdf/1619162839.pdf"
-              target="_blank">{{"insightsPage.explore" |
-              translate}}</a>
+              target="_blank">{{"insightsPageExplore" | CustomTranslation:langSelected}}</a>
           </div>
         </div>
       </div>
@@ -40,7 +39,7 @@
             </svg>
           </div>
           <div class="footer-elements-txt">
-            {{"Discover" | translate}}
+            {{"Discover" | CustomTranslation:langSelected}}
           </div>
         </a>
       </div>
@@ -54,7 +53,7 @@
             </svg>
           </div>
           <div class="footer-elements-txt">
-            {{"VIP" | translate}}
+            {{"VIP" | CustomTranslation:langSelected}}
           </div>
         </a>
       </div>
@@ -68,7 +67,7 @@
             </svg>
           </div>
           <div class="footer-elements-txt ">
-            {{"INSIGHTS" | translate}}
+            {{"INSIGHTS" | CustomTranslation:langSelected}}
           </div>
         </a>
       </div>

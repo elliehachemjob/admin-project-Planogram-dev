@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
@@ -30,14 +31,9 @@ export class VipComponent implements OnInit {
     if (this.router.url.startsWith("/vip")) {
       this.isLogoActive = true;
     }
-    this.getVipCategories(localStorage.getItem("country")?.toLowerCase(), this.vipCategories);
-    this.getVipHeaderText(localStorage.getItem("country")?.toLowerCase(), this.vipHeaderText);
-
+    this.vipCategories = getMethod(this.vipCategories, localStorage.getItem("country")?.toLowerCase());
+    this.vipHeaderText = getMethod(this.vipHeaderText, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
-
-    //Variables goes here and they way its structured from the backend 
-
   }
 
   getVipCategories(countryChosen: any, listOfCountries: any): void {

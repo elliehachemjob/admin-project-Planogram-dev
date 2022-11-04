@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { getMethod } from 'src/app/helpers/helpers';
+import { InnerPage } from 'src/app/models/inner-page.model';
 import { DatabaseService } from 'src/app/services/database.service';
 import { TranslationService } from 'src/app/services/translation.service';
 
@@ -15,8 +17,6 @@ export class InnerPageComponent implements OnInit {
   isHidden: boolean = true;
   isLogoActive: boolean = false;
   categories: any = this.database.categories;
-
-
   planogramQuickSearchPlaceHolder: string = this.database.planogramQuickSearchPlaceHolder;
   title: string = '';
   isOpen = false;
@@ -27,6 +27,9 @@ export class InnerPageComponent implements OnInit {
   categoryChosen: any = [];
   countryChosen: any = "";
   langSelected: any;
+  languageArrayBeforeParse: any;
+  languageArrayAfterParse: any;
+
 
   constructor(
     private router: Router,
@@ -41,14 +44,25 @@ export class InnerPageComponent implements OnInit {
       this.isLogoActive = true;
     }
     this.getCountry(localStorage.getItem("country")?.toLowerCase(), this.categories);
+    // this.categories = getMethod(this.categories, localStorage.getItem("country")?.toLowerCase());
     this.isRtl = localStorage.getItem('isRTL');
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem(`${this.langSelected}Translation`);
-
-    //Variables goes here and they way its structured from the backend 
-
   }
 
+
+  //Model that could be receive  or send to backend /other component
+  // createSubCategoryMode(backendObject: any) {
+  //   const oneObject = new InnerPage(
+  //     backendObject.categories,
+  //     backendObject.planogramQuickSearchPlaceHolder,
+  //     backendObject.title,
+  //     backendObject.languages,
+  //     backendObject.searchedData,
+  //     backendObject.categoryChosen,
+  //     backendObject.countryChosen,
+  //     backendObject.langSelected
+  //   );
+  // }
 
 
 
@@ -74,13 +88,14 @@ export class InnerPageComponent implements OnInit {
   }
 
   changeLanguage(language: string = "english"): void {
-    if (language === "English") { language = "en"; localStorage.setItem("lang", "en"); }
-    else if (language === "Arabic") { language = "ar"; localStorage.setItem("lang", "ar"); }
-    else if (language === "French") { language = "fr"; localStorage.setItem("lang", "fr"); }
-    if (language === 'ar') {
+    localStorage.setItem("language", language);
+
+    if (language.toLowerCase() === 'arabic') {
       localStorage.setItem("isRTL", "true"); window.location.reload(); return;
     } else { localStorage.setItem("isRTL", "false"); window.location.reload(); }
     return;
+
+
 
   }
 
@@ -94,7 +109,7 @@ export class InnerPageComponent implements OnInit {
       this.isSearchEmpty = false;
     }
     if (e.target.value.length === 0) {
-      this.categories = [{ title: "impulse", background: "impulse" }, { title: "c&g", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }];
+      this.categories = [{ title: "impulse", background: "impulse" }, { title: "cAndG", background: "cg" }, { title: "retail", background: "retail" }, { title: "coolers", background: "coolers" }];
     }
     const searchSubCategoryData: any = this.database.subCategories.filter((category: any) => (category.title.includes(e.target.value) || category.subTitle.includes(e.target.value) || category.title.includes(e.target.value.toUpperCase()) || category.subTitle.includes(e.target.value.toUpperCase()) || category.title.includes(e.target.value.toLowerCase()) || category.subTitle.includes(e.target.value.toLowerCase())) && e.target.value);
     if (searchSubCategoryData.length > 0) {

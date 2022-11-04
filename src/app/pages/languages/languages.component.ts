@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 
 
@@ -16,24 +17,22 @@ export class LanguagesComponent implements OnInit {
   siteName: string = "WINGMAN";
   year: Number = new Date().getFullYear();
   languages: any = this.database.languages;
-
+  langSelected: any;
   constructor(
     private router: Router,
     private database: DatabaseService
   ) { }
 
   ngOnInit() {
-    this.getLanguage(localStorage.getItem("country")?.toLowerCase(), this.languages);
+    this.languages = getMethod(this.languages, localStorage.getItem("country")?.toLowerCase());
+    this.langSelected = localStorage.getItem("language");
+
+
   }
 
 
   navigateInnerPage(language: string): void {
-    if (language.toLowerCase() === "english") {
-      language = "en";
-    }
-    else if (language.toLowerCase() === "arabic") { language = "ar"; localStorage.setItem("lang", "ar"); }
-    else if (language.toLowerCase() === "french") { language = "fr"; localStorage.setItem("lang", "fr"); }
-    if (language === 'ar') {
+    if (language === 'arabic') {
       localStorage.setItem("isRTL", "true");
       this.router.navigate(['/home']).then((): void => {
         window.location.reload();
@@ -43,22 +42,7 @@ export class LanguagesComponent implements OnInit {
       window.location.reload();
     });
 
-
-
-
     localStorage.setItem("language", language);
-    localStorage.setItem(`${language}Translation`, JSON.stringify({
-      planogramQuickSearchPlaceHolder: "Planogram Quick Search", "Discover": "Discover",
-      "VIP": "VIP",
-      "INSIGHTS": "INSIGHTS"
-    }));
-
-
-  }
-
-  getLanguage(countryChosen: any, listOfCountries: any): void {
-    this.languages = listOfCountries.filter((data: any): boolean => data.country.toLowerCase() === countryChosen.toLowerCase());
-    this.languages.map((item: any): any => this.languages = item.content);
   }
 }
 

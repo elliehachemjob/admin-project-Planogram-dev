@@ -53,10 +53,10 @@ export class CustomTranslationPipe implements PipeTransform {
           Range: "Range",
           mainPlacementNew: "MainPlacementNew ",
           Min13facings: "Min 13 facings",
-          MintweleveFacings: "Min 12 Facings",
+          MinTwelveFacings: "Min 12 Facings",
           vipCategoryA: "VIP CategoryA ",
           impulse: "IMPULSE",
-          cAndg: "c&g",
+          cAndG: "c&g",
           retail: "RETAIL",
           coolers: "COOLERS",
           impulseA: "Impulse A",
@@ -78,7 +78,13 @@ export class CustomTranslationPipe implements PipeTransform {
           VAT: " VAT",
           exciseTax: " EXCISE TAX",
           rebatePercentage: " REBATE %",
-          totalRebates: " TOTAL REBATES"
+          totalRebates: " TOTAL REBATES",
+          insightTitleOne: "FUNCTIONAL PLACEMENTS: LARGE FORMATS",
+          insightTitleTwo: "FUNCTIONAL PLACEMENTS: MEDIUM FORMATS",
+          insightTitleThree: "FUNCTIONAL PLACEMENTS: SMALL FORMATS",
+          insightDescriptionTwo: "On on produce colonel pointed. Just four sold need over how any. In to september suspicion determine he prevailed admitting. On adapted an as affixed limited on. Giving cousin warmly things no spring mr be abroad. Relation breeding be as repeated strictly followed margaret. One gravity son brought shyness waiting regular led ham.",
+          insightDescriptionThree: "She wholly fat who window extent either formal. Removing welcomed civility or hastened is. Justice elderly but perhaps expense six her are another passage. Full her ten open fond walk not down. For request general express unknown are. He in just mr door body held john down he. So journey greatly or garrets. Draw door kept do so come on open mean. Estimating stimulated how reasonably precaution diminution she simplicity sir but. Questions am sincerity zealously concluded consisted or no gentleman it.",
+          insightDescriptionOne: "So feel been kept be at gate. Be september it extensive oh concluded of certainty. In read most gate at body held it ever no. Talking justice welcome message inquiry in started of am me. Led own hearted highest visited lasting sir through compass his. Guest tiled he quick by so these trees am. It announcing alteration at surrounded comparison."
         }
       ]
     },
@@ -121,10 +127,10 @@ export class CustomTranslationPipe implements PipeTransform {
           Range: "دلیل المتجر المثالي  ",
           MainPlacementNew: "وحدات تخزین  ",
           Min13facings: "دلیل المتجر المثالي [عبوة واحدة 1]   ",
-          MintweleveFacings: "دلیل المتجر المثالي [عبوة واحدة 1]  ",
+          MinTwelveFacings: "دلیل المتجر المثالي [عبوة واحدة 1]  ",
           vipCategoryA: "الفئة   ١ ",
           impulse: "بقالة",
-          cAndg: "متاجر محطات الوقود",
+          cAndG: "متاجر محطات الوقود",
           retail: "سوبر ماركت",
           coolers: "البرادات",
           impulseA: "مكان رئيسي صغير",
@@ -146,7 +152,13 @@ export class CustomTranslationPipe implements PipeTransform {
           VAT: " ضريبة القيمة المضافة",
           exciseTax: " الضريبة",
           rebatePercentage: " الخصوم",
-          totalRebates: " إجمالي الخصوم"
+          totalRebates: " إجمالي الخصوم",
+          insightTitleOne: "المواضع الوظيفية: تنسيقات كبيرة",
+          insightTitleTwo: "المواضع الوظيفية: الصيغ المتوسطة",
+          insightTitleThree: "المواضع الوظيفية: تنسيقات صغيرة",
+          insightDescriptionTwo: "على إنتاج وأشار العقيد. أربعة فقط تباع تحتاج إلى أي شيء. في سبتمبر الشك في تحديد أنه ساد الاعتراف. على تكييفها كما تم إلصاق محدود على. إعطاء ابن عم بحرارة الأشياء لا ربيع السيد يكون في الخارج. تتكرر تربية العلاقة كما اتبعت بدقة مارغريت. جلب أحد أبناء الجاذبية الخجل في انتظار لحم الخنزير.",
+          insightDescriptionThree: "انها سمينة تماما نافذة المدى سواء الرسمية. إزالة الكياسة المرحب بها أو التعجيل هو. العدل عجوز بل ربما نفقة ستة لها فقرة أخرى. ممتلئًا لها العشرة مغرمًا بالمشي لا تسقط. لطلب صريح عام غير معروف هي. كان في جسد باب السيد فقط عقد جون أسفله. لذلك رحلة كبيرة أو الثغرات. أبقى رسم الباب تفعل ذلك تعال يعني فتح. لقد حفز التقدير مدى معقولية التقليل من البساطة يا سيدي ولكن. الأسئلة التي أنا بصدق خلص إليها بحماسة تتكون أو لا يوجد رجل نبيل.",
+          insightDescriptionOne: "لذا أشعر أنك بقيت على البوابة. يكون سبتمبر واسع النطاق يا استنتاج يقين. في قراءة معظم البوابة في الجسم عقدها على الإطلاق لا. الحديث عن العدالة رسالة الترحيب الاستفسار في البداية أنا أنا. أدى قلبه الخاص أعلى زيارة دائمة سيدي من خلال البوصلة له. ضيف البلاط كان سريعًا حتى هذه الأشجار. تعلن عن التغيير في مقارنة محاطة."
         }
       ]
     },
@@ -188,10 +200,10 @@ export class CustomTranslationPipe implements PipeTransform {
           Range: "Disponibilité de toutes les unités de stockage  ",
           MainPlacementNew: "unités de stockage  ",
           Min13facings: "Le Guide du Magasin Parfait Un Pack 1 ",
-          MintweleveFacings: "Le Guide du Magasin Parfait Un Pack 2",
+          MinTwelveFacings: "Le Guide du Magasin Parfait Un Pack 2",
           vipCategoryA: "Catégorie A  ",
           impulse: "épicerie",
-          cAndg: "Magasins de stations-service",
+          cAndG: "Magasins de stations-service",
           retail: "Supermarché",
           coolers: "réfrigérateurs",
           impulseA: "petite place principale",
@@ -204,7 +216,13 @@ export class CustomTranslationPipe implements PipeTransform {
           functionalPlacementsMediumFormats: "Pratique : Grands marchés  ",
           beatGate: "La présence de boissons fraîches près de la caisse augmente les ventes et attire plus de clients  ",
           tweleveFacings: " visage 12  ",
-          TrafficFlow: " Flux de trafic  "
+          TrafficFlow: " Flux de trafic  ",
+          insightTitleOne: "PLACEMENTS FONCTIONNELS : GRANDS FORMATS",
+          insightTitleTwo: "STAGES FONCTIONNELS : FORMATS MOYENS",
+          insightTitleThree: "STAGES FONCTIONNELS : FORMATS MOYENS",
+          insightDescriptionTwo: "On on produit le colonel pointé. Juste quatre vendus ont besoin de plus de combien. En septembre, les soupçons ont déterminé qu'il a prévalu en admettant. Sur adapté et tel qu'apposé limité sur. Donner chaleureusement des choses à son cousin sans printemps mr être à l'étranger. L'élevage de la relation soit aussi répété que margaret strictement suivi. Un fils de gravité a apporté de la timidité en attendant un jambon conduit régulier.",
+          insightDescriptionThree: "Elle entièrement grasse, qui étend la fenêtre soit formelle. La suppression de la civilité bienvenue ou accélérée est. La justice âgée mais peut-être les dépenses de six sont-elles un autre passage. Complète ses dix marches ouvertes et non vers le bas. Pour demande générale express inconnue sont. Il dans juste le corps de la porte a tenu John vers le bas. Alors voyage grandement ou mansardes. Tirez la porte gardée, alors venez sur le moyen ouvert. L'estimation a stimulé la façon raisonnable dont la précaution diminue sa simplicité monsieur mais. Les questions sur la sincérité conclues avec zèle consistaient ou non en cela.",
+          insightDescriptionOne: "Alors n'hésitez pas à rester à la porte. Soyez septembre vaste oh conclu de certitude. En lecture, la plupart des portes du corps ne l'ont jamais tenue. Parler de la justice demande de message de bienvenue au début de moi. Mené le plus cher de son cœur, visité monsieur durable à travers sa boussole. L'invité a carrelé rapidement pour que ces arbres soient. Il annonce une altération à la comparaison entourée."
         }
       ]
     },

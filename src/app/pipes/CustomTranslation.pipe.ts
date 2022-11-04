@@ -62,7 +62,7 @@ export class CustomTranslationPipe implements PipeTransform {
           impulseA: "Impulse A",
           impulseB: "Impulse B",
           impulseC: "Iimpulse C",
-          shelfMainPlacement: "shelfMainPlacement",
+          shelfMainPlacement: "shelf Main Placement",
           functionalPlacementsLarge: "JustFoursold",
           functionalPlacementsSmall: "functionalPlacementsSmall ",
           extentEitherFormal: "sir but. Questions am sincerity zealously concluded consisted or no gentleman it ",

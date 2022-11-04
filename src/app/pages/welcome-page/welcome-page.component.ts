@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DatabaseService } from 'src/app/services/database.service';
+import ISO6391 from 'iso-639-1';
 
 @Component({
   selector: 'app-welcome-page',
@@ -26,6 +27,10 @@ export class WelcomePageComponent implements OnInit {
   ngOnInit(): void {
     this.langSelected = localStorage.getItem("language");
     if (this.langSelected === null || undefined) this.langSelected = "english";
+    this.langSelected = localStorage.getItem("language");
+    if (this.langSelected === null || undefined) this.langSelected = ISO6391.getName(window.navigator.language.substring(0, 2));
+    else if (this.langSelected === null || undefined) this.langSelected = "english";
+
   }
 
   navigatelanguagesPageSelectALanguageToStart(country: string): void {

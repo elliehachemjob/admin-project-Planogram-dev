@@ -5,6 +5,7 @@ import { getMethod } from 'src/app/helpers/helpers';
 import { InnerPage } from 'src/app/models/inner-page.model';
 import { DatabaseService } from 'src/app/services/database.service';
 import { TranslationService } from 'src/app/services/translation.service';
+import ISO6391 from 'iso-639-1';
 
 
 @Component({
@@ -44,10 +45,10 @@ export class InnerPageComponent implements OnInit {
       this.isLogoActive = true;
     }
     this.getCountry(localStorage.getItem("country")?.toLowerCase(), this.categories);
-    // this.categories = getMethod(this.categories, localStorage.getItem("country")?.toLowerCase());
     this.isRtl = localStorage.getItem('isRTL');
     this.langSelected = localStorage.getItem("language");
-    if (this.langSelected === null || undefined) this.langSelected = "english";
+    if (this.langSelected === null || undefined) this.langSelected = ISO6391.getName(window.navigator.language.substring(0, 2));
+    else if (this.langSelected === null || undefined) this.langSelected = "english";
 
   }
 
@@ -89,12 +90,19 @@ export class InnerPageComponent implements OnInit {
     this.router.navigate(['/sub-categories'], { replaceUrl: true });
   }
 
-  changeLanguage(language: string = "english"): void {
+  changeLanguage(language: string = "en"): void {
     localStorage.setItem("language", language);
+
 
     if (language.toLowerCase() === 'arabic') {
       localStorage.setItem("isRTL", "true"); window.location.reload(); return;
     } else { localStorage.setItem("isRTL", "false"); window.location.reload(); }
+
+
+    if (language === "arabic") { language = "ar"; }
+    if (language === "english") { language = "en"; }
+    if (language === "french") { language = "fr"; }
+    if (language === "urdu") { language = "ur"; }
     return;
 
 

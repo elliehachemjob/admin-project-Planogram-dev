@@ -232,7 +232,6 @@ export class CustomTranslationPipe implements PipeTransform {
     this.setLanguageSelected(lang, this.langObject);
     Object.entries(this.langObject).forEach(
       ([key, valueOfObject]: any) => {
-        console.log(key, valueOfObject);
         if (key === value) {
           value = valueOfObject;
         }

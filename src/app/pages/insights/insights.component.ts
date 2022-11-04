@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 import { LogoService } from 'src/app/services/logo.service';
+import ISO6391 from 'iso-639-1';
 
 @Component({
   selector: 'app-insights',
@@ -28,7 +29,9 @@ export class InsightsComponent implements OnInit {
     }
     this.inSightsCategories = getMethod(this.inSightsCategories, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
-    if (this.langSelected === null || undefined) this.langSelected = "english";
+    this.langSelected = localStorage.getItem("language");
+    if (this.langSelected === null || undefined) this.langSelected = ISO6391.getName(window.navigator.language.substring(0, 2));
+    else if (this.langSelected === null || undefined) this.langSelected = "english";
 
   }
 

@@ -26,6 +26,7 @@ export class LanguagesComponent implements OnInit {
   ngOnInit() {
     this.languages = getMethod(this.languages, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
+    if (this.langSelected === null || undefined) this.langSelected = "english";
 
 
   }

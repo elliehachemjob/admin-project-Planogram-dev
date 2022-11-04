@@ -241,9 +241,9 @@ export class CustomTranslationPipe implements PipeTransform {
     return value;
   }
 
-  setLanguageSelected(countryChosen: any, listOfCountries: any) {
+  setLanguageSelected(languageChosen: any = "english", listOfCountries: any) {
     //Usually Here will be the api, which will tell us the language chosen 
-    this.langObject = listOfCountries.filter((data: any): boolean => data.lang.toLowerCase() === countryChosen.toLowerCase());
+    this.langObject = listOfCountries.filter((data: any): boolean => data.lang.toLowerCase() === languageChosen.toLowerCase());
     this.langObject.map((item: any): any => this.langObject = item.content);
     this.langObject = this.langObject[0];
 

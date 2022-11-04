@@ -47,6 +47,8 @@ export class InnerPageComponent implements OnInit {
     // this.categories = getMethod(this.categories, localStorage.getItem("country")?.toLowerCase());
     this.isRtl = localStorage.getItem('isRTL');
     this.langSelected = localStorage.getItem("language");
+    if (this.langSelected === null || undefined) this.langSelected = "english";
+
   }
 
 

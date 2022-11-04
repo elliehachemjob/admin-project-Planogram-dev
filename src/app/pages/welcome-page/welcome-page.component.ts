@@ -25,6 +25,7 @@ export class WelcomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.langSelected = localStorage.getItem("language");
+    if (this.langSelected === null || undefined) this.langSelected = "english";
   }
 
   navigatelanguagesPageSelectALanguageToStart(country: string): void {

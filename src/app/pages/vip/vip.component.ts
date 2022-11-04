@@ -34,6 +34,8 @@ export class VipComponent implements OnInit {
     this.vipCategories = getMethod(this.vipCategories, localStorage.getItem("country")?.toLowerCase());
     this.vipHeaderText = getMethod(this.vipHeaderText, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
+    if (this.langSelected === null || undefined) this.langSelected = "english";
+
   }
 
   getVipCategories(countryChosen: any, listOfCountries: any): void {

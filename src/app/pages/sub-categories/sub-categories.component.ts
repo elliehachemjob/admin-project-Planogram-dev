@@ -28,6 +28,7 @@ export class SubCategoriesComponent implements OnInit {
     }
     this.subCategories = getMethod(this.subCategories, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
+    if (this.langSelected === null || undefined) this.langSelected = "english";
   }
 
   navigateInsightsPage(): void {

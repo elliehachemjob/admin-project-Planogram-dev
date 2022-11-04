@@ -27,6 +27,7 @@ export class VipInnerPageComponent implements OnInit {
     }
     this.vipCategoriesDetailsContent = getMethod(this.vipCategoriesDetailsContent, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
+    if (this.langSelected === null || undefined) this.langSelected = "english";
   }
 
   navigateInsightsPage(): void {

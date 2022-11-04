@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
+import ISO6391 from 'iso-639-1';
 
 
 @Component({
@@ -26,6 +27,9 @@ export class LanguagesComponent implements OnInit {
   ngOnInit() {
     this.languages = getMethod(this.languages, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
+    this.langSelected = localStorage.getItem("language");
+    if (this.langSelected === null || undefined) this.langSelected = ISO6391.getName(window.navigator.language.substring(0, 2));
+    else if (this.langSelected === null || undefined) this.langSelected = "english";
 
 
   }

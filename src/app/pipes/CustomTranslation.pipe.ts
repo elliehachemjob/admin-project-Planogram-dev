@@ -192,7 +192,7 @@ export class CustomTranslationPipe implements PipeTransform {
           planogramQuickSearchPlaceHolder: "Recherche rapide",
           Discover: "Découvrir",
           VIP: "VIP",
-          INSIGHTS: "CONNAISSANCES",
+          INSIGHTS: "APERÇU",
           CategoryA: "Catégorie A",
           CategoryB: "Catégorie B",
           CategoryC: "Catégorie C",

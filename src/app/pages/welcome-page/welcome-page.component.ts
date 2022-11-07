@@ -14,9 +14,9 @@ export class WelcomePageComponent implements OnInit {
   //All countries should be listed here by default so the logic here is to get + navigate to other page
   //when navigating take in consideration  the dynamic navigation and fix possible bugs like spacing between countries
 
-  siteName: string = this.database.siteName;
-  year: Number = new Date().getFullYear();
-  countries: string[] = this.database.countries;
+  siteName: string = this.database.siteName; // done
+  year: Number = new Date().getFullYear(); // done
+  countries: string[] = this.database.countries; // done
   langSelected: any;
 
 
@@ -27,8 +27,6 @@ export class WelcomePageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.langSelected = localStorage.getItem("language");
-    if (this.langSelected === null || undefined) this.langSelected = "english";
     this.langSelected = this.common.getAndSetLanguage(this.langSelected);
   }
 

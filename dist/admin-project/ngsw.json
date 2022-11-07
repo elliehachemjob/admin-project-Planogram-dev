@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1667223646692,
+  "timestamp": 1667810700117,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.4821e8c056a6d75a.js",
+        "/main.acb9c545d5278bdf.js",
         "/manifest.webmanifest",
         "/polyfills.df45216cbce89053.js",
         "/runtime.67d0c51e7e682e36.js",
-        "/styles.c4a2ce3d41027332.css"
+        "/styles.2f99df3176bdc735.css"
       ],
       "patterns": []
     },
@@ -223,9 +223,9 @@
     "/assets/good-read-1.PNG": "c0e8c0f49ec541497a0687d484a421493d760d0f",
     "/assets/good-read-2.PNG": "708612dcdc042d546094286f8305915fa1028d40",
     "/assets/good-read-3.PNG": "48738050c7b5eb06a92ddb9fec415652a6cd263d",
-    "/assets/i18n/ar.json": "93cb021ae3dcca839e09e9b8e3f74a1c941ce256",
-    "/assets/i18n/en.json": "2fc18d461b1b24167d455a13bd51037b9c97f118",
-    "/assets/i18n/fr.json": "a75f35a4df3d3b8fd28f65a3ba811719ea291927",
+    "/assets/i18n/ar.json": "19bce9beef3b1502830fdc16408b74d1aa6abddc",
+    "/assets/i18n/en.json": "e500a2b2a4c923560d161c304226b7e80f605a76",
+    "/assets/i18n/fr.json": "f6cca3a3e9c9a56be0761b36f39c81f79aa9bdb5",
     "/assets/i18n/ur.json": "ff87b1700230e95622904d445ae7b1fdec9614cb",
     "/assets/icons/icon-128x128.png": "6b57e057f3d9e6bdf8d0d0590638be2f8bceee15",
     "/assets/icons/icon-144x144.png": "70e26cdd95fff52ad9b6675893fddd5291c4df1d",
@@ -253,13 +253,13 @@
     "/favicon.ico": "ac03b35f545f55cf093b153f66435168a16f34c5",
     "/ghana.afbba98b758e31b5.png": "8deeb2c4ec59701ffa574832afbc5f779c4cb9d6",
     "/impulse.ecc812318219d533.jpg": "b270bb2c085853c8921d7095a35ee9dd1f5516a5",
-    "/index.html": "e7b1f8deaaf398d33f5d75828e1f00afdc1990de",
+    "/index.html": "1f3d7fb1681620063133dd7e77264e313b8fede3",
     "/jordan.51c3eda6a94150d2.png": "0dd97c8b74b4652a6a488912ed23bd995de4fa04",
     "/kenya.0eb1d7270caa251d.png": "b7e3838523489e400fd1457f7c166cf51c0ade44",
     "/ksa.6c62e01bc2c36ffd.png": "6d742febc7c0bc17a46a44d72fef05a4634c01fc",
     "/kuwait.563cb504335fdbc4.png": "9b4f25e4abbe1134ef4567a3537e77de03d9478f",
     "/lebanon.d9dfd9a14ec70c9e.png": "a88a320f7e0489e087c5138d0b515885b8cdb7b0",
-    "/main.4821e8c056a6d75a.js": "e2b7fbabff4dbaa29e9d0147924bae8fc7344c72",
+    "/main.acb9c545d5278bdf.js": "7e1c84ac55bd342bd9590f1160703ef0ea4ed488",
     "/maldives.01cb253c90946851.png": "729b2eec082467be6f2e8d220254d8710dbb01ee",
     "/manifest.webmanifest": "ccf2e63aa5be72778298fd68bf80d09afed36fec",
     "/mauritius.a295ad629aee34db.png": "74868b381a3860d6eb070b43d632100a67ea70d5",
@@ -272,7 +272,7 @@
     "/runtime.67d0c51e7e682e36.js": "977c6caacf498ce871dec5e1bce7e7fe96cd94f6",
     "/splash-bg.da4eeaa96815b84a.png": "24a1428ee52780b943e29149a23a460fd81f7b69",
     "/sriLanka.88863857832f0e49.png": "eaa10d55f9b4249c5fb7c552cfcd24252d2d43f0",
-    "/styles.c4a2ce3d41027332.css": "8c6a093699a9e61f5ae764d3dbc9fa20ce1662c4",
+    "/styles.2f99df3176bdc735.css": "e5d6f3e6718284e3a7612e88b3e5c5dd1d6ce136",
     "/uae.45415d55a55f64da.png": "a1207f1180413d86dfc4d3344d5b2cc4c78bfb60"
   },
   "navigationUrls": [

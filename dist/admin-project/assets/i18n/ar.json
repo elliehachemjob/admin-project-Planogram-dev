@@ -1,20 +1,11 @@
 {
-  "welcomePage": {
-    "program": "program",
-    "welcomeSelectACountryToStart": "Select country to start"
-  },
-  "languagesPageSelectALanguageToStart": {
-    "program": "program",
-    "selectALanguageToStart": "Select language from above to start"
-  },
-  "vipPage": {
-    "vipHeaderText": "هذا نادي خاص للأعضاء حيث ستتلقى خصومات بناءً على نظرائك في المتجر والتي ستؤدي إلى زيادة المبيعات ، مما يساعدك على كسب المزيد من الأرباح!"
-  },
-  "insightsPage": {
-    "headerContent": "قراءة جيدة ",
-    "explore": "استكشف"
-  },
-  "homePage": {},
+  "welcomeProgram": "program",
+  "welcomeSelectACountryToStart": "Select country to start",
+  "program": "program",
+  "languagesPageSelectALanguageToStart": "Select language from above to start",
+  "specialPromotion": "هذا نادي خاص للأعضاء حيث ستتلقى خصومات بناءً على نظرائك في المتجر والتي ستؤدي إلى زيادة المبيعات ، مما يساعدك على كسب المزيد من الأرباح!",
+  "insightsPageHeaderContent": "قراءة جيدة ",
+  "insightsPageExplore": "استكشف",
   "UAE": "UAE",
   "MALDIVES": "MALDIVES",
   "PAKISTAN": "PAKISTAN",
@@ -35,7 +26,7 @@
   "planogramQuickSearchPlaceHolder": "بحث سريع",
   "Discover": "اكتشف النص",
   "VIP": "VIP",
-  "INSIGHTS": "بحث سريع",
+  "INSIGHTS": "أفكار",
   "CategoryA": "الفئة   ١",
   "CategoryB": "الفئة    ٢",
   "CategoryC": "الفئة    ٣",
@@ -52,7 +43,6 @@
   "impulseA": "مكان رئيسي صغير",
   "impulseB": "مكان رئيسي متوسط",
   "impulseC": "مكان رئيسي كبير",
-  "shelfMainPlacement": "1 رف | 10 واجهات",
   "functionalPlacementsLargeFormats": "نقاط البيع الإضافية المؤقتة  ",
   "JustFoursold": "نقاط البيع الإضافية المؤقتة تعمل على تسهيل الشراء وتزيد من المبيعا",
   "functionalPlacementsSmall": "العرض العملي: الأسواق الكبيرة  ",
@@ -60,6 +50,7 @@
   "beatGate": "يؤدي تواجد المشروبات الباردة بالقرب من الكاشير إلى زيادة نسبة المبيعات وجذب المزيد من المتسوقين  ",
   "tweleveFacings": " مواجهة ١٢  ",
   "TrafficFlow": " تدفق حركة المرور  ",
+  "shelfMainPlacement": " تدفق حركة المرور  ",
   "before": " قبل ",
   "after": " بعد ",
   "impulseVIPA": " دفعةالفئ  ١ ",
@@ -68,5 +59,11 @@
   "VAT": " ضريبة القيمة المضافة",
   "exciseTax": " الضريبة",
   "rebatePercentage": " الخصوم",
-  "totalRebates": " إجمالي الخصوم"
+  "totalRebates": " إجمالي الخصوم",
+  "insightTitleOne": "المواضع الوظيفية: تنسيقات كبيرة",
+  "insightTitleTwo": "المواضع الوظيفية: الصيغ المتوسطة",
+  "insightTitleThree": "المواضع الوظيفية: تنسيقات صغيرة",
+  "insightDescriptionTwo": "على إنتاج وأشار العقيد. أربعة فقط تباع تحتاج إلى أي شيء. في سبتمبر الشك في تحديد أنه ساد الاعتراف. على تكييفها كما تم إلصاق محدود على. إعطاء ابن عم بحرارة الأشياء لا ربيع السيد يكون في الخارج. تتكرر تربية العلاقة كما اتبعت بدقة مارغريت. جلب أحد أبناء الجاذبية الخجل في انتظار لحم الخنزير.",
+  "insightDescriptionThree": "انها سمينة تماما نافذة المدى سواء الرسمية. إزالة الكياسة المرحب بها أو التعجيل هو. العدل عجوز بل ربما نفقة ستة لها فقرة أخرى. ممتلئًا لها العشرة مغرمًا بالمشي لا تسقط. لطلب صريح عام غير معروف هي. كان في جسد باب السيد فقط عقد جون أسفله. لذلك رحلة كبيرة أو الثغرات. أبقى رسم الباب تفعل ذلك تعال يعني فتح. لقد حفز التقدير مدى معقولية التقليل من البساطة يا سيدي ولكن. الأسئلة التي أنا بصدق خلص إليها بحماسة تتكون أو لا يوجد رجل نبيل.",
+  "insightDescriptionOne": "لذا أشعر أنك بقيت على البوابة. يكون سبتمبر واسع النطاق يا استنتاج يقين. في قراءة معظم البوابة في الجسم عقدها على الإطلاق لا. الحديث عن العدالة رسالة الترحيب الاستفسار في البداية أنا أنا. أدى قلبه الخاص أعلى زيارة دائمة سيدي من خلال البوصلة له. ضيف البلاط كان سريعًا حتى هذه الأشجار. تعلن عن التغيير في مقارنة محاطة."
 }

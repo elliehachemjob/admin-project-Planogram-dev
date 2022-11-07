@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { getMethod } from 'src/app/helpers/helpers';
 import { DatabaseService } from 'src/app/services/database.service';
 import ISO6391 from 'iso-639-1';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-vip',
@@ -21,7 +22,8 @@ export class VipComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private database: DatabaseService
+    private database: DatabaseService,
+    private common: CommonService
   ) { }
 
 
@@ -34,10 +36,7 @@ export class VipComponent implements OnInit {
     }
     this.vipCategories = getMethod(this.vipCategories, localStorage.getItem("country")?.toLowerCase());
     this.vipHeaderText = getMethod(this.vipHeaderText, localStorage.getItem("country")?.toLowerCase());
-    this.langSelected = localStorage.getItem("language");
-    if (this.langSelected === null || undefined) this.langSelected = ISO6391.getName(window.navigator.language.substring(0, 2));
-    else if (this.langSelected === null || undefined) this.langSelected = "english";
-
+    this.langSelected = this.common.getAndSetLanguage(this.langSelected);
   }
 
   getVipCategories(countryChosen: any, listOfCountries: any): void {

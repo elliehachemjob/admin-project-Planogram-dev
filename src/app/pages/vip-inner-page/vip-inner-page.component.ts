@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { getMethod } from 'src/app/helpers/helpers';
+import { CommonService } from 'src/app/services/common.service';
 import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class VipInnerPageComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private database: DatabaseService
+    private database: DatabaseService,
+    private common: CommonService
   ) { }
 
   ngOnInit(): void {
@@ -26,8 +28,7 @@ export class VipInnerPageComponent implements OnInit {
       this.isLogoActive = true;
     }
     this.vipCategoriesDetailsContent = getMethod(this.vipCategoriesDetailsContent, localStorage.getItem("country")?.toLowerCase());
-    this.langSelected = localStorage.getItem("language");
-    if (this.langSelected === null || undefined) this.langSelected = "english";
+    this.langSelected = this.common.getAndSetLanguage(this.langSelected);
   }
 
   navigateInsightsPage(): void {

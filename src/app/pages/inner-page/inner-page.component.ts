@@ -6,6 +6,7 @@ import { InnerPage } from 'src/app/models/inner-page.model';
 import { DatabaseService } from 'src/app/services/database.service';
 import { TranslationService } from 'src/app/services/translation.service';
 import ISO6391 from 'iso-639-1';
+import { CommonService } from 'src/app/services/common.service';
 
 
 @Component({
@@ -36,7 +37,8 @@ export class InnerPageComponent implements OnInit {
     private router: Router,
     private translate: TranslateService,
     private translation: TranslationService,
-    private database: DatabaseService
+    private database: DatabaseService,
+    private common: CommonService
   ) { }
 
   ngOnInit(): void {
@@ -46,10 +48,7 @@ export class InnerPageComponent implements OnInit {
     }
     this.getCountry(localStorage.getItem("country")?.toLowerCase(), this.categories);
     this.isRtl = localStorage.getItem('isRTL');
-    this.langSelected = localStorage.getItem("language");
-    if (this.langSelected === null || undefined) this.langSelected = ISO6391.getName(window.navigator.language.substring(0, 2));
-    else if (this.langSelected === null || undefined) this.langSelected = "english";
-
+    this.langSelected = this.common.getAndSetLanguage(this.langSelected);
   }
 
 

@@ -24,7 +24,6 @@ export class GiftTableComponent implements OnInit {
   ngOnInit(): void {
     this.categoriesTableContent = getMethod(this.categoriesTableContent, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = localStorage.getItem("language");
-    this.langSelected = localStorage.getItem("language");
     if (this.langSelected === null || undefined) this.langSelected = ISO6391.getName(window.navigator.language.substring(0, 2));
     else if (this.langSelected === null || undefined) this.langSelected = "english";
 

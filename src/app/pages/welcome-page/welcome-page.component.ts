@@ -30,7 +30,7 @@ export class WelcomePageComponent implements OnInit {
     this.langSelected = this.common.getAndSetLanguage(this.langSelected);
   }
 
-  navigatelanguagesPageSelectALanguageToStart(country: string): void {
+  navigateLanguagesPageSelectALanguageToStart(country: string): void {
     window.localStorage.setItem("country", country);
     this.router.navigate(['/languages', country.toLowerCase().replace(/\s+/g, '')]);
   }

@@ -8,7 +8,7 @@
       </div>
       <div class="wlc-page-countries-cont countries-list" id="country-list">
         <div *ngFor="let country of countries" class="country-cont">
-          <div (click)="navigatelanguagesPageSelectALanguageToStart(country)"
+          <div (click)="navigateLanguagesPageSelectALanguageToStart(country)"
             class="country-content {{country.toLowerCase()}}">
             {{country.toUpperCase() | CustomTranslation:langSelected}}
           </div>

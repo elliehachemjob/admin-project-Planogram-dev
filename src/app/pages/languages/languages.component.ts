@@ -36,7 +36,7 @@ export class LanguagesComponent implements OnInit {
 
 
   navigateInnerPage(language: string): void {
-    if (language === 'arabic') {
+    if (language.toLowerCase() === 'arabic') {
       localStorage.setItem("isRTL", "true");
       this.router.navigate(['/home']).then((): void => {
         window.location.reload();
@@ -45,7 +45,6 @@ export class LanguagesComponent implements OnInit {
     this.router.navigate(['/home']).then((): void => {
       window.location.reload();
     });
-
     localStorage.setItem("language", language);
   }
 }

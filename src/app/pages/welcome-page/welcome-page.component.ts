@@ -17,7 +17,7 @@ export class WelcomePageComponent implements OnInit {
   siteName: string = this.database.siteName; // done
   year: Number = new Date().getFullYear(); // done
   countries: string[] = this.database.countries; // done
-  langSelected: any;
+  langSelected: any; //done
 
 
   constructor(
@@ -27,12 +27,12 @@ export class WelcomePageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.langSelected = this.common.getAndSetLanguage(this.langSelected);
+    this.langSelected = this.common.getAndSetLanguage(this.langSelected); //done
   }
 
   navigatelanguagesPageSelectALanguageToStart(country: string): void {
     window.localStorage.setItem("country", country);
     this.router.navigate(['/languages', country.toLowerCase().replace(/\s+/g, '')]);
-  }
+  } // done for this function
 
 }

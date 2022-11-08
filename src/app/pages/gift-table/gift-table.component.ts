@@ -24,8 +24,8 @@ export class GiftTableComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.categoriesTableContent = getMethod(this.categoriesTableContent, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = this.common.getAndSetLanguage(this.langSelected);
+    this.categoriesTableContent = getMethod(this.categoriesTableContent, localStorage.getItem("country")?.toLowerCase());
   }
 
   navigateInnerVipPage(): void {

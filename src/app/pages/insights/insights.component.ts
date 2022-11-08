@@ -29,8 +29,8 @@ export class InsightsComponent implements OnInit {
     if (this.router.url.startsWith("/insights")) {
       this.isLogoActive = true;
     }
-    this.inSightsCategories = getMethod(this.inSightsCategories, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = this.common.getAndSetLanguage(this.langSelected);
+    this.inSightsCategories = getMethod(this.inSightsCategories, localStorage.getItem("country")?.toLowerCase());
   }
 
   navigateInsightsPage(): void {

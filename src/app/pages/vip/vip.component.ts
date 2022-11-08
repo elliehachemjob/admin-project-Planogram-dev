@@ -34,9 +34,9 @@ export class VipComponent implements OnInit {
     if (this.router.url.startsWith("/vip")) {
       this.isLogoActive = true;
     }
+    this.langSelected = this.common.getAndSetLanguage(this.langSelected);
     this.vipCategories = getMethod(this.vipCategories, localStorage.getItem("country")?.toLowerCase());
     this.vipHeaderText = getMethod(this.vipHeaderText, localStorage.getItem("country")?.toLowerCase());
-    this.langSelected = this.common.getAndSetLanguage(this.langSelected);
   }
 
   getVipCategories(countryChosen: any, listOfCountries: any): void {

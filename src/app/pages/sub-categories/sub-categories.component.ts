@@ -29,8 +29,8 @@ export class SubCategoriesComponent implements OnInit {
     if (this.router.url.startsWith("/sub-categories")) {
       this.isLogoActive = true;
     }
-    this.subCategories = getMethod(this.subCategories, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = this.common.getAndSetLanguage(this.langSelected);
+    this.subCategories = getMethod(this.subCategories, localStorage.getItem("country")?.toLowerCase());
   }
 
   navigateInsightsPage(): void {

@@ -46,9 +46,9 @@ export class InnerPageComponent implements OnInit {
     if (this.router.url.startsWith("/home")) {
       this.isLogoActive = true;
     }
+    this.langSelected = this.common.getAndSetLanguage(this.langSelected);
     this.getCountry(localStorage.getItem("country")?.toLowerCase(), this.categories);
     this.isRtl = localStorage.getItem('isRTL');
-    this.langSelected = this.common.getAndSetLanguage(this.langSelected);
   }
 
 

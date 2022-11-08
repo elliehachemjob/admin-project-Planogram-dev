@@ -27,8 +27,8 @@ export class VipInnerPageComponent implements OnInit {
     if (this.router.url.startsWith("/vip-inner-page")) {
       this.isLogoActive = true;
     }
-    this.vipCategoriesDetailsContent = getMethod(this.vipCategoriesDetailsContent, localStorage.getItem("country")?.toLowerCase());
     this.langSelected = this.common.getAndSetLanguage(this.langSelected);
+    this.vipCategoriesDetailsContent = getMethod(this.vipCategoriesDetailsContent, localStorage.getItem("country")?.toLowerCase());
   }
 
   navigateInsightsPage(): void {

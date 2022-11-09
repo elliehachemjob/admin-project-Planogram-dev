@@ -75,7 +75,7 @@ export class DatabaseService {
     {
       "country": "Lebanon",
       "content": [{
-        title: "insightTitleOne", description: "insightDescriptionTwo",
+        title: "insightTitleOne", description: "insightDescriptionOne",
         path: "assets/good-read-1.PNG",
         explorePdf: "/assets/pdf/1.pdf"
       }, {
@@ -94,7 +94,7 @@ export class DatabaseService {
       "country": "Qatar",
       "content":
         [{
-          title: "insightTitleOne", description: "insightDescriptionTwo",
+          title: "insightTitleOne", description: "insightDescriptionOne",
           path: "assets/good-read-1.PNG",
           explorePdf: "/assets/pdf/1.pdf"
         }, {
